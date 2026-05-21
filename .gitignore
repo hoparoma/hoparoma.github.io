@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+
+# Unused / staging assets (kept locally for iteration, not shipped)
+assets/app-store-badge-white.svg
+assets/bento-card-detail.png
+assets/hero-homestart-liquidglass.png
+assets/section-2-hazy-ipa.png

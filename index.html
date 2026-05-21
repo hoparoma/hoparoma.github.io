@@ -3,100 +3,712 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hoparoma — IPA aroma prediction for brewers</title>
+    <title>Hoparoma — Brew tropical IPA simply.</title>
     <meta
       name="description"
-      content="Hoparoma is an aroma-prediction logbook for IPA brewers. Enter a recipe, see a 7-axis aroma forecast, then log tasting deltas to tune predictions to your kettle, water, and palate."
+      content="Hoparoma is an iOS app for IPA brewers. The first to predict tropical thiol expression through a 4-axis Thiol Forecast — yeast × hop × malt × Phantasm. Built on peer-reviewed research, designed in Tokyo."
     />
     <meta name="color-scheme" content="light" />
+    <meta property="og:title" content="Hoparoma — Brew tropical IPA simply." />
+    <meta
+      property="og:description"
+      content="The first iOS app to predict tropical thiol expression in modern IPAs. A 4-axis Thiol Forecast engine, built on peer-reviewed research."
+    />
+    <meta property="og:image" content="/assets/icon-1024.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hoparoma.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/assets/icon-512.png" />
+    <link rel="apple-touch-icon" href="/assets/icon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
+    <header class="site-header" aria-label="Main">
+      <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="/">Home</a>
-          <a href="/support.html">Support</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/terms.html">Terms</a>
+          <a href="/" class="site-nav__link site-nav__link--active">Home</a>
+          <a href="/support.html" class="site-nav__link">Support</a>
+          <a href="/privacy.html" class="site-nav__link">Privacy</a>
+          <a href="/terms.html" class="site-nav__link">Terms</a>
         </nav>
+        <a
+          href="https://apps.apple.com/app/hoparoma/id6764503200"
+          target="_blank"
+          rel="noopener"
+          class="cta-pill"
+          aria-label="Download Hoparoma on the App Store"
+          >Get App</a
+        >
       </div>
     </header>
 
     <main>
-      <section class="container">
-        <div class="hero">
-          <p class="eyebrow">For IPA brewers</p>
-          <h1>See the aroma<br />before you brew.</h1>
-          <p class="lede">
-            Hoparoma predicts a seven-axis hop aroma profile from your recipe,
-            then learns your palate every time you log a tasting.
-          </p>
-          <div class="cta-row">
-            <span class="badge-pending">iOS · Coming to the App Store</span>
+      <!-- ============================================================ -->
+      <!-- Section 1: Hero (Immersive Full-Bleed) -->
+      <!-- ============================================================ -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__bg" aria-hidden="true">
+          <img
+            src="/assets/hero-iphone-mockup.png"
+            alt=""
+            class="hero__bg-image"
+          />
+          <div class="hero__bg-overlay"></div>
+        </div>
+        <div class="container hero__content">
+          <div class="hero__copy">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-pill__dot" aria-hidden="true"></span>
+              A Tokyo-made iOS app for IPA brewers
+            </span>
+            <h1 id="hero-heading" class="hero__title">
+              Brew tropical IPA simply.<br />
+              <span class="hero__title-accent"
+                >with a 4-axis thiol forecast.</span
+              >
+            </h1>
+            <p class="hero__lede">
+              Hoparoma is the first iOS app to predict tropical thiol
+              expression in modern IPAs — built on peer-reviewed research,
+              designed for brewers who want to see the chemistry behind their
+              beer.
+            </p>
+            <div class="hero__cta-row">
+              <a
+                href="https://apps.apple.com/app/hoparoma/id6764503200"
+                target="_blank"
+                rel="noopener"
+                class="badge-link"
+                aria-label="Download Hoparoma on the App Store"
+              >
+                <img
+                  src="/assets/app-store-badge-black.svg"
+                  alt="Download on the App Store"
+                  width="180"
+                  height="60"
+                />
+              </a>
+              <span class="hero__new-tag">
+                NEW IN 1.0.4 · Crop year data · Suggestion engine
+              </span>
+            </div>
           </div>
-          <p class="doc-meta" style="margin-top: var(--space-6); max-width: 52ch;">
-            Hoparoma is a recipe-planning and aroma-prediction tool. Brewing
-            laws vary by country — in Japan, the Liquor Tax Act (酒税法)
-            prohibits unlicensed production of beverages exceeding 1% ABV.
-            Please comply with the laws of your jurisdiction.
-          </p>
         </div>
+      </section>
 
-        <div class="feature-grid">
-          <article class="feature">
-            <h3>Seven axes of hop character</h3>
-            <p>
-              Citrus, Tropical, Floral, Herbal, Spicy, Resin/Pine, and
-              Dank/Earthy — broken out by Boil, Whirlpool, Dry Hop, and Cold
-              Dry Hop stages.
+      <!-- ============================================================ -->
+      <!-- Section 2: Thiol Forecast (4-axis grid) -->
+      <!-- ============================================================ -->
+      <section class="section section--axis" aria-labelledby="forecast-heading">
+        <div class="container">
+          <div class="section__header">
+            <h2 id="forecast-heading" class="section__title">
+              Thiol Forecast — the 4-axis prediction engine
+            </h2>
+            <p class="section__lede">
+              Most brewing apps tell you what hops to use. Hoparoma predicts
+              what your beer will smell like before you brew it, by combining
+              four ingredient layers into one science-honest forecast.
             </p>
-          </article>
-          <article class="feature">
-            <h3>Backed by literature</h3>
-            <p>
-              Stevens power laws (Lafontaine &amp; Shellhammer, 2018),
-              Arrhenius-based whirlpool decay (Forster, 2021), and BJCP /
-              Cicerone / Siebel sensory vocabulary. Every coefficient cites
-              its source.
+          </div>
+
+          <figure class="section-feature-photo">
+            <img
+              src="/assets/section-2.png"
+              alt="A hand holding a glass of hazy IPA at a brewery bar, with stainless fermentation tanks softly out of focus in the background"
+              loading="lazy"
+              width="1536"
+              height="1024"
+            />
+          </figure>
+
+          <div class="axis-grid">
+            <article class="axis-card axis-card--yeast">
+              <span class="axis-card__index">01</span>
+              <h3 class="axis-card__title">YEAST</h3>
+              <p class="axis-card__fact">21 strains · β-lyase activity rated</p>
+              <p class="axis-card__body">
+                Cosmic Punch, Helio Gazer, Hornindal Kveik, A04 Barbarian
+                (Conan), Lutra, LalBrew New England. Each strain carries a
+                thiol biotransformation activity score (0–1.0) that gates how
+                much hop and malt thiol gets released.
+              </p>
+            </article>
+
+            <article class="axis-card axis-card--hop">
+              <span class="axis-card__index">02</span>
+              <h3 class="axis-card__title">HOP</h3>
+              <p class="axis-card__fact">
+                18 varieties · free thiol potential rated
+              </p>
+              <p class="axis-card__body">
+                Galaxy 0.90, Nelson Sauvin 0.90, Citra 0.75, Mosaic 0.60,
+                Cascade 0.25. Free thiol scoring based on internal medians from
+                Yakima Chief, Hop Products Australia, and brewer community
+                data.
+              </p>
+            </article>
+
+            <article class="axis-card axis-card--malt">
+              <span class="axis-card__index">03</span>
+              <h3 class="axis-card__title">MALT</h3>
+              <p class="axis-card__fact">
+                38 entries · thiol precursor level rated
+              </p>
+              <p class="axis-card__body">
+                The first brewing app to model malt's thiol contribution. Pale
+                2-row holds up to ~700 µg/kg of bound 3MH precursor. Roasted
+                malts are thermally degraded; wheat, oat, and rye carry low
+                non-barley precursor.
+              </p>
+            </article>
+
+            <article class="axis-card axis-card--booster">
+              <span class="axis-card__index">04</span>
+              <h3 class="axis-card__title">+ THIOL BOOSTER</h3>
+              <p class="axis-card__fact">
+                Phantasm Powder · Propper Phantasm · future products
+              </p>
+              <p class="axis-card__body">
+                Additive amplification of the core 3 axes, normalized to dose
+                per batch volume. Future-proof naming for upcoming booster
+                products such as Tropics Boost and Apex Amplify.
+              </p>
+            </article>
+          </div>
+
+          <figure class="thiol-radar-figure">
+            <svg
+              viewBox="0 0 520 520"
+              class="thiol-radar"
+              role="img"
+              aria-labelledby="radar-title radar-desc"
+            >
+              <title id="radar-title">Sample Thiol Forecast radar chart</title>
+              <desc id="radar-desc">
+                Four-axis radar visualizing a sample Hoparoma recipe: yeast 0.65,
+                hop 0.85, malt 0.72, booster 0.45, total 0.78.
+              </desc>
+
+              <g class="radar__grid">
+                <polygon points="260,60 460,260 260,460 60,260" />
+                <polygon points="260,110 410,260 260,410 110,260" />
+                <polygon points="260,160 360,260 260,360 160,260" />
+                <polygon points="260,210 310,260 260,310 210,260" />
+              </g>
+
+              <g class="radar__axes">
+                <line x1="260" y1="260" x2="260" y2="60" />
+                <line x1="260" y1="260" x2="460" y2="260" />
+                <line x1="260" y1="260" x2="260" y2="460" />
+                <line x1="260" y1="260" x2="60" y2="260" />
+              </g>
+
+              <polygon
+                class="radar__data"
+                points="260,130 430,260 260,404 170,260"
+              />
+
+              <g class="radar__vertices">
+                <circle cx="260" cy="130" r="7" />
+                <circle cx="430" cy="260" r="7" />
+                <circle cx="260" cy="404" r="7" />
+                <circle cx="170" cy="260" r="7" />
+              </g>
+
+              <g class="radar__center">
+                <text
+                  x="260"
+                  y="252"
+                  text-anchor="middle"
+                  class="radar__total-label"
+                >
+                  TROPICAL THIOL · TOTAL
+                </text>
+                <text
+                  x="260"
+                  y="288"
+                  text-anchor="middle"
+                  class="radar__total-value"
+                >
+                  0.78
+                </text>
+              </g>
+
+              <g class="radar__labels">
+                <text x="260" y="36" text-anchor="middle" class="radar__axis-name">
+                  YEAST
+                </text>
+                <text x="260" y="56" text-anchor="middle" class="radar__axis-score">
+                  0.65
+                </text>
+
+                <text x="490" y="252" text-anchor="middle" class="radar__axis-name">
+                  HOP
+                </text>
+                <text x="490" y="272" text-anchor="middle" class="radar__axis-score">
+                  0.85
+                </text>
+
+                <text x="260" y="496" text-anchor="middle" class="radar__axis-name">
+                  MALT
+                </text>
+                <text x="260" y="478" text-anchor="middle" class="radar__axis-score">
+                  0.72
+                </text>
+
+                <text x="55" y="252" text-anchor="middle" class="radar__axis-name">
+                  + BOOSTER
+                </text>
+                <text x="55" y="272" text-anchor="middle" class="radar__axis-score">
+                  0.45
+                </text>
+              </g>
+            </svg>
+            <figcaption class="thiol-radar__caption">
+              <span class="thiol-radar__caption-label">
+                SAMPLE · Mindful Hazy Session IPA
+              </span>
+              <span class="thiol-radar__caption-detail">
+                Cosmic Punch · Citra + Mosaic · Pale 2-row · 1.0 oz Phantasm
+              </span>
+            </figcaption>
+          </figure>
+
+          <div class="science-block">
+            <h3 class="science-block__title">The science behind the forecast</h3>
+            <p class="science-block__body">
+              Built on peer-reviewed research from MDPI Fermentation (2022),
+              Springer EFR&amp;T (2022), DIAL UCL (2023), and PMC 9329171
+              (2024). Brewfather and BeerSmith model hop chemistry; Hoparoma is
+              the first to integrate yeast × hop × malt × adjunct as a single
+              thiol expression engine — including malt thiol precursor data no
+              competitor app captures.
             </p>
-          </article>
-          <article class="feature">
-            <h3>A journal that learns your kettle</h3>
-            <p>
-              Save a recipe, brew it, log a tasting. Hoparoma computes the
-              delta between predicted and perceived on every axis and pulls
-              future forecasts toward the reality of your fermentation.
-            </p>
-          </article>
-          <article class="feature">
-            <h3>Fully offline, fully yours</h3>
-            <p>
-              No accounts, no telemetry, no network calls except Apple's
-              purchase endpoints. Everything you create stays on your device.
-            </p>
-          </article>
+          </div>
         </div>
+      </section>
 
-        <hr />
+      <!-- ============================================================ -->
+      <!-- Section 3: Mindful Recipe Presets -->
+      <!-- ============================================================ -->
+      <section
+        class="section section--alt"
+        aria-labelledby="mindful-heading"
+      >
+        <div class="container">
+          <div class="section__header">
+            <h2 id="mindful-heading" class="section__title">
+              Mindful Recipe Presets
+            </h2>
+            <p class="section__lede">
+              Designed with the Thiol Forecast in mind. Low ABV, full thiol
+              expression.
+            </p>
+          </div>
 
-        <p class="doc-meta">
-          Questions?
-          <a href="/support.html">Visit support</a> or email
-          <a href="mailto:hoparoma.support@gmail.com">hoparoma.support@gmail.com</a>.
-        </p>
+          <div class="preset-grid">
+            <article class="preset-card">
+              <h3 class="preset-card__title">Mindful Hazy Session IPA</h3>
+              <p class="preset-card__meta">
+                4.2% ABV · Cosmic Punch + Citra + Mosaic + 1.0 oz Phantasm
+              </p>
+              <p class="preset-card__forecast">
+                Thiol Forecast: <strong>0.76 · high</strong>
+              </p>
+              <p class="preset-card__body">
+                Low-ABV hazy that doesn't sacrifice tropical aroma. Phantasm
+                slider tunes intensity from 0.5 to 2.5 g/L.
+              </p>
+            </article>
+
+            <article class="preset-card">
+              <h3 class="preset-card__title">Sober-Curious Session Pale</h3>
+              <p class="preset-card__meta">
+                3.8% ABV · LalBrew New England + Galaxy + Nelson Sauvin
+              </p>
+              <p class="preset-card__forecast">
+                Thiol Forecast: <strong>0.74 · high</strong>
+              </p>
+              <p class="preset-card__body">
+                Sub-4% pale ale built around thiol-rich Southern Hemisphere
+                hops and a thiol-positive yeast strain.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 4: Yeast Library -->
+      <!-- ============================================================ -->
+      <section class="section" aria-labelledby="yeast-heading">
+        <div class="container library">
+          <div class="library__copy">
+            <h2 id="yeast-heading" class="section__title">
+              Expanded Yeast Library
+            </h2>
+            <p class="library__count">21 strains</p>
+            <p class="library__body">
+              Every yeast rated for thiol biotransformation activity.
+              Availability badges tell you what you can actually source — from
+              homebrew packs to pro-pitch-only strains.
+            </p>
+            <ul class="library__legend">
+              <li>
+                <span class="badge badge--mainstream">Mainstream</span>
+                <span>11 g / 500 g dry packs or PurePitch / pouch</span>
+              </li>
+              <li>
+                <span class="badge badge--limited">Limited</span>
+                <span>Homebrew packs phased out, active in 0.5 hL pro pitch</span>
+              </li>
+              <li>
+                <span class="badge badge--pro">Pro Pitch Only</span>
+                <span>0.5 hL or 1 BBL, recommended for craft breweries</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 5: Hop Library (NEW for 1.0.4) -->
+      <!-- ============================================================ -->
+      <section class="section section--alt" aria-labelledby="hop-heading">
+        <div class="container library">
+          <div class="library__copy">
+            <span class="new-flag">NEW in 1.0.4</span>
+            <h2 id="hop-heading" class="section__title">Expanded Hop Library</h2>
+            <p class="library__count">18 varieties · with crop year data</p>
+            <p class="library__body">
+              Free thiol potential scored for every variety. 1.0.4 introduces
+              <strong>crop year data</strong> for 24 hop varieties — the 2024
+              vs 2023 crop shift moves free thiol potential by ±5–15% depending
+              on variety, and the AromaCalculator surfaces it directly on the
+              radar chart.
+            </p>
+            <figure class="hop-bars" aria-label="Free thiol potential across hop varieties">
+              <figcaption class="hop-bars__title">
+                Free thiol potential · internal medians
+              </figcaption>
+              <div class="hop-bar">
+                <span class="hop-bar__name">Galaxy</span>
+                <span class="hop-bar__track">
+                  <span class="hop-bar__fill" style="width: 90%"></span>
+                </span>
+                <span class="hop-bar__score">0.90</span>
+              </div>
+              <div class="hop-bar">
+                <span class="hop-bar__name">Nelson Sauvin</span>
+                <span class="hop-bar__track">
+                  <span class="hop-bar__fill" style="width: 90%"></span>
+                </span>
+                <span class="hop-bar__score">0.90</span>
+              </div>
+              <div class="hop-bar">
+                <span class="hop-bar__name">Citra</span>
+                <span class="hop-bar__track">
+                  <span class="hop-bar__fill" style="width: 75%"></span>
+                </span>
+                <span class="hop-bar__score">0.75</span>
+              </div>
+              <div class="hop-bar">
+                <span class="hop-bar__name">Mosaic</span>
+                <span class="hop-bar__track">
+                  <span class="hop-bar__fill" style="width: 60%"></span>
+                </span>
+                <span class="hop-bar__score">0.60</span>
+              </div>
+              <div class="hop-bar">
+                <span class="hop-bar__name">Cascade</span>
+                <span class="hop-bar__track">
+                  <span class="hop-bar__fill" style="width: 25%"></span>
+                </span>
+                <span class="hop-bar__score">0.25</span>
+              </div>
+              <p class="hop-bars__footnote">
+                Crop year support shifts these values by ±5–15% in 1.0.4.
+                Cascade rises to ~0.65 with the mash hop bonus landing in 1.0.5.
+              </p>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 6: Malt Library -->
+      <!-- ============================================================ -->
+      <section class="section" aria-labelledby="malt-heading">
+        <div class="container library">
+          <div class="library__copy">
+            <h2 id="malt-heading" class="section__title">
+              Expanded Malt Library
+            </h2>
+            <p class="library__count">38 entries</p>
+            <p class="library__body">
+              <strong
+                >The first brewing app to model malt's thiol contribution.</strong
+              >
+              Brewfather and BeerSmith do not capture malt thiol precursor
+              metadata. Hoparoma does.
+            </p>
+            <figure class="malt-spectrum" aria-label="Malt thiol precursor concentration spectrum">
+              <figcaption class="malt-spectrum__title">
+                Glut-3MH precursor · concentration spectrum
+              </figcaption>
+              <div class="malt-spectrum__bar">
+                <span class="malt-spectrum__marker" style="left: 4%">
+                  <span class="malt-spectrum__dot"></span>
+                  <span class="malt-spectrum__label">Chocolate</span>
+                </span>
+                <span class="malt-spectrum__marker" style="left: 22%">
+                  <span class="malt-spectrum__dot"></span>
+                  <span class="malt-spectrum__label">Munich</span>
+                </span>
+                <span class="malt-spectrum__marker" style="left: 52%">
+                  <span class="malt-spectrum__dot"></span>
+                  <span class="malt-spectrum__label">CaraMunich</span>
+                </span>
+                <span class="malt-spectrum__marker" style="left: 88%">
+                  <span class="malt-spectrum__dot"></span>
+                  <span class="malt-spectrum__label">Pale 2-row</span>
+                </span>
+              </div>
+              <div class="malt-spectrum__scale">
+                <span>NEGLIGIBLE</span>
+                <span>LOW</span>
+                <span>MEDIUM</span>
+                <span>HIGH</span>
+              </div>
+              <div class="malt-spectrum__numbers">
+                <span>thermal · 0</span>
+                <span>~5–30 µg/kg</span>
+                <span>~30–100 µg/kg</span>
+                <span>~100–700 µg/kg</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 7: Apple Native by Design -->
+      <!-- ============================================================ -->
+      <section
+        class="section section--alt"
+        aria-labelledby="apple-native-heading"
+      >
+        <div class="container">
+          <div class="section__header">
+            <span class="eyebrow-pill eyebrow-pill--ios">
+              BUILT WITH iOS 26 LIQUIDGLASS REFRACTION
+            </span>
+            <h2 id="apple-native-heading" class="section__title">
+              Apple Native by Design
+            </h2>
+            <p class="section__lede">
+              Built natively for Apple platforms. Hoparoma fits into how you
+              already use your devices.
+            </p>
+          </div>
+
+          <ul class="apple-native__list">
+            <li>
+              <h3>App Intents &amp; Siri</h3>
+              <p>"Hey Siri, what's my latest thiol forecast?"</p>
+            </li>
+            <li>
+              <h3>watchOS Live Activities</h3>
+              <p>Fermentation progress on your wrist.</p>
+            </li>
+            <li>
+              <h3>Smart Stack widgets</h3>
+              <p>Hop schedule reminders on your home screen.</p>
+            </li>
+            <li>
+              <h3>Local-first privacy</h3>
+              <p>All on device. No account required.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 8: Designed in Tokyo -->
+      <!-- ============================================================ -->
+      <section class="section section--tokyo" aria-labelledby="tokyo-heading">
+        <div class="container tokyo">
+          <div class="tokyo__copy">
+            <h2 id="tokyo-heading" class="section__title">
+              Designed in Tokyo
+            </h2>
+            <p class="tokyo__body">
+              Modern IPAs amaze me every time I drink one — passion fruit and
+              citrus, pillowy, full of surprise. But when I tried to brew like
+              them myself, I never got close.
+            </p>
+            <p class="tokyo__body">
+              Hoparoma started in Tokyo with the hunch that real scientific
+              analysis might finally close the gap. The radar chart visualizes
+              your beer's character at a glance, and underneath, years of
+              peer-reviewed research drive every calculation. Aroma compounds
+              are quantified, not guessed.
+            </p>
+            <p class="tokyo__body">
+              Save a recipe, log how it actually brewed, refine it again. Over
+              time you build a beer that's truly your own — guided by
+              prediction, not guesswork.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 9: Pricing -->
+      <!-- ============================================================ -->
+      <section class="section" aria-labelledby="pricing-heading">
+        <div class="container pricing">
+          <div class="pricing__intro">
+            <h2 id="pricing-heading" class="section__title">Pricing</h2>
+            <p class="pricing__lede">
+              Transparent, indie pricing. Use Hoparoma free with up to 3 saved
+              recipes — or unlock the full 4-axis engine.
+            </p>
+          </div>
+
+          <ol class="pricing__list">
+            <li class="pricing-tier">
+              <div class="pricing-tier__main">
+                <h3>Free</h3>
+                <p>
+                  Core Thiol Forecast, basic recipe management, up to 3 saved
+                  recipes.
+                </p>
+              </div>
+              <div class="pricing-tier__price">
+                <span class="pricing-tier__amount">$0</span>
+              </div>
+            </li>
+
+            <li class="pricing-tier">
+              <div class="pricing-tier__main">
+                <h3>Pro Monthly</h3>
+                <p>
+                  Unlimited recipes, 4-axis advice, history compare,
+                  optimization mode.
+                </p>
+              </div>
+              <div class="pricing-tier__price">
+                <span class="pricing-tier__amount">$5.99</span>
+                <span class="pricing-tier__interval">/mo</span>
+              </div>
+            </li>
+
+            <li class="pricing-tier">
+              <div class="pricing-tier__main">
+                <h3>Pro Annual</h3>
+                <p>Best value for ongoing brewers · 7-day free trial.</p>
+              </div>
+              <div class="pricing-tier__price">
+                <span class="pricing-tier__amount">$39</span>
+                <span class="pricing-tier__interval">/yr</span>
+              </div>
+            </li>
+
+            <li class="pricing-tier pricing-tier--featured">
+              <div class="pricing-tier__main">
+                <span class="pricing-tier__badge">Limited launch edition</span>
+                <h3>Lifetime</h3>
+                <p>Own Hoparoma forever. Support indie development.</p>
+              </div>
+              <div class="pricing-tier__price">
+                <span class="pricing-tier__amount">$89</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 10: FAQ -->
+      <!-- ============================================================ -->
+      <section
+        class="section section--alt"
+        aria-labelledby="faq-heading"
+      >
+        <div class="container faq">
+          <h2 id="faq-heading" class="section__title">Frequently asked</h2>
+
+          <details class="faq__item">
+            <summary>What's the science behind 4-axis prediction?</summary>
+            <p>
+              Peer-reviewed research from MDPI Fermentation (2022), Springer
+              EFR&amp;T (2022), DIAL UCL (2023), and PMC 9329171 (2024)
+              establishes that barley malt holds up to 700 µg/kg of bound 3MH
+              precursor, hops carry both free and bound thiols, and yeast's
+              β-lyase enzyme is the gate that unlocks all of them.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is Hoparoma for homebrewers or craft brewers?</summary>
+            <p>
+              Both. The yeast and malt libraries include mainstream homebrew
+              packs and pro-pitch-only strains for commercial breweries.
+              Availability badges make it clear what you can source at your
+              scale.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>How does crop year data work?</summary>
+            <p>
+              Hoparoma 1.0.4 includes crop year data for 24 hop varieties.
+              Switching between the 2024 and 2023 crop years shifts free thiol
+              potential by ±5–15% depending on variety, and the
+              AromaCalculator midpoint surfaces this directly on the radar
+              chart.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>What does the Suggestion engine recommend?</summary>
+            <p>
+              The Suggestion engine surfaces in the Bento card after you
+              compose a recipe. It analyzes your 4-axis thiol forecast and
+              proposes 2–4 category-diverse next-batch tweaks — for example,
+              "swap Citra for Galaxy to boost free thiol" or "Phantasm 1.0 →
+              1.5 g/L to amplify." Top 1 suggestion per category, so hops
+              don't crowd out yeast, malt, or booster ideas.
+            </p>
+          </details>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <span>© 2026 Hoparoma</span>
-        <span class="footer-links">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__wordmark">Hoparoma</span>
+          <p class="site-footer__tagline">
+            © 2026 Hoparoma · ArtFactory, K.K. · Designed in Tokyo
+          </p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
-          <a href="/support.html">Support</a>
-        </span>
+          <a href="mailto:hoparoma.support@gmail.com">Contact</a>
+        </nav>
       </div>
     </footer>
   </body>
