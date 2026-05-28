@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Editorial press kit for Hoparoma — the first iOS app to predict hop aroma expression across yeast, hop, malt, and Phantasm thiol-feeder, using peer-reviewed chemistry. Not for distribution — evaluation materials." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Hoparoma · Editorial Press Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --hop-green: #5e9522;
+        --hop-green-light: #b6f577;
+        --hop-green-deep: #3a6700;
+        --carbon: #1a1a1a;
+        --carbon-soft: #2f3130;
+        --vellum: #f9f9f8;
+        --vellum-warm: #f3f4f3;
+        --tech-gray: #8c8c8c;
+        --tech-gray-light: #c2c9b5;
+        --hairline: #e5e5e5;
+        --white: #ffffff;
+
+        --space-1: 8px;
+        --space-2: 16px;
+        --space-3: 24px;
+        --space-4: 32px;
+        --space-5: 48px;
+        --space-6: 64px;
+        --space-7: 96px;
+        --space-8: 128px;
+        --space-9: 160px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--vellum);
+        color: var(--carbon);
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* ============== Typography ============== */
+      .display-lg {
+        font-family: Inter, sans-serif;
+        font-size: clamp(40px, 6vw, 72px);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+      }
+      h2.headline-md {
+        font-family: Inter, sans-serif;
+        font-size: clamp(28px, 3.5vw, 40px);
+        font-weight: 600;
+        line-height: 1.15;
+        letter-spacing: -0.018em;
+      }
+      h3.headline-sm {
+        font-family: Inter, sans-serif;
+        font-size: clamp(22px, 2.4vw, 28px);
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -0.012em;
+      }
+      h4 {
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .lead {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 1.55;
+        color: var(--carbon-soft);
+      }
+      .body-md {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.65;
+        color: var(--carbon-soft);
+      }
+      .eyebrow {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--hop-green);
+      }
+      .tech-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        color: var(--tech-gray);
+        text-transform: uppercase;
+      }
+      .tagline {
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--hop-green);
+        letter-spacing: 0.005em;
+      }
+      em.italic-display {
+        font-style: italic;
+        color: var(--hop-green-deep);
+      }
+
+      /* ============== Layout ============== */
+      .container {
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: clamp(20px, 5vw, 64px);
+      }
+      .container-narrow {
+        max-width: 760px;
+        margin-inline: auto;
+        padding-inline: clamp(20px, 5vw, 64px);
+      }
+
+      section {
+        padding-block: clamp(var(--space-7), 12vw, var(--space-9));
+        border-bottom: 1px solid var(--hairline);
+      }
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      /* ============== Hero ============== */
+      .hero {
+        background: var(--vellum);
+        padding-block: clamp(var(--space-7), 14vw, var(--space-9)) clamp(var(--space-6), 10vw, var(--space-8));
+        border-bottom: 1px solid var(--hairline);
+      }
+      .hero__grid {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: clamp(var(--space-5), 6vw, var(--space-7));
+        align-items: center;
+      }
+      @media (max-width: 880px) {
+        .hero__grid { grid-template-columns: 1fr; }
+      }
+      .hero__copy .eyebrow { margin-bottom: var(--space-3); }
+      .hero__copy h1 { margin-bottom: var(--space-3); }
+      .hero__copy .lead { margin-bottom: var(--space-4); max-width: 520px; }
+      .hero__copy .tagline { margin-top: var(--space-3); }
+
+      .hero__app-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+        overflow: hidden;
+        margin-bottom: var(--space-3);
+        display: block;
+        box-shadow: 0 1px 0 rgba(26, 26, 26, 0.04), 0 2px 8px rgba(26, 26, 26, 0.05);
+      }
+      .press-kit-note {
+        margin-top: var(--space-4);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: var(--tech-gray);
+        line-height: 1.6;
+      }
+      .press-kit-note a {
+        color: var(--hop-green);
+        text-decoration: none;
+        border-bottom: 1px solid var(--hairline);
+      }
+      .hero__app-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero__image {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero__image img {
+        width: 100%;
+        height: auto;
+        max-width: 480px;
+        object-fit: contain;
+      }
+
+      /* ============== Meta strip (App Store Story format header) ============== */
+      .meta-strip {
+        padding-block: var(--space-4);
+        background: var(--vellum-warm);
+        border-block: 1px solid var(--hairline);
+      }
+      .meta-strip__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: var(--space-3);
+      }
+      .meta-strip__item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .meta-strip__item-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        color: var(--tech-gray);
+        text-transform: uppercase;
+      }
+      .meta-strip__item-value {
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--carbon);
+      }
+
+      /* ============== Chart sections (full bleed within container) ============== */
+      .chart-block {
+        background: var(--white);
+        border: 1px solid var(--hairline);
+        margin-top: var(--space-5);
+      }
+      .chart-block img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .chart-caption {
+        margin-top: var(--space-3);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+        color: var(--tech-gray);
+      }
+
+      /* ============== Personal background ============== */
+      .creator__grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: clamp(var(--space-5), 6vw, var(--space-7));
+        align-items: center;
+      }
+      @media (max-width: 880px) {
+        .creator__grid { grid-template-columns: 1fr; }
+      }
+      .creator__image {
+        aspect-ratio: 5 / 6;
+        background: var(--vellum-warm);
+        border: 1px solid var(--hairline);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .creator__image[data-placeholder]::before {
+        content: "Tsu background image — beer bar / brewing studio shot";
+        color: var(--tech-gray);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        padding: var(--space-3);
+        text-align: center;
+      }
+      .creator__image img { width: 100%; height: 100%; object-fit: cover; }
+      .creator__copy .eyebrow { margin-bottom: var(--space-3); }
+      .creator__copy h2 { margin-bottom: var(--space-3); }
+      .creator__copy p { margin-bottom: var(--space-3); }
+      .creator__copy p:last-child { margin-bottom: 0; }
+
+      /* ============== Bento grid for screenshots ============== */
+      .screenshot-bento {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+      }
+      @media (max-width: 880px) {
+        .screenshot-bento { grid-template-columns: repeat(2, 1fr); }
+      }
+      .bento-card {
+        background: var(--vellum-warm);
+        border: 1px solid var(--hairline);
+        padding: var(--space-3) var(--space-3) var(--space-3);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        align-items: center;
+        text-align: center;
+      }
+      .bento-card img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        display: block;
+      }
+      .bento-card__label {
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--carbon);
+        line-height: 1.3;
+      }
+      .bento-card__sub {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        color: var(--tech-gray);
+      }
+
+      /* ============== Q&A ============== */
+      .qa-block {
+        border-top: 1px solid var(--hairline);
+        padding-top: var(--space-4);
+        margin-top: var(--space-5);
+      }
+      .qa-block:first-of-type {
+        border-top: none;
+        padding-top: 0;
+      }
+      .qa-question {
+        font-family: Inter, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--hop-green-deep);
+        line-height: 1.3;
+        margin-bottom: var(--space-3);
+        letter-spacing: -0.01em;
+      }
+      .qa-answer {
+        font-size: 17px;
+        line-height: 1.7;
+        color: var(--carbon-soft);
+      }
+      .qa-answer p { margin-bottom: var(--space-2); }
+      .qa-answer p:last-child { margin-bottom: 0; }
+
+      /* ============== Section helpers ============== */
+      .section-header {
+        margin-bottom: var(--space-5);
+      }
+      .section-header .eyebrow { margin-bottom: var(--space-3); display: inline-block; }
+      .section-header h2 { margin-bottom: var(--space-3); }
+      .section-header p { max-width: 680px; }
+
+      /* ============== Press kit appendix grid ============== */
+      .appendix-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+      }
+      @media (max-width: 880px) {
+        .appendix-grid { grid-template-columns: 1fr; }
+      }
+      .appendix-card {
+        background: var(--white);
+        border: 1px solid var(--hairline);
+        padding: var(--space-4);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+      }
+      .appendix-card__label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        color: var(--hop-green);
+        text-transform: uppercase;
+      }
+      .appendix-card__title {
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        color: var(--carbon);
+        margin: 0;
+      }
+      .appendix-card__copy {
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--carbon-soft);
+        flex: 1;
+      }
+      .appendix-card__link {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        color: var(--hop-green);
+        text-decoration: none;
+        border-bottom: 1px solid var(--hairline);
+        padding-bottom: 2px;
+        margin-top: 4px;
+        display: inline-block;
+        word-break: break-word;
+      }
+      .appendix-card__link:hover {
+        color: var(--hop-green-deep);
+        border-bottom-color: var(--hop-green);
+      }
+
+      footer {
+        background: var(--carbon-soft);
+        color: rgba(249, 249, 248, 0.7);
+        padding-block: var(--space-5);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+      }
+      footer .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+      }
+      footer a {
+        color: var(--hop-green-light);
+        text-decoration: none;
+      }
+      footer a:hover { text-decoration: underline; }
+
+      /* ============== App icon corner mark ============== */
+      .app-icon {
+        position: absolute;
+        top: var(--space-3);
+        right: var(--space-3);
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--hairline);
+        background: var(--white);
+      }
+      .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+
+      /* ============== Utility ============== */
+      .center { text-align: center; }
+      .mt-3 { margin-top: var(--space-3); }
+      .mt-4 { margin-top: var(--space-4); }
+      .mt-5 { margin-top: var(--space-5); }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================ -->
+    <!-- 1. HERO -->
+    <!-- ============================================================ -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <span class="eyebrow">Editorial Press Kit · June 2026</span>
+            <div class="hero__app-icon">
+              <img src="./assets/icon-512.png" alt="Hoparoma app icon" />
+            </div>
+            <h1 class="display-lg">Hoparoma.</h1>
+            <p class="lead">
+              The first iOS app to predict hop aroma expression across yeast, hop, malt, and Phantasm thiol-feeder — using peer-reviewed chemistry instead of a flavor wheel guess.
+            </p>
+            <p class="tagline">
+              <em class="italic-display">Design the aroma before you brew.<br />Aroma first. Alcohol last.</em>
+            </p>
+            <p class="press-kit-note">
+              Evaluation materials for editorial review. Marketing site: <a href="./index.html">hoparoma.github.io</a>
+            </p>
+          </div>
+          <div class="hero__image">
+            <img src="./assets/screenshot_framed/hero-mockup-cropped.png" alt="Hoparoma running on iPhone 17 Pro — home screen with hazy IPA background" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- Meta strip (App Store Story format header) -->
+    <!-- ============================================================ -->
+    <div class="meta-strip">
+      <div class="container">
+        <div class="meta-strip__grid">
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">Company</span>
+            <span class="meta-strip__item-value">ArtFactory Inc.</span>
+          </div>
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">Founder</span>
+            <span class="meta-strip__item-value">Tsukaya Suzuki</span>
+          </div>
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">Mission</span>
+            <span class="meta-strip__item-value">Make hop aroma a designable practice, not a guess</span>
+          </div>
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">App launched</span>
+            <span class="meta-strip__item-value">May 6, 2026</span>
+          </div>
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">Team size</span>
+            <span class="meta-strip__item-value">1</span>
+          </div>
+          <div class="meta-strip__item">
+            <span class="meta-strip__item-label">Go-to emoji</span>
+            <span class="meta-strip__item-value">🌿</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 2. Punchline + Mission -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container-narrow">
+        <span class="eyebrow">Mission</span>
+        <h2 class="headline-md mt-3">
+          To make hop aroma a designable practice, not a guess.
+        </h2>
+        <p class="lead mt-4">
+          Most brewing apps — Brewfather, BeerSmith, Brewer's Friend — are great at tracking what you brew. Hoparoma predicts what your beer will <em class="italic-display">smell like</em> before you brew it, using peer-reviewed thiol biotransformation chemistry across four variables: yeast, hop, malt, and Phantasm thiol-feeder.
+        </p>
+        <p class="body-md mt-4">
+          Built natively for Apple platforms with SwiftUI, Swift Charts, and App Intents. A solo project from a Tokyo studio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. Fig 05 — Hook -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Figure 01 · Why a hop database alone isn't enough</span>
+          <h2 class="headline-md mt-3">The same Citra recipe produces four different beers — the yeast decides which one.</h2>
+          <p class="body-md mt-3">
+            Hop alpha acid percentages aren't enough. The variable that decides what your IPA actually smells like is yeast biotransformation — and that's the prediction surface Hoparoma navigates.
+          </p>
+        </div>
+        <figure class="chart-block">
+          <img src="./chatgpt-output-2026-05-28/hoparoma_new_charts_fixed/fig05_same_hop_different_beers.svg"
+               alt="Four radar charts showing how the same Citra-forward IPA recipe produces different sensory profiles across four yeast strains" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. Personal background — Meet the Creator -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="creator__grid">
+          <div class="creator__image">
+            <img src="./assets/section-2.png" alt="Tsukaya at an American craft beer bar in Japan — taproom and brewing tanks visible" />
+          </div>
+          <div class="creator__copy">
+            <span class="eyebrow">Meet the Creator</span>
+            <h2 class="headline-md">A filmmaker who became obsessed with hop chemistry.</h2>
+            <p class="body-md">
+              Tsukaya Suzuki is a Tokyo-based filmmaker and indie iOS developer. He works as a filmmaker through <a href="https://www.tsukayasuzuki.com" style="color: var(--hop-green); text-decoration: none; border-bottom: 1px solid var(--hop-green);">Pith Films Tokyo</a> — long-form documentary work for MARUNI 2020, BREATH TAKING KAGOSHIMA, and Re:SET KOM_I.
+            </p>
+            <p class="body-md">
+              In Japan, home brewing above 1% ABV is restricted by law. So Tsukaya has spent years designing low-ABV recipes within that constraint, studying hop biotransformation and obsessing over the question that mattered most: <em class="italic-display">what does it take to design hop aroma intentionally when ABV is your hardest constraint?</em>
+            </p>
+            <p class="body-md">
+              The same observational discipline that shapes documentary editing — restraint, slow attention, an editor's instinct for what to leave out — is what shaped Hoparoma's design language.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. Fig 06 — Position (competitor matrix) -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Figure 02 · Brewing app landscape, 2026</span>
+          <h2 class="headline-md mt-3">Recipe builders exist. Hop databases exist. Hoparoma adds aroma chemistry prediction.</h2>
+          <p class="body-md mt-3">
+            Hoparoma is positioned as a complement, not a replacement — it adds the chemistry layer that the recipe builder category has not addressed.
+          </p>
+        </div>
+        <figure class="chart-block">
+          <img src="./chatgpt-output-2026-05-28/hoparoma_new_charts_fixed/fig06_competitor_matrix.svg"
+               alt="Capability comparison matrix across Brewfather Premium, BeerSmith 3, and Hoparoma 1.0.5" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. App features — screenshot bento -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">App Surface · 1.0.5</span>
+          <h2 class="headline-md mt-3">Four screens. One thesis. Aroma at the center.</h2>
+          <p class="body-md mt-3">
+            Where most brewing apps stack every variable on screen, Hoparoma hides 80% of the complexity behind a single radial Bento card visualization that maps four thiol axes onto one chart. Filmmaker's restraint, applied to indie software.
+          </p>
+        </div>
+        <div class="screenshot-bento">
+          <div class="bento-card">
+            <img src="./assets/screenshot_framed/IMG_1157_framed_v2.png" alt="Hoparoma home screen with four primary actions" />
+            <span class="bento-card__label">Home</span>
+            <span class="bento-card__sub">Create · Load · Import · Tasting log</span>
+          </div>
+          <div class="bento-card">
+            <img src="./assets/screenshot_framed/IMG_1158_framed_v2.png" alt="Sensory radar chart showing aroma profile" />
+            <span class="bento-card__label">Sensory radar</span>
+            <span class="bento-card__sub">7 aroma axes · 1 visualization</span>
+          </div>
+          <div class="bento-card">
+            <img src="./assets/screenshot_framed/IMG_1163_framed_v2.png" alt="Sensory profile bar chart with axis breakdown" />
+            <span class="bento-card__label">Axis breakdown</span>
+            <span class="bento-card__sub">Citrus · Tropical · Floral · Herbal · Spicy</span>
+          </div>
+          <div class="bento-card">
+            <img src="./assets/screenshot_framed/IMG_1161_framed_v2.png" alt="Aroma compound concentration table in µg/L" />
+            <span class="bento-card__label">Compound depth</span>
+            <span class="bento-card__sub">µg/L predictions · Burn factors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. Fig 03 — Depth (chemistry concentrations) -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Figure 03 · Compound concentration depth</span>
+          <h2 class="headline-md mt-3">The chemistry underneath every sensory axis — measured in µg/L.</h2>
+          <p class="body-md mt-3">
+            Here's what's actually happening at the molecular level. The chart spans four orders of magnitude — from 0.1 µg/L to 10,000 µg/L — and the surprising thing is that the three polyfunctional thiols (3MH, 3MHA, 4MMP) sit at single-digit concentrations yet drive the entire Tropical sensory axis. Tiny molecules. Huge expression.
+          </p>
+        </div>
+        <figure class="chart-block">
+          <svg viewBox="0 0 720 460" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Aroma compound concentrations on log scale" style="display: block; padding: 32px;">
+            <!-- Compound rows -->
+            <g>
+              <text x="150" y="58" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Linalool</text>
+              <rect x="160" y="45" width="370" height="18" fill="#1a1a1a"/>
+              <text x="540" y="60" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">1047 µg/L · Floral</text>
+            </g>
+            <g>
+              <text x="150" y="88" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Myrcene</text>
+              <rect x="160" y="75" width="321" height="18" fill="#1a1a1a"/>
+              <text x="491" y="90" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">309 µg/L · Resin/Pine</text>
+            </g>
+            <g>
+              <text x="150" y="118" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">β-Caryophyllene</text>
+              <rect x="160" y="105" width="302" height="18" fill="#1a1a1a"/>
+              <text x="472" y="120" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">191 µg/L · Spicy</text>
+            </g>
+            <g>
+              <text x="150" y="148" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Humulene</text>
+              <rect x="160" y="135" width="270" height="18" fill="#1a1a1a"/>
+              <text x="440" y="150" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">86 µg/L · Herbal</text>
+            </g>
+            <g>
+              <text x="150" y="178" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Geraniol</text>
+              <rect x="160" y="165" width="270" height="18" fill="#1a1a1a"/>
+              <text x="440" y="180" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">85 µg/L · Floral</text>
+            </g>
+            <g>
+              <text x="150" y="208" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Citronellol</text>
+              <rect x="160" y="195" width="241" height="18" fill="#1a1a1a"/>
+              <text x="411" y="210" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">42 µg/L · Citrus</text>
+            </g>
+            <g>
+              <text x="150" y="238" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">4MMP (thiol)</text>
+              <rect x="160" y="225" width="166" height="18" fill="#5e9522"/>
+              <text x="336" y="240" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">6.4 µg/L · Tropical</text>
+            </g>
+            <g>
+              <text x="150" y="268" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">3MH (thiol)</text>
+              <rect x="160" y="255" width="148" height="18" fill="#5e9522"/>
+              <text x="318" y="270" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">4.0 µg/L · Tropical</text>
+            </g>
+            <g>
+              <text x="150" y="298" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">3MHA (thiol)</text>
+              <rect x="160" y="285" width="63" height="18" fill="#5e9522"/>
+              <text x="233" y="300" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" fill="#1a1a1a">0.5 µg/L · Tropical</text>
+            </g>
+
+            <!-- X-axis -->
+            <line x1="160" y1="330" x2="620" y2="330" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="160" y1="330" x2="160" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="252" y1="330" x2="252" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="344" y1="330" x2="344" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="436" y1="330" x2="436" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="528" y1="330" x2="528" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <line x1="620" y1="330" x2="620" y2="335" stroke="#1a1a1a" stroke-width="1"/>
+            <text x="160" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">0.1</text>
+            <text x="252" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">1</text>
+            <text x="344" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">10</text>
+            <text x="436" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">100</text>
+            <text x="528" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">1,000</text>
+            <text x="620" y="350" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">10,000</text>
+
+            <text x="390" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1a1a1a">Concentration µg/L (log scale)</text>
+
+            <!-- Legend (vertical stack) -->
+            <g transform="translate(160, 405)">
+              <rect x="0" y="0" width="14" height="14" fill="#5e9522"/>
+              <text x="20" y="11" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Polyfunctional thiol (3MH / 3MHA / 4MMP)</text>
+            </g>
+            <g transform="translate(160, 430)">
+              <rect x="0" y="0" width="14" height="14" fill="#1a1a1a"/>
+              <text x="20" y="11" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Terpenoid / sesquiterpene</text>
+            </g>
+          </svg>
+        </figure>
+        <p class="chart-caption">
+          Fig. 03 — Source: Mindful Hazy Session IPA preset prediction · Logarithmic scale across four orders of magnitude
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. Fig 04 — Transparency (catalog tier) -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Figure 04 · Catalog data depth</span>
+          <h2 class="headline-md mt-3">51 hop varieties, three tiers of lot-level depth.</h2>
+          <p class="body-md mt-3">
+            Not all hop data is created equal. Fifteen varieties in Hoparoma's catalog carry lot-level analytical data tied to specific crop years — the kind a brewer needs for actual prediction work. The remaining thirty-six rely on multi-year aggregate ranges from supplier technical sheets, and we say so right in the app. Honesty about depth is a feature.
+          </p>
+        </div>
+        <figure class="chart-block">
+          <svg viewBox="0 0 720 400" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Tier 1, 2, 3 plus 4-year aggregate coverage across 51 varieties" style="display: block; padding: 32px;">
+            <!-- Stacked bar -->
+            <rect x="60" y="80" width="97.25" height="60" fill="#5e9522"/>
+            <rect x="157.25" y="80" width="36.47" height="60" fill="#8bc34a"/>
+            <rect x="193.72" y="80" width="48.63" height="60" fill="#c5e1a5"/>
+            <rect x="242.35" y="80" width="437.65" height="60" fill="#e5e5e5"/>
+
+            <!-- Segment labels above -->
+            <text x="108" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Tier 1 · 8</text>
+            <text x="175" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">T2·3</text>
+            <text x="218" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">T3·4</text>
+            <text x="461" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">4-year aggregate · 36</text>
+
+            <!-- Total count -->
+            <text x="60" y="170" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">0</text>
+            <text x="680" y="170" text-anchor="end" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">51 varieties</text>
+
+            <!-- Tier descriptions (vertical stack) -->
+            <g transform="translate(60, 200)">
+              <rect x="0" y="0" width="12" height="12" fill="#5e9522"/>
+              <text x="18" y="10" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Tier 1 — full lot-level per year</text>
+              <text x="0" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">Citra · Cascade · Chinook · Galaxy · Vic Secret · Eclipse · Nelson Sauvin · Strata</text>
+            </g>
+            <g transform="translate(60, 248)">
+              <rect x="0" y="0" width="12" height="12" fill="#8bc34a"/>
+              <text x="18" y="10" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Tier 2 — 2025 lot + 2024 range</text>
+              <text x="0" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">Mosaic · Idaho 7 · Motueka</text>
+            </g>
+            <g transform="translate(60, 296)">
+              <rect x="0" y="0" width="12" height="12" fill="#c5e1a5"/>
+              <text x="18" y="10" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">Tier 3 — partial lot coverage</text>
+              <text x="0" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">Sabro · Centennial · Simcoe · Amarillo</text>
+            </g>
+            <g transform="translate(60, 344)">
+              <rect x="0" y="0" width="12" height="12" fill="#e5e5e5" stroke="#8c8c8c" stroke-width="0.5"/>
+              <text x="18" y="10" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#1a1a1a">4-year aggregate — supplier ranges</text>
+              <text x="0" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#8c8c8c">36 remaining varieties (Ekuanot · Hallertau Mittelfruh · Saaz · etc.)</text>
+            </g>
+          </svg>
+        </figure>
+        <p class="chart-caption">
+          Fig. 04 — Source: Hoparoma 1.0.5 hop catalog · Lot CoAs from Yakima Chief, Hopsteiner, BarthHaas, John I. Haas, HPA
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 9. Developer's voice — 5 questions (Tide Guide / Halide format) -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container-narrow">
+        <div class="section-header">
+          <span class="eyebrow">In the developer's own words</span>
+          <h2 class="headline-md mt-3">Five questions about Hoparoma.</h2>
+        </div>
+
+        <div class="qa-block">
+          <h3 class="qa-question">What inspired you to create Hoparoma?</h3>
+          <div class="qa-answer">
+            <p>
+              I'm a filmmaker — and through years of client work, I've been lucky enough to travel and drink beer all over the world. Japanese lager at home (which I still love), but the beer that kept me coming back was American IPA. Classic cans I'd grab from corner stores in New York — Sierra Nevada, Stone — and then later, the newer wave of American IPA at a small brewery in Alaska that completely rewired what I thought a beer could smell like.
+            </p>
+            <p>
+              When I started brewing my own beer in the evenings from my Tokyo studio, I wanted to chase that aroma. But in Japan, home brewing above 1% ABV is restricted by law. That constraint turned into the most interesting design problem I'd ever encountered: <em class="italic-display">how do you build a beer that's both low in alcohol and high in aroma?</em>
+            </p>
+            <p>
+              For a while, I was just asking AI. Brewing a recipe, opening ChatGPT, asking what hop pairs with what yeast at what fermentation temperature. It worked, but only kind of — the more I learned, the more I needed the same calculation done the same way every batch. Reproducibility, not improvisation. So I built the tool I wanted: a deterministic, visible, repeatable design surface for hop aroma.
+            </p>
+            <p>
+              These days, you can drink incredible American IPA in Japan too. I'm a huge fan of Ambitious Ales, Green Cheek Beer Co., and Cerebral Brewing — breweries that taught me how far hop-forward design can go. My hope is that Hoparoma becomes a partner for that journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-block">
+          <h3 class="qa-question">What did you learn during the process of making the app?</h3>
+          <div class="qa-answer">
+            <p>
+              There was a moment in particular — I was drinking at an American craft beer specialty bar in Japan, and I had this beer with an aroma I'd never encountered before. Not just citrus. Stone fruit, mango, this tropical layered complexity that didn't make sense. I asked: was there fruit juice added? No. It was all hop-derived. I couldn't believe it.
+            </p>
+            <p>
+              I tried to recreate that aroma at home, batch after batch, and I couldn't get there. Same hops, same ratios — but my beer wasn't doing what theirs was doing. That gap is what sent me into the chemistry. I started reading peer-reviewed research — Sasaki 2008 on thiol biosynthesis in beer, Sharp 2021 on quantifying 3MH across hop varieties, Brauwelt 2025 on LC-MS/MS chromatography for hop oil analysis. I learned that yeast wasn't just fermenting sugar — certain strains were actively releasing hidden thiols from hop precursors. Then how malt protein affects haze and thiol retention. Then how a small bit of Phantasm powder can feed even more thiol release.
+            </p>
+            <p>
+              Each paper opened another variable. And as the chemistry got deeper, I realized I couldn't hold all of it in my head while designing a recipe — I didn't have the experience yet to integrate it intuitively the way a veteran brewer might. <em class="italic-display">I needed a tool that did the integration for me.</em> That's when I started building Hoparoma.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-block">
+          <h3 class="qa-question">What role did design play when creating the app?</h3>
+          <div class="qa-answer">
+            <p>
+              Everything. I wanted Hoparoma to put the beer's aroma at the center — not the recipe, not the ingredients, the aroma itself. And the best way I found to visually express the aroma-centric character of a beer was a single radial chart: four thiol axes — yeast, hop, malt, Phantasm — read together on one Bento card. Not four screens. Not four panels. One expression.
+            </p>
+            <p>
+              Where most brewing apps stack every variable on screen — alpha acid percentages, hop schedule timing, water chemistry, fermentation curves — Hoparoma hides 80% of that complexity behind that one chart. I spent a lot of time figuring out what to leave out rather than bring in. The same observational discipline that shapes documentary editing — restraint, slow attention, an editor's instinct for what to leave out — is what shaped this app. Filmmaker's restraint, applied to indie software.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-block">
+          <h3 class="qa-question">How does Hoparoma differ from other brewing apps?</h3>
+          <div class="qa-answer">
+            <p>
+              Most brewing apps — Brewfather, BeerSmith, Brewer's Friend — are great at tracking what you brew. They handle recipes, ingredient inventory, and batch logs really well. But none of them predict what your beer will <em class="italic-display">smell like</em> before you brew it. Hoparoma does that. It's the first iOS app to predict hop aroma expression across four variables — yeast, hop, malt, and Phantasm thiol-feeder — using peer-reviewed thiol biotransformation chemistry instead of a flavor wheel guess. The chemistry foundation is what makes it different. Where existing apps track recipes, Hoparoma designs aroma.
+            </p>
+          </div>
+        </div>
+
+        <div class="qa-block">
+          <h3 class="qa-question">Do you have any advice for other one-person development teams?</h3>
+          <div class="qa-answer">
+            <p>
+              Follow your curiosity. For me, that's been one of the most powerful things — I built Hoparoma because I genuinely needed it as a Tokyo brewer working within Japan's 1% ABV constraint, and the curiosity to solve my own problem gave me the energy to learn Swift, study thiol chemistry, and ship the app.
+            </p>
+            <p>
+              Also: lean on Apple platforms native. Hoparoma uses SwiftUI throughout, Swift Charts for data visualization, App Intents for Spotlight integration, and (in 1.1) a watchOS companion. Being a good platform citizen makes users feel comfortable with your app even when they're new to it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 10. Sources reference + Press Assets + Press Contact -->
+    <!-- ============================================================ -->
+    <section>
+      <div class="container-narrow">
+        <div class="section-header">
+          <span class="eyebrow">Editorial materials</span>
+          <h2 class="headline-md mt-3">Press kit appendix.</h2>
+          <p class="body-md mt-3">
+            For reviewers who need to verify chemistry sources, download brand assets, or contact the developer.
+          </p>
+        </div>
+
+        <div class="appendix-grid">
+          <div class="appendix-card">
+            <span class="appendix-card__label">Source bibliography</span>
+            <h3 class="appendix-card__title">Peer-reviewed chemistry citations</h3>
+            <p class="appendix-card__copy">
+              Eight peer-reviewed papers (Sasaki 2008 · Sharp 2021 · Brauwelt 2025 · Roland 2016/2018 · Chenot 2019/2021/2023 · Hellwig 2022 · Molitor 2022) plus six lot-level data sources (Hop Alliance · Yakima Chief · Hopsteiner · BarthHaas · John I. Haas · HPA).
+            </p>
+            <a href="./bibliography.html" class="appendix-card__link">View full bibliography →</a>
+          </div>
+
+          <div class="appendix-card">
+            <span class="appendix-card__label">Press assets</span>
+            <h3 class="appendix-card__title">Logo, app icon, screenshots</h3>
+            <p class="appendix-card__copy">
+              App icon (1024 / 512), hero mockup, four bento screenshots in iPhone 17 Pro Max frame, App Store badge variants. Vellum brand palette + typography reference included.
+            </p>
+            <a href="./assets/hoparoma-press-assets.zip" class="appendix-card__link" download>Download press assets (zip) →</a>
+          </div>
+
+          <div class="appendix-card">
+            <span class="appendix-card__label">Press contact</span>
+            <h3 class="appendix-card__title">Tsukaya Suzuki · Founder</h3>
+            <p class="appendix-card__copy">
+              For interview, additional materials, or press inquiries. Reply within 24 hours from Tokyo (JST).
+            </p>
+            <a href="mailto:hoparoma@tsukayasuzuki.com" class="appendix-card__link">hoparoma@tsukayasuzuki.com</a>
+            <a href="https://www.tsukayasuzuki.com" class="appendix-card__link">tsukayasuzuki.com (filmmaker portfolio) →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div>
+          ArtFactory Inc. · Tokyo · 2026 · Editorial press kit · Not for redistribution
+        </div>
+        <div>
+          <a href="./bibliography.html">Bibliography</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.tsukayasuzuki.com">Pith Films</a>
+          &nbsp;·&nbsp;
+          <a href="./index.html">Marketing site</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

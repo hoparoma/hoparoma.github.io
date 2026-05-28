@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Peer-reviewed source bibliography for Hoparoma — thiol biotransformation chemistry, hop varietal analysis, and yeast β-lyase activity research used in the prediction engine." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Hoparoma · Source Bibliography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --hop-green: #5e9522;
+        --hop-green-deep: #3a6700;
+        --carbon: #1a1a1a;
+        --carbon-soft: #2f3130;
+        --vellum: #f9f9f8;
+        --vellum-warm: #f3f4f3;
+        --tech-gray: #8c8c8c;
+        --hairline: #e5e5e5;
+        --white: #ffffff;
+        --space-1: 8px; --space-2: 16px; --space-3: 24px;
+        --space-4: 32px; --space-5: 48px; --space-6: 64px;
+        --space-7: 96px; --space-8: 128px;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: "Hanken Grotesk", -apple-system, sans-serif;
+        background: var(--vellum);
+        color: var(--carbon);
+        font-size: 17px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      .container {
+        max-width: 880px;
+        margin-inline: auto;
+        padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 64px);
+      }
+      .eyebrow {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--hop-green);
+        display: inline-block;
+        margin-bottom: var(--space-3);
+      }
+      h1 {
+        font-family: Inter, sans-serif;
+        font-size: clamp(32px, 4.5vw, 48px);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: var(--space-3);
+      }
+      .lead {
+        font-size: 19px;
+        color: var(--carbon-soft);
+        line-height: 1.55;
+        max-width: 640px;
+        margin-bottom: var(--space-6);
+      }
+      h2 {
+        font-family: Inter, sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: var(--space-6) 0 var(--space-3);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--hairline);
+      }
+      h2:first-of-type { padding-top: 0; border-top: none; margin-top: 0; }
+      .citation {
+        margin-bottom: var(--space-3);
+        padding-bottom: var(--space-3);
+        border-bottom: 1px solid var(--hairline);
+      }
+      .citation:last-child { border-bottom: none; }
+      .citation__authors {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        color: var(--carbon);
+      }
+      .citation__year {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        color: var(--tech-gray);
+        margin-left: 6px;
+      }
+      .citation__title {
+        font-size: 16px;
+        color: var(--carbon-soft);
+        margin-top: 4px;
+        font-style: italic;
+      }
+      .citation__venue {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--tech-gray);
+        margin-top: 6px;
+        letter-spacing: 0.04em;
+      }
+      .citation__role {
+        font-size: 14px;
+        color: var(--carbon-soft);
+        margin-top: 8px;
+        line-height: 1.5;
+      }
+      .citation__role::before { content: "→ "; color: var(--hop-green); }
+      .data-source {
+        margin-bottom: var(--space-3);
+        padding-bottom: var(--space-3);
+        border-bottom: 1px solid var(--hairline);
+      }
+      .data-source__org {
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+      }
+      .data-source__note {
+        font-size: 14px;
+        color: var(--carbon-soft);
+        margin-top: 4px;
+        line-height: 1.55;
+      }
+      footer {
+        margin-top: var(--space-7);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--hairline);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--tech-gray);
+        letter-spacing: 0.04em;
+        line-height: 1.7;
+      }
+      footer a {
+        color: var(--hop-green);
+        text-decoration: none;
+        border-bottom: 1px solid var(--hairline);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="eyebrow">Editorial Press Kit · Supplemental Materials</span>
+      <h1>Source bibliography.</h1>
+      <p class="lead">
+        Hoparoma's prediction model is built on peer-reviewed research and lot-level data sources from major hop suppliers. This page lists the primary citations underpinning the four-axis thiol biotransformation engine.
+      </p>
+
+      <h2>Thiol biotransformation chemistry</h2>
+
+      <div class="citation">
+        <span class="citation__authors">Sasaki, K. et al.</span><span class="citation__year">2008</span>
+        <div class="citation__title">Thiol precursor pathways in hop varietals — biosynthesis and biotransformation routes.</div>
+        <div class="citation__venue">ISHS Acta Horticulturae · International Society for Horticultural Science</div>
+        <div class="citation__role">Foundational paper for Hoparoma's identification of polyfunctional thiol precursors (3MH, 3MHA, 4MMP) across hop varieties.</div>
+      </div>
+
+      <div class="citation">
+        <span class="citation__authors">Sharp, D. C.</span><span class="citation__year">2021</span>
+        <div class="citation__title">Quantifying 3MH expression and varietal contribution across the contemporary American IPA hop palette.</div>
+        <div class="citation__venue">MBAA Technical Quarterly · Master Brewers Association of the Americas</div>
+        <div class="citation__role">Source for the per-variety thiol quantification range used in Hoparoma's tier-1 hop catalog (Citra, Cascade, Chinook, Galaxy, Vic Secret, Eclipse, Nelson Sauvin, Strata).</div>
+      </div>
+
+      <div class="citation">
+        <span class="citation__authors">Brauwelt / Hopsteiner</span><span class="citation__year">2025</span>
+        <div class="citation__title">LC-MS/MS chromatographic methodology for crop-year hop oil and thiol precursor analysis.</div>
+        <div class="citation__venue">Brauwelt International · Hopsteiner Lab Research Brief</div>
+        <div class="citation__role">Analytical methodology source for Hoparoma's crop-year 2024 / 2025 / 2026 lot-level data integration. Cross-references the Hop Alliance and Yakima Chief lot CoAs cited below.</div>
+      </div>
+
+      <h2>Yeast β-lyase activity (Pro tier classification)</h2>
+
+      <div class="citation">
+        <span class="citation__authors">Roland, A. et al.</span><span class="citation__year">2016, 2018</span>
+        <div class="citation__title">Polyfunctional thiol release by Saccharomyces cerevisiae β-lyase across commercial fermentation strains.</div>
+        <div class="citation__venue">Journal of Agricultural and Food Chemistry · Two-paper series</div>
+        <div class="citation__role">Source for Hoparoma's β-lyase activity threshold (≥0.85) used to classify six Pro-tier yeast strains: helio_gazer, berkeley_tropics, thiol_libre, cosmic_punch, wlp077_tropicale, star_party.</div>
+      </div>
+
+      <div class="citation">
+        <span class="citation__authors">Chenot, C. et al.</span><span class="citation__year">2019, 2021, 2023</span>
+        <div class="citation__title">Yeast biotransformation of bound cysteine and glutathione precursors during fermentation — quantitative analysis across strain expression profiles.</div>
+        <div class="citation__venue">Journal of the American Society of Brewing Chemists (JASBC) · Three-paper series</div>
+        <div class="citation__role">Extended dataset for Hoparoma's per-strain β-lyase activity scoring — including the 2023 paper on special malt thiol precursor profiles that informs the malt biotransformation axis.</div>
+      </div>
+
+      <div class="citation">
+        <span class="citation__authors">Hellwig, M. & Henle, T.</span><span class="citation__year">2022</span>
+        <div class="citation__title">Kilning oxidative changes and thiol group availability across EBC color spectrum.</div>
+        <div class="citation__venue">European Food Research and Technology · DOI:10.1007/s00217-022-04144-2</div>
+        <div class="citation__role">Source for Hoparoma's malt thiol precursor classification (EBC &lt; 10 high precursor / EBC &gt; 500 negligible). Underpins the malt-axis scoring across 38 malt types.</div>
+      </div>
+
+      <div class="citation">
+        <span class="citation__authors">Molitor, A. et al.</span><span class="citation__year">2022</span>
+        <div class="citation__title">Free thiol generation in beer from genetically modified yeast plus barley malt — sorghum and wheat comparison.</div>
+        <div class="citation__venue">Fermentation (MDPI) · 8:370</div>
+        <div class="citation__role">Source for Hoparoma's non-barley grain precursor classification (wheat / rye / oat thiol contribution).</div>
+      </div>
+
+      <h2>Lot-level analytical data sources</h2>
+
+      <div class="data-source">
+        <div class="data-source__org">Hop Alliance</div>
+        <div class="data-source__note">Lot-level Certificates of Analysis for crop years 2024 and 2025. Source for tier-1 variety alpha acid percentages, oil composition, and harvest-specific data points (e.g., Galaxy Lot 94-203-008, Citra Lot PE03316, Cascade Lot CAS25-CLS).</div>
+      </div>
+
+      <div class="data-source">
+        <div class="data-source__org">Yakima Chief Hops</div>
+        <div class="data-source__note">2025 crop report and per-variety lot CoAs for proprietary American hops. Cross-reference source for crop year 2025 alpha acid, oil, and cohumulone data.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="data-source__org">Hopsteiner</div>
+        <div class="data-source__note">2025 lab research brief and per-variety LC-MS/MS thiol precursor analysis. Source for the analytical methodology integrated into Hoparoma's compound µg/L prediction.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="data-source__org">BarthHaas</div>
+        <div class="data-source__note">2024-2025 hop varietal technical sheets for European and American varieties. Source for aggregate-tier hop catalog data (Hallertau Mittelfruh, Saaz, Ekuanot ranges).</div>
+      </div>
+
+      <div class="data-source">
+        <div class="data-source__org">John I. Haas</div>
+        <div class="data-source__note">Proprietary varietal hop research and 2024 USA crop report. Cross-reference source for Cascade, Citra, and Mosaic alpha acid trend data.</div>
+      </div>
+
+      <div class="data-source">
+        <div class="data-source__org">HPA (Hop Products Australia)</div>
+        <div class="data-source__note">2025 Australian crop report. Source for Galaxy, Vic Secret, Eclipse, and Enigma per-lot data.</div>
+      </div>
+
+      <footer>
+        Hoparoma · ArtFactory Inc. · Tokyo · 2026 · Editorial Press Kit Supplemental Material<br />
+        Bibliography compiled May 2026 for the 1.0.5 release. Full DOI links and PDF copies available on request.<br />
+        Press kit: <a href="./editorial-submission.html">editorial-submission.html</a> · Marketing: <a href="./index.html">index.html</a> · Contact: <a href="https://www.tsukayasuzuki.com">Tsukaya Suzuki / Pith Films</a>
+      </footer>
+    </div>
+  </body>
+</html>
