@@ -96,7 +96,7 @@
                 />
               </a>
               <span class="hero__new-tag">
-                NEW IN 1.0.4 · Crop year data · Suggestion engine
+                NEW IN 1.0.5 · Lot-level crop year · BeerXML import
               </span>
             </div>
           </div>
@@ -132,7 +132,7 @@
             <article class="axis-card axis-card--yeast">
               <span class="axis-card__index">01</span>
               <h3 class="axis-card__title">YEAST</h3>
-              <p class="axis-card__fact">21 strains · β-lyase activity rated</p>
+              <p class="axis-card__fact">23 strains · β-lyase activity rated</p>
               <p class="axis-card__body">
                 Cosmic Punch, Helio Gazer, Hornindal Kveik, A04 Barbarian
                 (Conan), Lutra, LalBrew New England. Each strain carries a
@@ -145,7 +145,7 @@
               <span class="axis-card__index">02</span>
               <h3 class="axis-card__title">HOP</h3>
               <p class="axis-card__fact">
-                18 varieties · free thiol potential rated
+                51 varieties · free thiol potential rated
               </p>
               <p class="axis-card__body">
                 Galaxy 0.90, Nelson Sauvin 0.90, Citra 0.75, Mosaic 0.60,
@@ -159,7 +159,7 @@
               <span class="axis-card__index">03</span>
               <h3 class="axis-card__title">MALT</h3>
               <p class="axis-card__fact">
-                38 entries · thiol precursor level rated
+                41 entries · thiol precursor level rated
               </p>
               <p class="axis-card__body">
                 The first brewing app to model malt's thiol contribution. Pale
@@ -354,7 +354,7 @@
             <h2 id="yeast-heading" class="section__title">
               Expanded Yeast Library
             </h2>
-            <p class="library__count">21 strains</p>
+            <p class="library__count">23 strains</p>
             <p class="library__body">
               Every yeast rated for thiol biotransformation activity.
               Availability badges tell you what you can actually source — from
@@ -379,20 +379,21 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 5: Hop Library (NEW for 1.0.4) -->
+      <!-- Section 5: Hop Library -->
       <!-- ============================================================ -->
       <section class="section section--alt" aria-labelledby="hop-heading">
         <div class="container library">
           <div class="library__copy">
-            <span class="new-flag">NEW in 1.0.4</span>
+            <span class="new-flag">UPDATED in 1.0.5</span>
             <h2 id="hop-heading" class="section__title">Expanded Hop Library</h2>
-            <p class="library__count">18 varieties · with crop year data</p>
+            <p class="library__count">51 varieties · 15 with lot-level crop year data</p>
             <p class="library__body">
-              Free thiol potential scored for every variety. 1.0.4 introduces
-              <strong>crop year data</strong> for 24 hop varieties — the 2024
-              vs 2023 crop shift moves free thiol potential by ±5–15% depending
-              on variety, and the AromaCalculator surfaces it directly on the
-              radar chart.
+              Free thiol potential scored for every variety. 1.0.5 introduces
+              <strong>lot-level crop year data</strong> for 15 core varieties —
+              each carries real 2024, 2025, and 2026 analytical lots (alpha
+              acid, total oil, oil composition) you can switch between, so the
+              radar reflects the exact crop you brewed with. Other varieties
+              fall back to 4-year aggregate medians.
             </p>
             <figure class="hop-bars" aria-label="Free thiol potential across hop varieties">
               <figcaption class="hop-bars__title">
@@ -434,8 +435,9 @@
                 <span class="hop-bar__score">0.25</span>
               </div>
               <p class="hop-bars__footnote">
-                Crop year support shifts these values by ±5–15% in 1.0.4.
-                Cascade rises to ~0.65 with the mash hop bonus landing in 1.0.5.
+                Lot-level crop year data shifts these values year over year.
+                Mash-hop additions bank extra thiol precursors that a β-lyase
+                yeast develops during fermentation.
               </p>
             </figure>
           </div>
@@ -451,7 +453,7 @@
             <h2 id="malt-heading" class="section__title">
               Expanded Malt Library
             </h2>
-            <p class="library__count">38 entries</p>
+            <p class="library__count">41 entries</p>
             <p class="library__body">
               <strong
                 >The first brewing app to model malt's thiol contribution.</strong
@@ -578,7 +580,7 @@
           <div class="pricing__intro">
             <h2 id="pricing-heading" class="section__title">Pricing</h2>
             <p class="pricing__lede">
-              Transparent, indie pricing. Use Hoparoma free with up to 3 saved
+              Transparent, indie pricing. Use Hoparoma free with up to 2 saved
               recipes — or unlock the full 4-axis engine.
             </p>
           </div>
@@ -588,7 +590,7 @@
               <div class="pricing-tier__main">
                 <h3>Free</h3>
                 <p>
-                  Core Thiol Forecast, basic recipe management, up to 3 saved
+                  Core Thiol Forecast, basic recipe management, up to 2 saved
                   recipes.
                 </p>
               </div>
@@ -617,7 +619,7 @@
                 <p>Best value for ongoing brewers · 7-day free trial.</p>
               </div>
               <div class="pricing-tier__price">
-                <span class="pricing-tier__amount">$39</span>
+                <span class="pricing-tier__amount">$39.99</span>
                 <span class="pricing-tier__interval">/yr</span>
               </div>
             </li>
@@ -629,7 +631,7 @@
                 <p>Own Hoparoma forever. Support indie development.</p>
               </div>
               <div class="pricing-tier__price">
-                <span class="pricing-tier__amount">$89</span>
+                <span class="pricing-tier__amount">$69.99</span>
               </div>
             </li>
           </ol>
@@ -670,11 +672,11 @@
           <details class="faq__item">
             <summary>How does crop year data work?</summary>
             <p>
-              Hoparoma 1.0.4 includes crop year data for 24 hop varieties.
-              Switching between the 2024 and 2023 crop years shifts free thiol
-              potential by ±5–15% depending on variety, and the
-              AromaCalculator midpoint surfaces this directly on the radar
-              chart.
+              Hoparoma 1.0.5 includes lot-level crop year data for 15 core hop
+              varieties. Each carries real 2024, 2025, and 2026 analytical lots —
+              switching crop year updates alpha acid, total oil, and oil
+              composition, and the forecast on the radar chart follows.
+              Varieties without lot data use 4-year aggregate medians.
             </p>
           </details>
 
