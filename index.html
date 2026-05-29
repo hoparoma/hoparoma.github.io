@@ -56,7 +56,7 @@
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero__bg" aria-hidden="true">
           <img
-            src="/assets/hero-iphone-mockup.png"
+            src="/assets/screenshot_framed/hero-mockup-cropped.png"
             alt=""
             class="hero__bg-image"
           />
@@ -104,29 +104,48 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 2: Thiol Forecast (4-axis grid) -->
+      <!-- Section 2: Aroma Forecast (real-device 7-axis radar) -->
       <!-- ============================================================ -->
-      <section class="section section--axis" aria-labelledby="forecast-heading">
+      <section class="section section--axis" aria-labelledby="aroma-heading">
         <div class="container">
           <figure class="section-feature-photo">
             <img
-              src="/assets/thiol-forecast-hero.png"
-              alt="A hand holding a glass of hazy IPA at a brewery bar, with stainless fermentation tanks softly out of focus in the background"
+              src="/assets/aroma-radar.png"
+              alt="The Hoparoma aroma forecast radar from a real device, plotting a recipe across seven aroma axes — Citrus, Tropical, Floral, Herbal, Spicy, Resin/Pine and Dank/Earthy — with the predicted profile drawn as a filled green polygon"
               loading="lazy"
-              width="1535"
-              height="1024"
+              width="1045"
+              height="880"
             />
             <figcaption class="section-feature-photo__caption">
-              <h2 id="forecast-heading" class="section-feature-photo__title">
-                Thiol Forecast — the 4-axis prediction engine
+              <h2 id="aroma-heading" class="section-feature-photo__title">
+                See your beer before you brew it
               </h2>
               <p class="section-feature-photo__lede">
-                Most brewing apps tell you what hops to use. Hoparoma predicts
-                what your beer will smell like before you brew it, by combining
-                four ingredient layers into one science-honest forecast.
+                From your hops, malt, and yeast, Hoparoma predicts the
+                aroma-compound levels your recipe will produce — then plots the
+                finished profile across seven sensory axes. Know how it will
+                turn out before brew day.
               </p>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 3: Thiol Forecast (4-axis grid) -->
+      <!-- ============================================================ -->
+      <section class="section section--alt" aria-labelledby="forecast-heading">
+        <div class="container">
+          <div class="section__header">
+            <h2 id="forecast-heading" class="section__title">
+              Thiol Forecast — the 4-axis prediction engine
+            </h2>
+            <p class="section__lede">
+              Most brewing apps tell you what hops to use. Hoparoma predicts
+              what your beer will smell like before you brew it, by combining
+              four ingredient layers into one science-honest forecast.
+            </p>
+          </div>
 
           <div class="axis-grid">
             <article class="axis-card axis-card--yeast">
@@ -296,10 +315,10 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 3: Mindful Recipe Presets -->
+      <!-- Section 4: Mindful Recipe Presets -->
       <!-- ============================================================ -->
       <section
-        class="section section--alt"
+        class="section"
         aria-labelledby="mindful-heading"
       >
         <div class="container">
@@ -346,204 +365,177 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 4: Yeast Library -->
+      <!-- Section 5: Ingredient Libraries (Hop + Yeast + Malt) -->
       <!-- ============================================================ -->
-      <section class="section" aria-labelledby="yeast-heading">
-        <div class="container library">
-          <div class="library__copy">
-            <h2 id="yeast-heading" class="section__title">
-              Expanded Yeast Library
-            </h2>
-            <p class="library__count">23 strains</p>
-            <p class="library__body">
-              Every yeast rated for thiol biotransformation activity.
-              Availability badges tell you what you can actually source — from
-              homebrew packs to pro-pitch-only strains.
-            </p>
-            <ul class="library__legend">
-              <li>
-                <span class="badge badge--mainstream">Mainstream</span>
-                <span>11 g / 500 g dry packs or PurePitch / pouch</span>
-              </li>
-              <li>
-                <span class="badge badge--limited">Limited</span>
-                <span>Homebrew packs phased out, active in 0.5 hL pro pitch</span>
-              </li>
-              <li>
-                <span class="badge badge--pro">Pro Pitch Only</span>
-                <span>0.5 hL or 1 BBL, recommended for craft breweries</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================ -->
-      <!-- Section 5: Hop Library -->
-      <!-- ============================================================ -->
-      <section class="section section--alt" aria-labelledby="hop-heading">
-        <div class="container library">
-          <div class="library__copy">
+      <section class="section section--alt" aria-labelledby="library-heading">
+        <div class="container">
+          <div class="section__header">
             <span class="new-flag">UPDATED in 1.0.5</span>
-            <h2 id="hop-heading" class="section__title">Expanded Hop Library</h2>
-            <p class="library__count">51 varieties · 15 with lot-level crop year data</p>
-            <p class="library__body">
-              Free thiol potential scored for every variety. 1.0.5 introduces
-              <strong>lot-level crop year data</strong> for 15 core varieties —
-              each carries real 2024, 2025, and 2026 analytical lots (alpha
-              acid, total oil, oil composition) you can switch between, so the
-              radar reflects the exact crop you brewed with. Other varieties
-              fall back to 4-year aggregate medians.
-            </p>
-            <figure class="hop-bars" aria-label="Free thiol potential across hop varieties">
-              <figcaption class="hop-bars__title">
-                Free thiol potential · internal medians
-              </figcaption>
-              <div class="hop-bar">
-                <span class="hop-bar__name">Galaxy</span>
-                <span class="hop-bar__track">
-                  <span class="hop-bar__fill" style="width: 90%"></span>
-                </span>
-                <span class="hop-bar__score">0.90</span>
-              </div>
-              <div class="hop-bar">
-                <span class="hop-bar__name">Nelson Sauvin</span>
-                <span class="hop-bar__track">
-                  <span class="hop-bar__fill" style="width: 90%"></span>
-                </span>
-                <span class="hop-bar__score">0.90</span>
-              </div>
-              <div class="hop-bar">
-                <span class="hop-bar__name">Citra</span>
-                <span class="hop-bar__track">
-                  <span class="hop-bar__fill" style="width: 75%"></span>
-                </span>
-                <span class="hop-bar__score">0.75</span>
-              </div>
-              <div class="hop-bar">
-                <span class="hop-bar__name">Mosaic</span>
-                <span class="hop-bar__track">
-                  <span class="hop-bar__fill" style="width: 60%"></span>
-                </span>
-                <span class="hop-bar__score">0.60</span>
-              </div>
-              <div class="hop-bar">
-                <span class="hop-bar__name">Cascade</span>
-                <span class="hop-bar__track">
-                  <span class="hop-bar__fill" style="width: 25%"></span>
-                </span>
-                <span class="hop-bar__score">0.25</span>
-              </div>
-              <p class="hop-bars__footnote">
-                Lot-level crop year data shifts these values year over year.
-                Mash-hop additions bank extra thiol precursors that a β-lyase
-                yeast develops during fermentation.
-              </p>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================ -->
-      <!-- Section 6: Malt Library -->
-      <!-- ============================================================ -->
-      <section class="section" aria-labelledby="malt-heading">
-        <div class="container library">
-          <div class="library__copy">
-            <h2 id="malt-heading" class="section__title">
-              Expanded Malt Library
+            <h2 id="library-heading" class="section__title">
+              Three libraries, one forecast
             </h2>
-            <p class="library__count">41 entries</p>
-            <p class="library__body">
-              <strong
-                >The first brewing app to model malt's thiol contribution.</strong
-              >
-              Brewfather and BeerSmith do not capture malt thiol precursor
-              metadata. Hoparoma does.
+            <p class="section__lede">
+              Every hop, yeast, and malt is rated for its thiol contribution —
+              the data layer the forecast is built on.
             </p>
-            <figure class="malt-spectrum" aria-label="Malt thiol precursor concentration spectrum">
-              <figcaption class="malt-spectrum__title">
-                Glut-3MH precursor · concentration spectrum
-              </figcaption>
-              <div class="malt-spectrum__bar">
-                <span class="malt-spectrum__marker" style="left: 4%">
-                  <span class="malt-spectrum__dot"></span>
-                  <span class="malt-spectrum__label">Chocolate</span>
-                </span>
-                <span class="malt-spectrum__marker" style="left: 22%">
-                  <span class="malt-spectrum__dot"></span>
-                  <span class="malt-spectrum__label">Munich</span>
-                </span>
-                <span class="malt-spectrum__marker" style="left: 52%">
-                  <span class="malt-spectrum__dot"></span>
-                  <span class="malt-spectrum__label">CaraMunich</span>
-                </span>
-                <span class="malt-spectrum__marker" style="left: 88%">
-                  <span class="malt-spectrum__dot"></span>
-                  <span class="malt-spectrum__label">Pale 2-row</span>
-                </span>
-              </div>
-              <div class="malt-spectrum__scale">
-                <span>NEGLIGIBLE</span>
-                <span>LOW</span>
-                <span>MEDIUM</span>
-                <span>HIGH</span>
-              </div>
-              <div class="malt-spectrum__numbers">
-                <span>thermal · 0</span>
-                <span>~5–30 µg/kg</span>
-                <span>~30–100 µg/kg</span>
-                <span>~100–700 µg/kg</span>
-              </div>
-            </figure>
+          </div>
+
+          <div class="library">
+            <!-- Hop (lead, with chart) -->
+            <div class="library__copy">
+              <h3 class="library__subtitle">Hops</h3>
+              <p class="library__count">
+                51 varieties · 15 with lot-level crop year data
+              </p>
+              <p class="library__body">
+                Free thiol potential scored for every variety. 1.0.5 introduces
+                <strong>lot-level crop year data</strong> for 15 core varieties —
+                each carries real 2024, 2025, and 2026 analytical lots (alpha
+                acid, total oil, oil composition) you can switch between, so the
+                radar reflects the exact crop you brewed with. Other varieties
+                fall back to 4-year aggregate medians.
+              </p>
+              <figure class="hop-bars" aria-label="Free thiol potential across hop varieties">
+                <figcaption class="hop-bars__title">
+                  Free thiol potential · internal medians
+                </figcaption>
+                <div class="hop-bar">
+                  <span class="hop-bar__name">Galaxy</span>
+                  <span class="hop-bar__track">
+                    <span class="hop-bar__fill" style="width: 90%"></span>
+                  </span>
+                  <span class="hop-bar__score">0.90</span>
+                </div>
+                <div class="hop-bar">
+                  <span class="hop-bar__name">Nelson Sauvin</span>
+                  <span class="hop-bar__track">
+                    <span class="hop-bar__fill" style="width: 90%"></span>
+                  </span>
+                  <span class="hop-bar__score">0.90</span>
+                </div>
+                <div class="hop-bar">
+                  <span class="hop-bar__name">Citra</span>
+                  <span class="hop-bar__track">
+                    <span class="hop-bar__fill" style="width: 75%"></span>
+                  </span>
+                  <span class="hop-bar__score">0.75</span>
+                </div>
+                <div class="hop-bar">
+                  <span class="hop-bar__name">Mosaic</span>
+                  <span class="hop-bar__track">
+                    <span class="hop-bar__fill" style="width: 60%"></span>
+                  </span>
+                  <span class="hop-bar__score">0.60</span>
+                </div>
+                <div class="hop-bar">
+                  <span class="hop-bar__name">Cascade</span>
+                  <span class="hop-bar__track">
+                    <span class="hop-bar__fill" style="width: 25%"></span>
+                  </span>
+                  <span class="hop-bar__score">0.25</span>
+                </div>
+                <p class="hop-bars__footnote">
+                  Lot-level crop year data shifts these values year over year.
+                  Mash-hop additions bank extra thiol precursors that a β-lyase
+                  yeast develops during fermentation.
+                </p>
+              </figure>
+            </div>
+
+            <!-- Yeast (text only) -->
+            <div class="library__copy">
+              <h3 class="library__subtitle">Yeast</h3>
+              <p class="library__count">23 strains</p>
+              <p class="library__body">
+                Every yeast rated for thiol biotransformation activity.
+                Availability badges tell you what you can actually source — from
+                homebrew packs to pro-pitch-only strains.
+              </p>
+              <ul class="library__legend">
+                <li>
+                  <span class="badge badge--mainstream">Mainstream</span>
+                  <span>11 g / 500 g dry packs or PurePitch / pouch</span>
+                </li>
+                <li>
+                  <span class="badge badge--limited">Limited</span>
+                  <span>Homebrew packs phased out, active in 0.5 hL pro pitch</span>
+                </li>
+                <li>
+                  <span class="badge badge--pro">Pro Pitch Only</span>
+                  <span>0.5 hL or 1 BBL, recommended for craft breweries</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Malt (text only) -->
+            <div class="library__copy">
+              <h3 class="library__subtitle">Malt</h3>
+              <p class="library__count">41 entries</p>
+              <p class="library__body">
+                <strong
+                  >The first brewing app to model malt's thiol
+                  contribution.</strong
+                >
+                Brewfather and BeerSmith do not capture malt thiol precursor
+                metadata. Hoparoma does — Pale 2-row holds up to ~700 µg/kg of
+                bound 3MH precursor, while roasted malts are thermally degraded
+                to near zero.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 7: Apple Native by Design -->
+      <!-- Section 6: Apple Native by Design -->
       <!-- ============================================================ -->
       <section
-        class="section section--alt"
+        class="section"
         aria-labelledby="apple-native-heading"
       >
         <div class="container">
           <div class="section__header">
             <span class="eyebrow-pill eyebrow-pill--ios">
-              BUILT WITH iOS 26 LIQUIDGLASS REFRACTION
+              NATIVE SWIFTUI · iOS 26 LIQUID GLASS
             </span>
             <h2 id="apple-native-heading" class="section__title">
               Apple Native by Design
             </h2>
             <p class="section__lede">
-              Built natively for Apple platforms. Hoparoma fits into how you
-              already use your devices.
+              Built natively in SwiftUI for iPhone and iPad — with Apple's
+              latest design language and a strict on-device privacy model.
             </p>
           </div>
 
           <ul class="apple-native__list">
             <li>
-              <h3>App Intents &amp; Siri</h3>
-              <p>"Hey Siri, what's my latest thiol forecast?"</p>
+              <h3>Built in SwiftUI</h3>
+              <p>100% native — no web views, no cross-platform wrapper.</p>
             </li>
             <li>
-              <h3>watchOS Live Activities</h3>
-              <p>Fermentation progress on your wrist.</p>
+              <h3>Liquid Glass on iOS 26</h3>
+              <p>
+                Apple's Liquid Glass refraction, with a clean fallback to iOS
+                17.
+              </p>
             </li>
             <li>
-              <h3>Smart Stack widgets</h3>
-              <p>Hop schedule reminders on your home screen.</p>
+              <h3>iPhone &amp; iPad</h3>
+              <p>
+                One universal app. The radar and builder reflow for the larger
+                screen.
+              </p>
             </li>
             <li>
               <h3>Local-first privacy</h3>
-              <p>All on device. No account required.</p>
+              <p>All on device. No account, no sign-in, no tracking.</p>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 8: Designed in Tokyo -->
+      <!-- Section 7: Designed in Tokyo -->
       <!-- ============================================================ -->
       <section class="section section--tokyo" aria-labelledby="tokyo-heading">
         <div class="container tokyo">
@@ -573,7 +565,7 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- Section 9: Pricing -->
+      <!-- Section 8: Pricing -->
       <!-- ============================================================ -->
       <section class="section" aria-labelledby="pricing-heading">
         <div class="container pricing">
