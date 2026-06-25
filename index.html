@@ -6,13 +6,13 @@
     <title>Hoparoma — Brew tropical IPA simply.</title>
     <meta
       name="description"
-      content="Hoparoma is an iOS app for IPA brewers. The first to predict tropical thiol expression through a 4-axis Thiol Forecast — yeast × hop × malt × Phantasm. Built on peer-reviewed research, designed in Tokyo."
+      content="Hoparoma is an iOS app for IPA brewers: a 4-axis Thiol Forecast (yeast × hop × malt × Phantasm), plus on-device Apple Intelligence that writes the tasting note and co-pilots your recipe. AI needs iOS 26 on a supported iPhone. Built on peer-reviewed research, designed in Tokyo."
     />
     <meta name="color-scheme" content="light" />
     <meta property="og:title" content="Hoparoma — Brew tropical IPA simply." />
     <meta
       property="og:description"
-      content="The first iOS app to predict tropical thiol expression in modern IPAs. A 4-axis Thiol Forecast engine, built on peer-reviewed research."
+      content="Predict tropical thiol expression in modern IPAs with a 4-axis Thiol Forecast — now with on-device Apple Intelligence that writes the tasting note and co-pilots your recipe. AI needs iOS 26 on a supported iPhone."
     />
     <meta property="og:image" content="/assets/icon-1024.png" />
     <meta property="og:type" content="website" />
@@ -96,7 +96,10 @@
                 />
               </a>
               <span class="hero__new-tag">
-                NEW IN 1.0.5 · Lot-level crop year · BeerXML import
+                NEW IN 2.0 · On-device AI · Flavor Forecast + co-pilot
+              </span>
+              <span class="hero__new-note">
+                AI features need iOS 26 on a supported iPhone.
               </span>
             </div>
           </div>
@@ -315,6 +318,106 @@
       </section>
 
       <!-- ============================================================ -->
+      <!-- Section 3.5: AI — Flavor Forecast + co-pilot (NEW in 2.0) -->
+      <!-- Apple Intelligence on-device. Narrative + recipe co-pilot. -->
+      <!-- ============================================================ -->
+      <section class="section section--ai" aria-labelledby="ai-heading">
+        <div class="container">
+          <div class="ai-section__header">
+            <span class="eyebrow-pill eyebrow-pill--ai">
+              <span class="eyebrow-pill__dot" aria-hidden="true"></span>
+              New in 2.0 · Apple Intelligence
+            </span>
+            <h2 id="ai-heading" class="ai-section__title">
+              Your forecast, in words —<br />
+              and a co-pilot that tunes it.
+            </h2>
+            <p class="ai-section__lede">
+              2.0 adds on-device AI, powered by Apple Intelligence. It reads
+              the same 4-axis forecast and turns it into a tasting note you can
+              actually read — then helps you steer the recipe toward the beer
+              you're after.
+            </p>
+          </div>
+
+          <div class="ai-grid">
+            <article class="ai-card">
+              <p class="ai-card__badge">
+                <span class="ai-card__spark" aria-hidden="true">✦</span>
+                Flavor Forecast
+              </p>
+              <h3 class="ai-card__title">
+                Reads your recipe. Writes the tasting note.
+              </h3>
+              <p class="ai-card__body">
+                Apple Intelligence turns your predicted profile into a short,
+                plain-language tasting note — the headline aroma, what sits
+                underneath, and the finish. Generated entirely on device.
+              </p>
+              <figure class="ai-note">
+                <span class="ai-note__tag">Sample output</span>
+                <p class="ai-note__headline">
+                  Pillowy passionfruit over soft citrus
+                </p>
+                <p class="ai-note__body">
+                  Galaxy and Citra push tropical thiols to the front, while a
+                  β-lyase yeast keeps the haze juicy rather than sharp.
+                </p>
+                <figcaption class="ai-note__finish">
+                  Finish — clean, lightly dank, low bitterness.
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="ai-card">
+              <p class="ai-card__badge">
+                <span class="ai-card__spark" aria-hidden="true">✦</span>
+                AI co-pilot
+              </p>
+              <h3 class="ai-card__title">
+                Tell it the beer you want. It steers the recipe.
+              </h3>
+              <p class="ai-card__body">
+                Say "more tropical, but not too bitter." The co-pilot reads
+                your current build and proposes options — but every number
+                comes from Hoparoma's prediction engine, not the language
+                model. Each option shows a before/after radar and an honest
+                trade-off.
+              </p>
+              <ul class="ai-chips" aria-label="Example goals you can ask for">
+                <li>More tropical</li>
+                <li>Raise the ABV</li>
+                <li>Like a West Coast IPA</li>
+              </ul>
+              <p class="ai-card__meta">
+                Free · 5 AI sessions &nbsp;|&nbsp; Pro · unlimited
+              </p>
+            </article>
+          </div>
+
+          <figure class="ai-shot">
+            <img
+              src="/assets/screenshot-ai-copilot.png"
+              alt="The Hoparoma AI co-pilot on iPhone: a What are you after prompt with the goal More tropical, then a proposed option to boost an existing hop, shown with a before/after aroma radar, the exact change (set Galaxy to 125g), and an honest trade-off."
+              width="660"
+              height="1434"
+              loading="lazy"
+            />
+            <figcaption class="ai-shot__caption">
+              The co-pilot, on device — goal in, options out, every number from
+              the engine.
+            </figcaption>
+          </figure>
+
+          <p class="ai-footnote">
+            Flavor Forecast and the AI co-pilot run on Apple Intelligence and
+            need iOS 26 on a supported iPhone. On other devices Hoparoma tells
+            you plainly — and the full 4-axis forecast still works everywhere.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
       <!-- Section 4: Mindful Recipe Presets -->
       <!-- ============================================================ -->
       <section
@@ -370,7 +473,7 @@
       <section class="section section--alt" aria-labelledby="library-heading">
         <div class="container">
           <div class="section__header">
-            <span class="new-flag">UPDATED in 1.0.5</span>
+            <span class="new-flag">Lot-level crop year data</span>
             <h2 id="library-heading" class="section__title">
               Three libraries, one forecast
             </h2>
@@ -388,7 +491,7 @@
                 51 varieties · 15 with lot-level crop year data
               </p>
               <p class="library__body">
-                Free thiol potential scored for every variety. 1.0.5 introduces
+                Free thiol potential scored for every variety. Hoparoma includes
                 <strong>lot-level crop year data</strong> for 15 core varieties —
                 each carries real 2024, 2025, and 2026 analytical lots (alpha
                 acid, total oil, oil composition) you can switch between, so the
@@ -583,7 +686,7 @@
                 <h3>Free</h3>
                 <p>
                   Core Thiol Forecast, basic recipe management, up to 2 saved
-                  recipes.
+                  recipes, and 5 AI co-pilot sessions to try.
                 </p>
               </div>
               <div class="pricing-tier__price">
@@ -595,8 +698,8 @@
               <div class="pricing-tier__main">
                 <h3>Pro Monthly</h3>
                 <p>
-                  Unlimited recipes, 4-axis advice, history compare,
-                  optimization mode.
+                  Unlimited recipes, unlimited AI co-pilot, 4-axis advice,
+                  history compare.
                 </p>
               </div>
               <div class="pricing-tier__price">
@@ -664,7 +767,7 @@
           <details class="faq__item">
             <summary>How does crop year data work?</summary>
             <p>
-              Hoparoma 1.0.5 includes lot-level crop year data for 15 core hop
+              Hoparoma includes lot-level crop year data for 15 core hop
               varieties. Each carries real 2024, 2025, and 2026 analytical lots —
               switching crop year updates alpha acid, total oil, and oil
               composition, and the forecast on the radar chart follows.
@@ -683,6 +786,56 @@
               don't crowd out yeast, malt, or booster ideas.
             </p>
           </details>
+
+          <details class="faq__item">
+            <summary>Do I need a specific iPhone for the AI features?</summary>
+            <p>
+              Flavor Forecast and the AI co-pilot run on Apple Intelligence,
+              which needs iOS 26 on a supported iPhone. Where it isn't
+              available, Hoparoma says so plainly instead of hiding the
+              button — and the full 4-axis Thiol Forecast, libraries, and
+              tasting log work on every supported device, AI or not.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- Section 11: Build notes (email capture · Buttondown JS-free form) -->
+      <!-- ============================================================ -->
+      <section class="section section--signup" aria-labelledby="signup-heading">
+        <div class="container">
+          <div class="signup">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-pill__dot" aria-hidden="true"></span>
+              Build notes · No spam
+            </span>
+            <h2 id="signup-heading" class="signup__title">Follow the build</h2>
+            <p class="signup__lede">
+              I'm building Hoparoma in the open. Occasional notes on hop aroma
+              chemistry, what I get wrong and fix, and a heads-up when a new
+              version ships. No spam, unsubscribe anytime.
+            </p>
+            <form
+              class="signup__form"
+              action="https://buttondown.com/api/emails/embed-subscribe/hoparoma"
+              method="post"
+            >
+              <label class="signup__label" for="signup-email">Email address</label>
+              <input
+                class="signup__input"
+                id="signup-email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="you@example.com"
+              />
+              <input type="hidden" name="embed" value="1" />
+              <input type="hidden" name="tag" value="hoparoma-site" />
+              <button class="signup__button" type="submit">Get notified</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
