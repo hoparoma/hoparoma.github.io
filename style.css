@@ -1838,3 +1838,74 @@ button {
     scroll-behavior: auto;
   }
 }
+
+/* ----------------------------------------------------------------
+   Legal & Support pages (privacy.html / terms.html / support.html)
+   Restored 2026-06-27: these class styles were dropped in the 1.0.4
+   redesign (09bca2b), which left the legal/support pages unstyled
+   ("under construction" look). Remapped from the original init rules
+   to the current design tokens. These selectors are NOT used by
+   index.html, so the homepage is unaffected.
+------------------------------------------------------------------ */
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-label-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3);
+  font-weight: 600;
+}
+
+.lede {
+  font-size: var(--text-body-lg);
+  color: var(--color-on-surface-muted);
+  max-width: 52ch;
+  margin: var(--space-4) 0 var(--space-8);
+}
+
+.doc-meta {
+  font-size: var(--text-label-sm);
+  color: var(--color-on-surface-muted);
+  margin-bottom: var(--space-section);
+}
+.doc-meta strong {
+  color: var(--color-on-surface);
+  font-weight: 600;
+}
+
+.lang-section {
+  padding-top: var(--space-8);
+}
+.lang-section + .lang-section {
+  border-top: 1px solid var(--color-outline-soft);
+  margin-top: var(--space-section);
+}
+
+.contact-card {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-soft);
+  border-radius: var(--radius-lg);
+  margin: var(--space-8) 0;
+}
+.contact-card dt {
+  font-size: var(--text-label-sm);
+  color: var(--color-on-surface-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: var(--space-4);
+}
+.contact-card dt:first-child {
+  margin-top: 0;
+}
+.contact-card dd {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-body-lg);
+}
+
+footer.site-footer .footer-links {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
