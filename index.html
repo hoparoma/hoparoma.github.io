@@ -16,7 +16,8 @@
     />
     <meta property="og:image" content="/assets/icon-1024.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hoparoma.github.io/" />
+    <meta property="og:url" content="https://hoparoma.com/" />
+    <link rel="canonical" href="https://hoparoma.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/assets/icon-512.png" />
     <link rel="apple-touch-icon" href="/assets/icon-512.png" />
@@ -26,17 +27,19 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="ref.css?v=5" />
   </head>
   <body>
     <header class="site-header" aria-label="Main">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="/" class="site-nav__link site-nav__link--active">Home</a>
+          <a href="/hops/" class="site-nav__link">Hops</a>
+          <a href="/yeast/" class="site-nav__link">Yeast</a>
+          <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
+          <a href="/sources/" class="site-nav__link">Sources</a>
           <a href="/support.html" class="site-nav__link">Support</a>
-          <a href="/privacy.html" class="site-nav__link">Privacy</a>
-          <a href="/terms.html" class="site-nav__link">Terms</a>
         </nav>
         <a
           href="https://apps.apple.com/app/hoparoma/id6764503200"
@@ -102,6 +105,54 @@
       </section>
 
       <!-- ============================================================ -->
+      <!-- Section 1.5: Reference library entrance (hops / yeast / malt) -->
+      <!-- ============================================================ -->
+      <section class="section section--library-entry" aria-labelledby="library-entry-heading">
+        <div class="container">
+          <div class="section__header">
+            <span class="new-flag">Free reference library</span>
+            <h2 id="library-entry-heading" class="section__title">
+              The data behind the forecast, open to everyone
+            </h2>
+            <p class="section__lede">
+              Supplier brewing values, bound-thiol ratings, crop-year lots, and
+              the yeast and malt tables Hoparoma runs on. Sourced,
+              machine-readable, no sign-up.
+            </p>
+          </div>
+          <div class="entry-grid">
+            <a class="entry-card" href="/hops/">
+              <span class="entry-card__count">70 hop varieties</span>
+              <span class="entry-card__title">Oils, thiol potential, crop-year lots</span>
+              <span class="entry-card__body">
+                Alpha, oil composition, 3MH and 4MMP precursor tiers, and lot
+                certificates for 15 core varieties across 2024 to 2026.
+              </span>
+              <span class="entry-card__cta">Browse hops</span>
+            </a>
+            <a class="entry-card" href="/yeast/">
+              <span class="entry-card__count">29 yeast strains</span>
+              <span class="entry-card__title">Rated for thiol release</span>
+              <span class="entry-card__body">
+                A three-step β-lyase rating for every strain, with the
+                manufacturer trials and papers behind the thiol-forward ones.
+              </span>
+              <span class="entry-card__cta">Browse yeast</span>
+            </a>
+            <a class="entry-card" href="/malt/thiol-precursors/">
+              <span class="entry-card__count">40 malts and grains</span>
+              <span class="entry-card__title">Thiol precursor levels</span>
+              <span class="entry-card__body">
+                Which grains carry bound 3MH precursors, which kilning destroys
+                them, and the three papers that measured it.
+              </span>
+              <span class="entry-card__cta">See the malt table</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
       <!-- Section 2: Aroma Forecast (real-device 7-axis radar) -->
       <!-- ============================================================ -->
       <section class="section section--axis" aria-labelledby="aroma-heading">
@@ -149,12 +200,12 @@
             <article class="axis-card axis-card--yeast">
               <span class="axis-card__index">01</span>
               <h3 class="axis-card__title">YEAST</h3>
-              <p class="axis-card__fact">23 strains · β-lyase activity rated</p>
+              <p class="axis-card__fact">29 strains · β-lyase level rated</p>
               <p class="axis-card__body">
-                Cosmic Punch, Helio Gazer, Hornindal Kveik, A04 Barbarian
-                (Conan), Lutra, LalBrew New England. Each strain carries a
-                thiol biotransformation activity score (0–1.0) that gates how
-                much hop and malt thiol gets released.
+                Cosmic Punch, Helio Gazer, WLP077 Tropicale, Thiol Libre,
+                Pomona, London III and Conan lineages. Every strain is rated
+                low, medium, or high for the enzyme that frees bound thiols.
+                <a href="/yeast/">See the yeast table</a>.
               </p>
             </article>
 
@@ -162,13 +213,13 @@
               <span class="axis-card__index">02</span>
               <h3 class="axis-card__title">HOP</h3>
               <p class="axis-card__fact">
-                51 varieties · free thiol potential rated
+                70 varieties · bound thiol precursors rated
               </p>
               <p class="axis-card__body">
-                Galaxy 0.90, Nelson Sauvin 0.90, Citra 0.75, Mosaic 0.60,
-                Cascade 0.25. Free thiol scoring based on internal medians from
-                Yakima Chief, Hop Products Australia, and brewer community
-                data.
+                Galaxy, Nelson Sauvin, Citra, Mosaic, and Riwaka rate high for
+                3MH-family or 4MMP precursors; Cascade and the noble hops rate
+                low. Ratings draw on supplier data and published thiol
+                research. <a href="/hops/">Browse the hop library</a>.
               </p>
             </article>
 
@@ -176,14 +227,14 @@
               <span class="axis-card__index">03</span>
               <h3 class="axis-card__title">MALT</h3>
               <p class="axis-card__fact">
-                41 entries · thiol precursor level rated
+                40 malts and grains · thiol precursor level rated
               </p>
               <p class="axis-card__body">
                 Hoparoma models malt's thiol contribution — the layer most
-                apps leave out. Pale
-                2-row holds up to ~700 µg/kg of bound 3MH precursor. Roasted
-                malts are thermally degraded; wheat, oat, and rye carry low
-                non-barley precursor.
+                apps leave out. Pale barley malt carries bound 3MH precursor
+                in the hundreds of µg/kg; roasting destroys it; wheat, oat,
+                and rye carry little.
+                <a href="/malt/thiol-precursors/">See the malt table</a>.
               </p>
             </article>
 
@@ -300,14 +351,15 @@
           </figure>
 
           <div class="science-block">
-            <h3 class="science-block__title">The science behind the forecast</h3>
+            <h3 class="science-block__title">Research basis</h3>
             <p class="science-block__body">
-              Built on peer-reviewed research from MDPI Fermentation (2022),
-              Springer EFR&amp;T (2022), DIAL UCL (2023), and PMC 9329171
-              (2024). Brewfather and BeerSmith model hop chemistry; Hoparoma
-              integrates yeast × hop × malt × adjunct into a single
-              thiol expression engine — including malt thiol precursor data most
-              apps leave out.
+              Built on peer-reviewed thiol and hop-aroma research (Chenot et
+              al. 2019–2023, Roland et al. 2016–2017, Fleischer &amp; Hellwig 2022,
+              Molitor et al. 2022, Lafontaine &amp; Shellhammer 2018) and on
+              supplier lot data. Most recipe apps model hop chemistry alone;
+              Hoparoma models yeast × hop × malt × adjunct together, and
+              publishes the data it runs on.
+              <a href="/sources/">Full source list</a>.
             </p>
           </div>
         </div>
@@ -484,59 +536,34 @@
             <div class="library__copy">
               <h3 class="library__subtitle">Hops</h3>
               <p class="library__count">
-                51 varieties · 15 with lot-level crop year data
+                70 varieties · 15 with lot-level crop year data
               </p>
               <p class="library__body">
-                Free thiol potential scored for every variety. Hoparoma includes
+                Bound thiol precursors rated for every variety. Hoparoma includes
                 <strong>lot-level crop year data</strong> for 15 core varieties —
                 each carries real 2024, 2025, and 2026 analytical lots (alpha
                 acid, total oil, oil composition) you can switch between, so the
                 radar reflects the exact crop you brewed with. Other varieties
-                fall back to 4-year aggregate medians.
+                fall back to 4-year aggregate ranges.
               </p>
-              <figure class="hop-bars" aria-label="Free thiol potential across hop varieties">
+              <figure class="hop-bars" aria-label="Thiol-forward hop varieties">
                 <figcaption class="hop-bars__title">
-                  Free thiol potential · internal medians
+                  Rated high for bound thiol precursors
                 </figcaption>
-                <div class="hop-bar">
-                  <span class="hop-bar__name">Galaxy</span>
-                  <span class="hop-bar__track">
-                    <span class="hop-bar__fill" style="width: 90%"></span>
-                  </span>
-                  <span class="hop-bar__score">0.90</span>
-                </div>
-                <div class="hop-bar">
-                  <span class="hop-bar__name">Nelson Sauvin</span>
-                  <span class="hop-bar__track">
-                    <span class="hop-bar__fill" style="width: 90%"></span>
-                  </span>
-                  <span class="hop-bar__score">0.90</span>
-                </div>
-                <div class="hop-bar">
-                  <span class="hop-bar__name">Citra</span>
-                  <span class="hop-bar__track">
-                    <span class="hop-bar__fill" style="width: 75%"></span>
-                  </span>
-                  <span class="hop-bar__score">0.75</span>
-                </div>
-                <div class="hop-bar">
-                  <span class="hop-bar__name">Mosaic</span>
-                  <span class="hop-bar__track">
-                    <span class="hop-bar__fill" style="width: 60%"></span>
-                  </span>
-                  <span class="hop-bar__score">0.60</span>
-                </div>
-                <div class="hop-bar">
-                  <span class="hop-bar__name">Cascade</span>
-                  <span class="hop-bar__track">
-                    <span class="hop-bar__fill" style="width: 25%"></span>
-                  </span>
-                  <span class="hop-bar__score">0.25</span>
-                </div>
+                <p class="ref-chips">
+                  <a class="ref-chip" href="/hops/citra/">Citra</a>
+                  <a class="ref-chip" href="/hops/galaxy/">Galaxy</a>
+                  <a class="ref-chip" href="/hops/nelson-sauvin/">Nelson Sauvin</a>
+                  <a class="ref-chip" href="/hops/mosaic/">Mosaic</a>
+                  <a class="ref-chip" href="/hops/riwaka/">Riwaka</a>
+                  <a class="ref-chip" href="/hops/strata/">Strata</a>
+                  <a class="ref-chip" href="/hops/simcoe/">Simcoe</a>
+                  <a class="ref-chip" href="/hops/">All 70 varieties</a>
+                </p>
                 <p class="hop-bars__footnote">
-                  Lot-level crop year data shifts these values year over year.
-                  Mash-hop additions bank extra thiol precursors that a β-lyase
-                  yeast develops during fermentation.
+                  Lot-level crop year data shifts oil and alpha values year over
+                  year. Mash-hop additions bank extra thiol precursors that a
+                  β-lyase yeast develops during fermentation.
                 </p>
               </figure>
             </div>
@@ -544,9 +571,11 @@
             <!-- Yeast (text only) -->
             <div class="library__copy">
               <h3 class="library__subtitle">Yeast</h3>
-              <p class="library__count">23 strains</p>
+              <p class="library__count">
+                29 strains · <a href="/yeast/">table and evidence</a>
+              </p>
               <p class="library__body">
-                Every yeast rated for thiol biotransformation activity.
+                Every yeast rated low, medium, or high for thiol release.
                 Availability badges tell you what you can actually source — from
                 homebrew packs to pro-pitch-only strains.
               </p>
@@ -569,16 +598,17 @@
             <!-- Malt (text only) -->
             <div class="library__copy">
               <h3 class="library__subtitle">Malt</h3>
-              <p class="library__count">41 entries</p>
+              <p class="library__count">
+                40 malts and grains · <a href="/malt/thiol-precursors/">precursor table</a>
+              </p>
               <p class="library__body">
                 <strong
                   >Models malt's thiol contribution — the layer most
                   apps leave out.</strong
                 >
-                Brewfather and BeerSmith do not capture malt thiol precursor
-                metadata. Hoparoma does — Pale 2-row holds up to ~700 µg/kg of
-                bound 3MH precursor, while roasted malts are thermally degraded
-                to near zero.
+                Pale barley malt carries bound 3MH precursor in the hundreds of
+                µg/kg, while roasted malts are thermally degraded to near zero.
+                Rated from peer-reviewed measurements, listed with sources.
               </p>
             </div>
           </div>
@@ -806,11 +836,12 @@
               <span class="eyebrow-pill__dot" aria-hidden="true"></span>
               Build notes · No spam
             </span>
-            <h2 id="signup-heading" class="signup__title">Follow the build</h2>
+            <h2 id="signup-heading" class="signup__title">Data updates and build notes</h2>
             <p class="signup__lede">
-              I'm building Hoparoma in the open. Occasional notes on hop aroma
-              chemistry, what I get wrong and fix, and a heads-up when a new
-              version ships. No spam, unsubscribe anytime.
+              I'm building Hoparoma in the open. A note when the hop, yeast, or
+              malt tables change (new crop-year lots, new strains), plus
+              occasional writing on hop aroma chemistry and what I get wrong
+              and fix. No spam, unsubscribe anytime.
             </p>
             <form
               class="signup__form"
@@ -846,6 +877,10 @@
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <a href="/">Home</a>
+          <a href="/hops/">Hops</a>
+          <a href="/yeast/">Yeast</a>
+          <a href="/malt/thiol-precursors/">Malt</a>
+          <a href="/sources/">Sources</a>
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
