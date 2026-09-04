@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}" />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href="{{ cfg.base_url }}{{ page_path }}" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="{{ page_description }}" />
+    <meta property="og:image" content="{{ cfg.base_url }}/assets/icon-1024.png" />
+    <meta property="og:type" content="{{ og_type | default('article') }}" />
+    <meta property="og:url" content="{{ cfg.base_url }}{{ page_path }}" />
+    <meta name="twitter:card" content="summary" />
+    {%- if noindex %}
+    <meta name="robots" content="noindex" />
+    {%- endif %}
+    <link rel="icon" type="image/png" href="/assets/icon-512.png" />
+    <link rel="apple-touch-icon" href="/assets/icon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css?v={{ cfg.css_version }}" />
+    <link rel="stylesheet" href="/ref.css?v={{ cfg.css_version }}" />
+    {%- if jsonld %}
+    <script type="application/ld+json">{{ jsonld | tojson }}</script>
+    {%- endif %}
+    {%- if cfg.analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ cfg.analytics_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ cfg.analytics_id }}');
+    </script>
+    {%- endif %}
+  </head>
+  <body class="ref-body">
+    <header class="site-header" aria-label="Main">
+      <div class="container site-header__inner">
+        <a href="/" class="site-brand">Hoparoma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/hops/" class="site-nav__link{% if nav == 'hops' %} site-nav__link--active{% endif %}">Hops</a>
+          <a href="/yeast/" class="site-nav__link{% if nav == 'yeast' %} site-nav__link--active{% endif %}">Yeast</a>
+          <a href="/malt/thiol-precursors/" class="site-nav__link{% if nav == 'malt' %} site-nav__link--active{% endif %}">Malt</a>
+          <a href="/sources/" class="site-nav__link{% if nav == 'sources' %} site-nav__link--active{% endif %}">Sources</a>
+          <a href="/support.html" class="site-nav__link">Support</a>
+        </nav>
+        <a
+          href="{{ cfg.app_store_url }}"
+          target="_blank"
+          rel="noopener"
+          class="cta-pill"
+          aria-label="Download Hoparoma on the App Store"
+          >Get App</a
+        >
+      </div>
+    </header>
+
+    <main class="ref-main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__wordmark">Hoparoma</span>
+          <p class="site-footer__tagline">
+            © 2026 Hoparoma · ArtFactory, K.K. · Designed in Tokyo
+          </p>
+          <p class="site-footer__tagline ref-footer-data">
+            Reference data: Hoparoma {{ meta.app_version }} (build {{ meta.app_build }}) · dataset {{ meta.embedded_data_sha }} · generated {{ meta.generated_at }}
+          </p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/hops/">Hops</a>
+          <a href="/yeast/">Yeast</a>
+          <a href="/malt/thiol-precursors/">Malt</a>
+          <a href="/sources/">Sources</a>
+          <a href="/support.html">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="mailto:{{ cfg.contact_email }}">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

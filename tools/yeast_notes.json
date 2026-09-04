@@ -1,0 +1,77 @@
+{
+  "_comment": "Literature and manufacturer evidence per thiol-relevant strain. Paraphrased from Resources/research/2026-05-13_hoparoma-yeast-scale-audit/source.md and manufacturer disclosures. Source ids point to data/sources.json anchors. Only strains listed here get an individual page.",
+  "cosmic_punch": {
+    "summary": "A British ale strain (Omega British V lineage) with its native IRC7 β-lyase promoter activated, so it releases bound hop thiols far more than its parent.",
+    "evidence": [
+      {"text": "Omega describes Cosmic Punch as a thiol-releasing strain built on its British V ale yeast; trade coverage reports free-thiol levels around ten times the sensory threshold in test beers.", "source": "omega-thiols"},
+      {"text": "It is the reference point Omega uses for its later patB strains: Helio Gazer is marketed as producing many times more thiols than Cosmic Punch.", "source": "omega-helio-gazer"}
+    ],
+    "practical": "Ferments like a soft British ale strain. Feed it precursors: mash or whirlpool hops rich in bound 3MH, and Phantasm if you use it. Keep oxygen away after fermentation, because the thiols it releases oxidise quickly.",
+    "gmo_note": "Engineered (IRC7 promoter change). Check local labelling rules before selling beer made with it."
+  },
+  "star_party": {
+    "summary": "A Chico-type (West Coast) ale strain carrying a patB β-lyase, giving thiol release on a clean, neutral fermentation base.",
+    "evidence": [
+      {"text": "Omega positions Star Party as its clean-base thiol strain; the parent Chico strain has very low native β-lyase activity, so the patB enzyme is what does the work.", "source": "omega-thiols"}
+    ],
+    "practical": "Choose it when you want West Coast clarity and attenuation with a tropical lift, rather than a soft hazy profile.",
+    "gmo_note": "Engineered (patB insertion)."
+  },
+  "thiol_libre": {
+    "summary": "A conventionally bred (non-GMO) strain selected for very high native β-lyase activity.",
+    "evidence": [
+      {"text": "Escarpment Labs classifies Thiol Libre as very high for thiol biotransformation and describes it as bred, not genetically modified; a 2023 update removed the phenolic character of the early release.", "source": "escarpment-thiol-libre"}
+    ],
+    "practical": "The usual homebrew-friendly route to strong thiol release without an engineered strain. Confirm you have the current, non-phenolic version.",
+    "gmo_note": "Non-GMO (bred)."
+  },
+  "berkeley_tropics": {
+    "summary": "A London-type ale strain carrying a protein-engineered carbon-sulfur lyase designed to release tropical thiols selectively while limiting off-flavours.",
+    "evidence": [
+      {"text": "Berkeley Yeast discloses that Tropics uses an engineered lyase chosen for selectivity toward the tropical thiols, on a London ale parent.", "source": "berkeley-tropics"}
+    ],
+    "practical": "Sold in professional pitch sizes; homebrewers rarely see it. Behaves like a soft London ale strain otherwise.",
+    "gmo_note": "Engineered (protein-engineered lyase)."
+  },
+  "wlp077_tropicale": {
+    "summary": "A non-GMO blend of two conventional strains that White Labs found to have high β-lyase activity, offered as a homebrew-friendly alternative to engineered thiol yeasts.",
+    "evidence": [
+      {"text": "White Labs screened its library for β-lyase activity and blended WLP037 Yorkshire Square with WLP830 German Lager; in a split-batch trial against WLP001, gas chromatography found 3MHA above its sensory threshold only in the WLP077 beer.", "source": "whitelabs-wlp077"}
+    ],
+    "practical": "Attenuation around 75 to 82 percent with low flocculation, so expect some haze. A good first thiol yeast for anyone who wants to avoid engineered strains.",
+    "gmo_note": "Non-GMO (blend)."
+  },
+  "helio_gazer": {
+    "summary": "The same British V parent as Cosmic Punch, but carrying a patB β-lyase, which Omega reports as far more active and more specific than the native IRC7 enzyme.",
+    "evidence": [
+      {"text": "Omega markets Helio Gazer as boosting free thiols to around two hundred times the sensory threshold and as producing many times more thiols than Cosmic Punch; those are concentration claims in finished beer, not conversion yields.", "source": "omega-helio-gazer"}
+    ],
+    "practical": "Easy to overshoot. Treat precursor-rich hops and Phantasm as a dial, not a default, and manage oxygen strictly.",
+    "gmo_note": "Engineered (patB insertion)."
+  },
+  "lalbrew_pomona": {
+    "summary": "A hybrid IPA strain developed by Lallemand with Escarpment Labs, characterised for both terpene and thiol biotransformation.",
+    "evidence": [
+      {"text": "Lallemand describes Pomona as having excellent potential for terpene biotransformation and for thiol biotransformation; brewer comparisons report more passionfruit and guava character than Verdant IPA in side-by-side batches.", "source": "lallemand-biotransformation"}
+    ],
+    "practical": "Dry, widely available, and forgiving. A medium-activity strain rather than a thiol specialist, so pair it with precursor-rich hops if tropical is the goal.",
+    "gmo_note": "Non-GMO."
+  },
+  "saflager_sh45": {
+    "summary": "A dry lager strain (Saccharomyces pastorianus) that Fermentis selected for its ability to release and esterify hop thiols, launched in late 2025.",
+    "evidence": [
+      {"text": "Fermentis states that SH-45 can release and esterify thiols, so beers made with it may show more fruitiness and stronger citrus and tropical notes when hopped with thiol-rich varieties.", "source": "fermentis-sh45"},
+      {"text": "Lager yeast releasing thiols from both hop and malt precursors during fermentation has been demonstrated in peer-reviewed work, which is the mechanism this strain is selected for.", "source": "chenot-2022"}
+    ],
+    "practical": "A route to thiol character in hoppy lagers and cold IPA without an ale strain. Cold fermentation slows the enzyme, so give it precursor-rich hops in the whirlpool and time. Independent measurements are still scarce; treat the high rating as the manufacturer's positioning until third-party data appears.",
+    "gmo_note": "Non-GMO."
+  },
+  "whitelabs_wlp830": {
+    "summary": "A classic German lager strain that White Labs identified as having unusually high β-lyase potential in its library screen.",
+    "evidence": [
+      {"text": "White Labs reports that WLP830 German Lager showed relatively high potential β-lyase activity, which is why it became one half of the WLP077 Tropicale blend.", "source": "whitelabs-wlp077"}
+    ],
+    "practical": "Useful for cold IPA and hoppy lagers where you want thiol lift without ale esters. Cold fermentation slows enzyme activity, so the effect is gentler than in an ale.",
+    "gmo_note": "Non-GMO."
+  }
+}

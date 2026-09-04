@@ -1,0 +1,69 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article">
+  {{ m.breadcrumb([('Home', '/'), ('Yeast', '/yeast/'), (y.display_name, None)]) }}
+
+  <header class="ref-head">
+    <p class="ref-eyebrow">Yeast strain · {{ y.lab }}{% if y.code %} · {{ y.code }}{% endif %}</p>
+    <h1 class="ref-title">{{ y.display_name }}</h1>
+    <p class="ref-lede">{{ y.notes.summary }}</p>
+    <dl class="ref-facts">
+      <div><dt>β-lyase level</dt><dd>{{ m.tier_badge(y.biotransformation_level) }}</dd></div>
+      <div><dt>Type</dt><dd>{{ y.fermentation_type }}</dd></div>
+      <div><dt>Temperature</dt><dd>{{ y.temp_c.min | n }}–{{ y.temp_c.max | n }} °C (opt {{ y.temp_c.opt | n }})</dd></div>
+      <div><dt>Attenuation</dt><dd>{{ (y.attenuation * 100) | n }} %</dd></div>
+      <div><dt>Availability</dt><dd>{{ m.availability_badge(y.availability) }}</dd></div>
+    </dl>
+  </header>
+
+  {%- if y.thiol_claim %}
+  <section class="ref-section" aria-labelledby="mfr-h">
+    <h2 id="mfr-h">What the manufacturer says</h2>
+    <blockquote class="ref-quote">{{ y.thiol_claim }}</blockquote>
+    {%- if y.product_url %}<p class="ref-note"><a href="{{ y.product_url }}" rel="noopener" target="_blank">Product page</a></p>{% endif %}
+  </section>
+  {%- endif %}
+
+  <section class="ref-section" aria-labelledby="lit-h">
+    <h2 id="lit-h">What the evidence says</h2>
+    <ul class="ref-evidence">
+      {%- for e in y.notes.evidence %}
+      <li>{{ e.text }} {{ m.cite(e.source) }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="ref-note">
+      Rating context: manufacturers usually quote free-thiol concentration relative to the sensory threshold, not conversion yield. Peer-reviewed work finds that only a small fraction of bound precursors is converted in beer fermentation, so the ordering between strains is more reliable than any absolute number {{ m.cite('chenot-2021') }} {{ m.cite('michel-2019') }}.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="use-h">
+    <h2 id="use-h">In practice</h2>
+    <p>{{ y.notes.practical }}</p>
+    <p class="ref-note">{{ y.notes.gmo_note }}</p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="hops-h">
+    <h2 id="hops-h">Hops that reward this strain</h2>
+    <p>
+      {% for h in thiol_hops %}<a href="{{ '/hops/' ~ h.slug ~ '/' if h.individual_page else '/hops/#' ~ h.slug }}">{{ h.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.
+      Each carries a high rating for bound 3MH-family or 4MMP precursors. Mash and whirlpool additions supply precursors during fermentation; a cold dry hop mostly adds the free fraction.
+    </p>
+  </section>
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">In Hoparoma</h2>
+    <p>Select {{ y.display_name }} in the recipe builder and Hoparoma models its release step against your hop precursors, malt precursors, and Phantasm dose. It is an estimate of where the beer is likely to land, with the engine's limits disclosed.</p>
+    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+  </section>
+
+  <section class="ref-section ref-sources" aria-labelledby="src-h">
+    <h2 id="src-h">Sources</h2>
+    <ul>
+      {%- for e in y.notes.evidence %}<li>{{ m.cite(e.source) }}</li>{% endfor %}
+      <li>{{ m.cite('chenot-2021') }}, {{ m.cite('michel-2019') }}, {{ m.cite('lallemand-biotransformation') }}</li>
+    </ul>
+    <p class="ref-note">Full list on the <a href="/sources/">sources page</a>.</p>
+  </section>
+</article>
+{% endblock %}

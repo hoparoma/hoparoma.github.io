@@ -1,0 +1,54 @@
+{# Shared macros. Imported "with context" so S (sources by id) and cfg are visible. #}
+
+{% macro cite(id) -%}
+{%- set s = S.get(id) -%}
+{%- if s -%}<a class="ref-cite" href="/sources/#{{ id }}">{{ s.label }}</a>{%- else -%}<a class="ref-cite ref-cite--missing" href="/sources/">[source]</a>{%- endif -%}
+{%- endmacro %}
+
+{% macro tier_badge(level, kind='thiol') -%}
+{%- set map = {
+  'high': ('High', 'high'),
+  'very_high_bound': ('Very high (bound)', 'high'),
+  'significant': ('Significant', 'significant'),
+  'significant_bound': ('Significant (bound)', 'significant'),
+  'low': ('Low', 'low'),
+  'medium': ('Medium', 'significant'),
+  'negligible': ('Negligible', 'negligible'),
+  'lowNonBarley': ('Low (non-barley)', 'low'),
+  'na': ('n/a', 'negligible')
+} -%}
+{%- set item = map.get(level) -%}
+{%- if item -%}<span class="ref-badge ref-badge--{{ item[1] }}">{{ item[0] }}</span>{%- else -%}<span class="ref-badge ref-badge--unknown">Not rated</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro availability_badge(code) -%}
+{%- set map = {
+  'mainstream_dry': ('Mainstream · dry', 'mainstream'),
+  'mainstream_liquid': ('Mainstream · liquid', 'mainstream'),
+  'mainstream_dry+liquid': ('Mainstream · dry + liquid', 'mainstream'),
+  'limited_hb_active_pro': ('Limited (pro pitch)', 'limited'),
+  'pro_only': ('Pro pitch only', 'pro')
+} -%}
+{%- set item = map.get(code, (code, 'unknown')) -%}
+<span class="ref-badge ref-badge--avail-{{ item[1] }}">{{ item[0] }}</span>
+{%- endmacro %}
+
+{% macro confidence(note) -%}
+{%- if note.startswith('verified') -%}
+<span class="ref-conf ref-conf--verified" title="{{ note }}">Verified</span>
+{%- elif note == '2026 estimate' -%}
+<span class="ref-conf ref-conf--estimate" title="{{ note }}">Estimate</span>
+{%- else -%}
+<span class="ref-conf ref-conf--reference" title="{{ note }}">Supplier reference</span>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro breadcrumb(items) -%}
+<nav class="ref-crumbs" aria-label="Breadcrumb">
+  <ol>
+  {%- for label, href in items %}
+    <li>{% if href %}<a href="{{ href }}">{{ label }}</a>{% else %}<span aria-current="page">{{ label }}</span>{% endif %}</li>
+  {%- endfor %}
+  </ol>
+</nav>
+{%- endmacro %}

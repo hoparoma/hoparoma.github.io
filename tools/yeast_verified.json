@@ -1,0 +1,177 @@
+{
+ "_comment": "Manufacturer URLs and official thiol statements, verified against product pages 2026-09-02 (Crossref/manufacturer). Display names come from yeast_names.json.",
+ "wyeast1318": {
+  "url": "https://wyeastlab.com/product/london-ale-iii/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol/biotransformation claim; page says it 'balances well with the tropical fruit qualities from late and dry hop additions'."
+ },
+ "imperial_juice": {
+  "url": "https://www.imperialyeast.com/yeast-strains/juice",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; Imperial describes ester profile bringing out new-school hop aromas."
+ },
+ "lalbrew_verdant": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/lalbrew-verdant-ipa/",
+  "thiol_claim": "Through expression of a β-lyase enzyme, LalBrew Verdant IPA can promote hop biotransformation and accentuate hop flavor and aroma.",
+  "status": "VERIFIED",
+  "note": "The β-lyase sentence is on the 2023 technical data sheet (https://admin.lallemandbrewing.com/wp-content/uploads/2023/05/TDS_LPS_BREWINGYEAST_VERDANT_ENG_A4-4.pdf); the current web product description omits it. Lallemand's 2026 thiol article classes Verdant IPA as a 'medium-high thiol freeing strain'"
+ },
+ "us05": {
+  "url": "https://fermentis.com/en/product/safale-us-05/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; described as neutral, 'ideal for American beer types and highly hopped beers'."
+ },
+ "wlp001": {
+  "url": "https://www.whitelabs.com/yeast-single?id=101&type=YEAST",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; 'accentuates hop flavors and aromas'."
+ },
+ "kveik_voss": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/lalbrew-voss-kveik-ale-yeast/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "ASSUMPTION: the app id 'kveik_voss' is mapped to LalBrew Voss (dry) as the most widely available Voss product; the same culture (from Sigmund Gjernes) is also sold by other labs (e.g., Omega 'Voss Kveik' OYL-061, Imperial 'Loki' A43, Escarpment 'Voss Kveik'), none of which were verified here. No thi"
+ },
+ "bry97": {
+  "url": "https://www.lallemandbrewing.com/en/global/products/bry-97-west-coast-ale-yeast",
+  "thiol_claim": "Through expression of a β-glucosidase enzyme, LalBrew BRY-97 can promote hop biotransformation and accentuate hop flavor and aroma.",
+  "status": "VERIFIED",
+  "note": "Claim is about β-glucosidase (glycoside release), not β-lyase/thiols. Lallemand also offers a 'Biotransformation Info Sheet' for this strain."
+ },
+ "cosmic_punch": {
+  "url": "https://omegayeast.com/products/cosmic-punch-next",
+  "thiol_claim": "A Thiolized version of British Ale V (OYL-011), Cosmic Punch generates thiols through biotransformation, releasing tropical aromas like those in Southern Hemisphere hops and New Zealand Sauvignon blanc; the current page describes 'bound thiols unlocked at a complementary level, not a dominant one'.",
+  "status": "VERIFIED",
+  "note": "Current page fetched; the longer statement is from Omega's 2022 Probrew brochure and retailer copies of Omega's description. Engineered (IRC7 activation, patent pending); Omega notes engineered strains are for sale in the US only."
+ },
+ "star_party": {
+  "url": "https://omegayeast.com/yeast/ales/star-party",
+  "thiol_claim": "A Thiolized version of the beloved Chico strain (West Coast Ale I), Star Party is a thiol burst with aromas of passion fruit, dank pink guava, and citrus zest.",
+  "status": "VERIFIED",
+  "note": "Page (2022 URL format) fetched via search index; 'For sale in the US only. Patent pending.' Uses the PatB carbon-sulfur lyase per Omega's guide."
+ },
+ "thiol_libre": {
+  "url": "https://escarpmentlabs.com/products/thiol-libre",
+  "thiol_claim": "Thiol Libre liberates tropical thiol aromas from your hops and malt; thanks to the thiol compound 3-MHA and others, beers fermented with Thiol Libre have enhanced guava and passionfruit aromas.",
+  "status": "VERIFIED",
+  "note": "Page fetched. Escarpment uses no numeric strain code. Page states the strain was updated in June 2023 to be non-phenolic; at fetch time it showed 'not in stock / apply to buy'."
+ },
+ "berkeley_tropics": {
+  "url": "https://berkeleyyeast.com/pages/tropics-strains",
+  "thiol_claim": "TROPICS strains are engineered to pack a tropical punch reminiscent of the finest southern-hemisphere hops, delivering a burst of thiols that unlock vibrant notes of guava, grapefruit, and passion fruit.",
+  "status": "VERIFIED",
+  "note": "'Tropics' is a product family, not a single strain; individual product page e.g. https://berkeleyyeast.com/products/tropics-london. Berkeley also sells 'TROPICS BOOST™', a plant-derived precursor extract. Related peer-reviewed work: molitor_2022."
+ },
+ "lalbrew_pomona": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/lalbrew-pomona/",
+  "thiol_claim": "A fruity, stress-tolerant, and robust hybrid strain (developed with Escarpment Laboratories) that enhances biotransformation and haze for modern IPA styles.",
+  "status": "VERIFIED",
+  "note": "Page fetched (published Apr 2024). Lallemand's 2026 split-batch article measured Pomona at 38% higher 3SH than Verdant IPA and classes both as 'medium-high thiol freeing strains'."
+ },
+ "novalager": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/lalbrew-novalager/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim in the product description; marketed as a Group III S. cerevisiae x S. eubayanus hybrid with patented UC Davis H2S-inhibiting technology and low VDK."
+ },
+ "lalbrew_neipa": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/lalbrew-new-england/",
+  "thiol_claim": "Through expression of a β-glucosidase enzyme, LalBrew New England can promote hop biotransformation and accentuate hop flavor and aroma.",
+  "status": "VERIFIED",
+  "note": "Claim is β-glucosidase (glycoside) based, not thiol/β-lyase."
+ },
+ "wlp077_tropicale": {
+  "url": "https://www.whitelabs.com/yeast-single?id=267&type=YEAST",
+  "thiol_claim": "This is a blend of non-GMO yeast strains that have been carefully selected to aid in the release of bound thiol compounds by targeting high enzymatic B-lyase activity.",
+  "status": "VERIFIED",
+  "note": "Blend, non-GMO; White Labs' WLP830 page says the blend research identified WLP037 and WLP830 as high potential β-lyase strains."
+ },
+ "lutra_kveik": {
+  "url": "https://omegayeast.com/products/lutra-kveik-standard",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; 'shockingly clean' neutral house strain. Dried version is OYL-071DRY."
+ },
+ "hornindal_kveik": {
+  "url": "https://omegayeast.com/yeast/kveiks/hornindal-kveik",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; tropical/stone-fruit ester character described as complementing fruit-forward hops."
+ },
+ "imperial_a04": {
+  "url": "https://www.imperialyeast.com/yeast-strains/barbarian",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; 'Conan'-type strain with stone-fruit esters."
+ },
+ "lalbrew_bellesaison": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/belle-saison-beer-yeast",
+  "thiol_claim": "Through expression of a β-glucosidase enzyme, LalBrew Belle Saison can promote hop biotransformation and accentuate hop flavor and aroma in hoppy saison-style beers.",
+  "status": "VERIFIED",
+  "note": "S. cerevisiae var. diastaticus; claim is β-glucosidase based, not thiol."
+ },
+ "wlp029_kolsch": {
+  "url": "https://www.whitelabs.com/yeast-single?id=119&type=YEAST",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "Current official name is 'WLP029 Kölsch Ale Yeast' (retailers still list it as 'German Ale/Kölsch'). No thiol claim."
+ },
+ "helio_gazer": {
+  "url": "https://omegayeast.com/products/helio-gazer-next",
+  "thiol_claim": "With enhanced Thiolized capabilities, Helio Gazer boosts thiol biotransformation to free thiols 200x above sensory threshold, creating a supernova of tropical, passion fruit flavors and aromas; the current page states 'Where Cosmic Punch complements, Helio Gazer dominates.'",
+  "status": "VERIFIED",
+  "note": "Thiolized British Ale V using PatB; Omega says it produces nearly 20x more thiols than Cosmic Punch. US only, patent pending. Spec discrepancy between old and current pages noted in the industry entry."
+ },
+ "wyeast1056": {
+  "url": "https://wyeastlab.com/product/american-ale/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim."
+ },
+ "wyeast1272": {
+  "url": "https://wyeastlab.com/product/american-ale-ii/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim."
+ },
+ "saflager_w3470": {
+  "url": "https://fermentis.com/en/product/saflager-w-34-70/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim."
+ },
+ "saflager_sh45": {
+  "url": "https://fermentis.com/en/product/saflager-sh-45/",
+  "thiol_claim": "This strain possesses the capability to release and esterify thiols; as a result, beers crafted with SafLager SH-45 may present enhanced levels of fruitiness and intensified citrus and tropical notes.",
+  "status": "VERIFIED",
+  "note": "Product exists: S. pastorianus lager strain 'selected to enhance hop thiol release'; apparent attenuation 77-82%, 12-18°C, high esters, medium flocculation; formats 11.5 g/100 g/500 g/10 kg. Launch announced ~Nov 2025 (Fermentis news page and Independent Brewers Association advertorial dated 19 Nov "
+ },
+ "lalbrew_diamond": {
+  "url": "https://www.lallemandbrewing.com/en/united-states/products/diamond-lager-yeast",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; S. pastorianus from the Doemens collection."
+ },
+ "mangrovejack_m84": {
+  "url": "https://mangrovejacks.com/products/m84-bohemian-lager-10g",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim."
+ },
+ "saflager_s23": {
+  "url": "https://fermentis.com/en/product/saflager-s-23/",
+  "thiol_claim": "",
+  "status": "VERIFIED",
+  "note": "No thiol claim; 'recommended for the production of fruitier and more estery lagers'."
+ },
+ "whitelabs_wlp830": {
+  "url": "https://www.whitelabs.com/yeast-single?id=223&type=YEAST",
+  "thiol_claim": "From our research creating WLP077 Tropicale Yeast Blend, we found WLP037 Yorkshire Square Ale Yeast and WLP830 German Lager Yeast to have a relative high potential activity for beta-lyase biotransformation, which releases bound thiols from hops into free thiols (passionfruit and guava aromas).",
+  "status": "VERIFIED",
+  "note": "Statement appears on the official WLP830 page."
+ }
+}

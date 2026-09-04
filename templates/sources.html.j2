@@ -1,0 +1,40 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article">
+  {{ m.breadcrumb([('Home', '/'), ('Sources', None)]) }}
+  <header class="ref-head">
+    <p class="ref-eyebrow">Reference · bibliography</p>
+    <h1 class="ref-title">Sources behind the data</h1>
+    <p class="ref-lede">
+      Hoparoma's reference tables and its aroma model are grounded in published research and supplier data. This page lists what is used where. Entries link to the publisher's page; anything we could not verify against a primary page is marked as such.
+    </p>
+  </header>
+
+  {%- for g in sources.groups %}
+  <section class="ref-section" aria-labelledby="g-{{ g.id }}">
+    <h2 id="g-{{ g.id }}">{{ g.title }}</h2>
+    {%- if g.intro %}<p class="ref-note">{{ g.intro }}</p>{% endif %}
+    <ol class="ref-biblio">
+      {%- for s in g['items'] %}
+      <li id="{{ s.id }}">
+        <span class="ref-biblio__label">{{ s.label }}</span>
+        <span class="ref-biblio__citation">{{ s.citation }}</span>
+        {%- if s.url %} <a class="ref-biblio__link" href="{{ s.url }}" rel="noopener" target="_blank">{{ s.link_text | default('Link') }}</a>{% endif %}
+        {%- if s.status != 'VERIFIED' %} <span class="ref-conf ref-conf--estimate">{{ s.status | lower }}</span>{% endif %}
+        {%- if s.used_for %}<br /><span class="ref-biblio__use">Used for: {{ s.used_for }}</span>{% endif %}
+        {%- if s.note %}<br /><span class="ref-biblio__use">{{ s.note }}</span>{% endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+
+  <section class="ref-section" aria-labelledby="how-h">
+    <h2 id="how-h">How the sources are used</h2>
+    <p>
+      Layer one of Hoparoma is calculation: recipe to compound concentrations, using published dose-response, decay, and saturation relationships. Layer two is perception: compound concentrations to what the beer is likely to smell like. The first layer is stated with confidence; the second is an estimate with its limits disclosed, because sensory validation of the model is still ongoing.
+    </p>
+  </section>
+</article>
+{% endblock %}

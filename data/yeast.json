@@ -1,0 +1,575 @@
+{
+ "meta": {
+  "app_version": "2.0.2",
+  "app_build": "24",
+  "app_head": "e04f703",
+  "embedded_data_sha": "cb514c20e9ef",
+  "generated_at": "2026-09-04",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "license_name": "CC BY 4.0",
+  "attribution": "Hoparoma hop, yeast and malt reference, https://hoparoma.com/"
+ },
+ "yeast": [
+  {
+   "id": "wyeast1318",
+   "slug": "wyeast1318",
+   "alias": "london",
+   "temp_c": {
+    "min": 18.0,
+    "opt": 20.0,
+    "max": 23.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "hazy",
+   "style_tags": [
+    "hazy"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": false
+  },
+  {
+   "id": "imperial_juice",
+   "slug": "imperial-juice",
+   "alias": "london",
+   "temp_c": {
+    "min": 18.0,
+    "opt": 21.0,
+    "max": 24.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "hazy",
+   "style_tags": [
+    "hazy"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": false
+  },
+  {
+   "id": "lalbrew_verdant",
+   "slug": "lalbrew-verdant",
+   "alias": "verdant",
+   "temp_c": {
+    "min": 18.0,
+    "opt": 21.0,
+    "max": 24.0
+   },
+   "attenuation": 0.77,
+   "style_tag": "hazy",
+   "style_tags": [
+    "hazy"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": false
+  },
+  {
+   "id": "us05",
+   "slug": "us05",
+   "alias": "chico",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "clean",
+   "style_tags": [
+    "clean"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "wlp001",
+   "slug": "wlp001",
+   "alias": "chico",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "clean",
+   "style_tags": [
+    "clean"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "kveik_voss",
+   "slug": "kveik-voss",
+   "alias": "kveik",
+   "temp_c": {
+    "min": 25.0,
+    "opt": 35.0,
+    "max": 40.0
+   },
+   "attenuation": 0.78,
+   "style_tag": "fast",
+   "style_tags": [
+    "fast"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "kveik",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "bry97",
+   "slug": "bry97",
+   "alias": "chico",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "clean",
+   "style_tags": [
+    "clean"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "cosmic_punch",
+   "slug": "cosmic-punch",
+   "alias": "thiol_clean",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "clean+thiol",
+   "style_tags": [
+    "clean",
+    "thiol"
+   ],
+   "availability": "limited_hb_active_pro",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "star_party",
+   "slug": "star-party",
+   "alias": "thiol_clean",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.78,
+   "style_tag": "clean+thiol",
+   "style_tags": [
+    "clean",
+    "thiol"
+   ],
+   "availability": "limited_hb_active_pro",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "thiol_libre",
+   "slug": "thiol-libre",
+   "alias": "thiol_clean",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "clean+thiol",
+   "style_tags": [
+    "clean",
+    "thiol"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "berkeley_tropics",
+   "slug": "berkeley-tropics",
+   "alias": "thiol_clean",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.72,
+   "style_tag": "clean+thiol",
+   "style_tags": [
+    "clean",
+    "thiol"
+   ],
+   "availability": "pro_only",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "lalbrew_pomona",
+   "slug": "lalbrew-pomona",
+   "alias": "hybrid_bioT",
+   "temp_c": {
+    "min": 15.0,
+    "opt": 19.0,
+    "max": 22.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "clean+bioT",
+   "style_tags": [
+    "clean",
+    "bioT"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": true
+  },
+  {
+   "id": "novalager",
+   "slug": "novalager",
+   "alias": "lager_hybrid",
+   "temp_c": {
+    "min": 12.0,
+    "opt": 16.0,
+    "max": 20.0
+   },
+   "attenuation": 0.75,
+   "style_tag": "clean_lager",
+   "style_tags": [
+    "clean_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "lalbrew_neipa",
+   "slug": "lalbrew-neipa",
+   "alias": "neipa",
+   "temp_c": {
+    "min": 18.0,
+    "opt": 21.0,
+    "max": 24.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "hazy",
+   "style_tags": [
+    "hazy"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": false
+  },
+  {
+   "id": "wlp077_tropicale",
+   "slug": "wlp077-tropicale",
+   "alias": "tropicale",
+   "temp_c": {
+    "min": 18.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.78,
+   "style_tag": "clean+thiol",
+   "style_tags": [
+    "clean",
+    "thiol"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "lutra_kveik",
+   "slug": "lutra-kveik",
+   "alias": "kveik",
+   "temp_c": {
+    "min": 20.0,
+    "opt": 30.0,
+    "max": 40.0
+   },
+   "attenuation": 0.78,
+   "style_tag": "fast",
+   "style_tags": [
+    "fast"
+   ],
+   "availability": "mainstream_dry+liquid",
+   "fermentation_type": "kveik",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "hornindal_kveik",
+   "slug": "hornindal-kveik",
+   "alias": "kveik",
+   "temp_c": {
+    "min": 22.0,
+    "opt": 32.0,
+    "max": 42.0
+   },
+   "attenuation": 0.78,
+   "style_tag": "fast+tropical",
+   "style_tags": [
+    "fast",
+    "tropical"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "kveik",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "imperial_a04",
+   "slug": "imperial-a04",
+   "alias": "conan",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 19.0,
+    "max": 21.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "hazy",
+   "style_tags": [
+    "hazy"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "medium",
+   "thiol_relevant": false
+  },
+  {
+   "id": "lalbrew_bellesaison",
+   "slug": "lalbrew-bellesaison",
+   "alias": "saison",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 22.0,
+    "max": 29.0
+   },
+   "attenuation": 0.92,
+   "style_tag": "saison",
+   "style_tags": [
+    "saison"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "wlp029_kolsch",
+   "slug": "wlp029-kolsch",
+   "alias": "kolsch",
+   "temp_c": {
+    "min": 16.0,
+    "opt": 19.0,
+    "max": 21.0
+   },
+   "attenuation": 0.75,
+   "style_tag": "clean_ale",
+   "style_tags": [
+    "clean_ale"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "helio_gazer",
+   "slug": "helio-gazer",
+   "alias": "gmo_thiol_max",
+   "temp_c": {
+    "min": 17.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "clean+thiol+gmo",
+   "style_tags": [
+    "clean",
+    "thiol",
+    "gmo"
+   ],
+   "availability": "pro_only",
+   "fermentation_type": "ale",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "wyeast1056",
+   "slug": "wyeast1056",
+   "alias": "chico",
+   "temp_c": {
+    "min": 16.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.75,
+   "style_tag": "clean",
+   "style_tags": [
+    "clean"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "wyeast1272",
+   "slug": "wyeast1272",
+   "alias": "american_ale_2",
+   "temp_c": {
+    "min": 16.0,
+    "opt": 20.0,
+    "max": 22.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "clean+soft",
+   "style_tags": [
+    "clean",
+    "soft"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "ale",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "saflager_w3470",
+   "slug": "saflager-w3470",
+   "alias": "w3470",
+   "temp_c": {
+    "min": 9.0,
+    "opt": 12.0,
+    "max": 18.0
+   },
+   "attenuation": 0.82,
+   "style_tag": "clean_lager",
+   "style_tags": [
+    "clean_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "saflager_sh45",
+   "slug": "saflager-sh45",
+   "alias": "sh45",
+   "temp_c": {
+    "min": 12.0,
+    "opt": 15.0,
+    "max": 18.0
+   },
+   "attenuation": 0.82,
+   "style_tag": "thiol_lager",
+   "style_tags": [
+    "thiol_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "lalbrew_diamond",
+   "slug": "lalbrew-diamond",
+   "alias": "diamond",
+   "temp_c": {
+    "min": 10.0,
+    "opt": 13.0,
+    "max": 15.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "clean_lager",
+   "style_tags": [
+    "clean_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  },
+  {
+   "id": "mangrovejack_m84",
+   "slug": "mangrovejack-m84",
+   "alias": "m84_bohemian",
+   "temp_c": {
+    "min": 10.0,
+    "opt": 13.0,
+    "max": 15.0
+   },
+   "attenuation": 0.74,
+   "style_tag": "clean_lager",
+   "style_tags": [
+    "clean_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "saflager_s23",
+   "slug": "saflager-s23",
+   "alias": "s23",
+   "temp_c": {
+    "min": 12.0,
+    "opt": 15.0,
+    "max": 18.0
+   },
+   "attenuation": 0.8,
+   "style_tag": "fruity_lager",
+   "style_tags": [
+    "fruity_lager"
+   ],
+   "availability": "mainstream_dry",
+   "fermentation_type": "lager",
+   "biotransformation_level": "low",
+   "thiol_relevant": false
+  },
+  {
+   "id": "whitelabs_wlp830",
+   "slug": "whitelabs-wlp830",
+   "alias": "wlp830",
+   "temp_c": {
+    "min": 10.0,
+    "opt": 12.0,
+    "max": 13.0
+   },
+   "attenuation": 0.77,
+   "style_tag": "thiol_lager",
+   "style_tags": [
+    "thiol_lager"
+   ],
+   "availability": "mainstream_liquid",
+   "fermentation_type": "lager",
+   "biotransformation_level": "high",
+   "thiol_relevant": true
+  }
+ ]
+}

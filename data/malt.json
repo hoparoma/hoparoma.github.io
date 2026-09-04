@@ -1,0 +1,294 @@
+{
+ "meta": {
+  "app_version": "2.0.2",
+  "app_build": "24",
+  "app_head": "e04f703",
+  "embedded_data_sha": "cb514c20e9ef",
+  "generated_at": "2026-09-04",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "license_name": "CC BY 4.0",
+  "attribution": "Hoparoma hop, yeast and malt reference, https://hoparoma.com/"
+ },
+ "malt": [
+  {
+   "id": "paleAle2Row",
+   "name": "Pale Ale (2-row)",
+   "lovibond": 2.5,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "extraPale",
+   "name": "Extra Pale",
+   "lovibond": 1.8,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "pilsner",
+   "name": "Pilsner",
+   "lovibond": 1.8,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "marisOtter",
+   "name": "Maris Otter",
+   "lovibond": 3.0,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "vienna",
+   "name": "Vienna",
+   "lovibond": 3.3,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "munich",
+   "name": "Munich",
+   "lovibond": 6.1,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "munichDark",
+   "name": "Munich II (Dark)",
+   "lovibond": 9.0,
+   "category": "base",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "wheatMalt",
+   "name": "Wheat Malt",
+   "lovibond": 2.5,
+   "category": "base",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "ryeMalt",
+   "name": "Rye Malt",
+   "lovibond": 3.5,
+   "category": "base",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "melanoidin",
+   "name": "Melanoidin",
+   "lovibond": 27.0,
+   "category": "base",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "abbeyMalt",
+   "name": "Abbey Malt",
+   "lovibond": 17.0,
+   "category": "base",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "aromaticMalt",
+   "name": "Aromatic Malt (20L)",
+   "lovibond": 20.0,
+   "category": "base",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "carapils",
+   "name": "Carapils / Dextrin",
+   "lovibond": 1.5,
+   "category": "crystal",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "caramalt",
+   "name": "Caramalt",
+   "lovibond": 15.0,
+   "category": "crystal",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "crystal60",
+   "name": "Crystal 60L",
+   "lovibond": 60.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "crystal120",
+   "name": "Crystal 120L",
+   "lovibond": 120.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "lightCrystal150",
+   "name": "Crystal 150 (Light)",
+   "lovibond": 65.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "darkCrystal",
+   "name": "Dark Crystal (Crystal 220)",
+   "lovibond": 170.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "honeyMalt",
+   "name": "Honey Malt",
+   "lovibond": 25.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "specialB",
+   "name": "Special B",
+   "lovibond": 125.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "caraHell",
+   "name": "CaraHell",
+   "lovibond": 10.0,
+   "category": "crystal",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "caraMunich1",
+   "name": "CaraMunich Type 1",
+   "lovibond": 34.0,
+   "category": "crystal",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "caraMunich2",
+   "name": "CaraMunich Type 2",
+   "lovibond": 46.0,
+   "category": "crystal",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "caraMunich3",
+   "name": "CaraMunich Type 3",
+   "lovibond": 57.0,
+   "category": "crystal",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "caraAroma",
+   "name": "CaraAroma",
+   "lovibond": 151.0,
+   "category": "crystal",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "biscuit",
+   "name": "Biscuit / Aromatic",
+   "lovibond": 23.0,
+   "category": "roast",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "brownMalt",
+   "name": "Brown Malt",
+   "lovibond": 65.0,
+   "category": "roast",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "chocolate",
+   "name": "Chocolate Malt",
+   "lovibond": 350.0,
+   "category": "roast",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "blackPatent",
+   "name": "Black Patent",
+   "lovibond": 500.0,
+   "category": "roast",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "roastedBarley",
+   "name": "Roasted Barley",
+   "lovibond": 300.0,
+   "category": "roast",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "carafaSpecial",
+   "name": "Carafa Special",
+   "lovibond": 340.0,
+   "category": "roast",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "flakedOats",
+   "name": "Flaked Oats",
+   "lovibond": 1.0,
+   "category": "adjunct",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "flakedWheat",
+   "name": "Flaked Wheat",
+   "lovibond": 1.5,
+   "category": "adjunct",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "flakedBarley",
+   "name": "Flaked Barley",
+   "lovibond": 2.0,
+   "category": "adjunct",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "flakedRye",
+   "name": "Flaked Rye",
+   "lovibond": 1.0,
+   "category": "adjunct",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "nakedOatMalt",
+   "name": "Naked Oat Malt",
+   "lovibond": 2.0,
+   "category": "adjunct",
+   "thiol_precursor_level": "lowNonBarley"
+  },
+  {
+   "id": "oatMalt",
+   "name": "Oat Malt (Golden Naked)",
+   "lovibond": 7.0,
+   "category": "adjunct",
+   "thiol_precursor_level": "low"
+  },
+  {
+   "id": "acidulated",
+   "name": "Acidulated",
+   "lovibond": 3.0,
+   "category": "other",
+   "thiol_precursor_level": "negligible"
+  },
+  {
+   "id": "smokedMalt",
+   "name": "Smoked Malt",
+   "lovibond": 3.0,
+   "category": "other",
+   "thiol_precursor_level": "medium"
+  },
+  {
+   "id": "dextrose",
+   "name": "Dextrose / Corn Sugar",
+   "lovibond": 0.0,
+   "category": "other",
+   "thiol_precursor_level": "na"
+  }
+ ]
+}

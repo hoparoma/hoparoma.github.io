@@ -1,0 +1,79 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article ref-article--wide">
+  {{ m.breadcrumb([('Home', '/'), ('Yeast', None)]) }}
+  <header class="ref-head">
+    <p class="ref-eyebrow">Reference · {{ yeast | length }} strains</p>
+    <h1 class="ref-title">Yeast strains rated for thiol release (β-lyase activity)</h1>
+    <p class="ref-lede">
+      The same hop bill fermented with two different strains can smell like two different beers, because the enzyme that frees bound hop thiols, β-lyase, varies enormously between strains. This table rates every strain in Hoparoma's library on a three-step scale and links to the evidence.
+    </p>
+  </header>
+
+  <section class="ref-section" aria-labelledby="scale-h">
+    <h2 id="scale-h">The three levels</h2>
+    <ul class="ref-legend">
+      <li>{{ m.tier_badge('high') }} Thiol-forward strains: engineered or bred for β-lyase activity, or conventional strains that screened high. Expect free thiols above threshold when precursor-rich hops are used.</li>
+      <li>{{ m.tier_badge('medium') }} London III and Conan lineage hazy strains and hybrid IPA strains. Moderate release; the classic NEIPA workhorses.</li>
+      <li>{{ m.tier_badge('low') }} Chico-type clean strains, cool-fermented lager strains, kveik fermented hot, saison and Kölsch strains. Most bound precursors stay bound.</li>
+    </ul>
+    <p class="ref-note">
+      Screening studies find native β-lyase activity low in most brewing strains and clearly higher in a few English ale lineages; the engineered and bred thiol strains sit above all of them {{ m.cite('michel-2019') }} {{ m.cite('svedlund-2022') }} {{ m.cite('lallemand-biotransformation') }}. Lager yeast can release thiols too, from malt as well as hop precursors {{ m.cite('chenot-2022') }}. Levels are the labels Hoparoma shows in its yeast picker; the underlying coefficients are not published.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="table-h">
+    <h2 id="table-h">All strains</h2>
+    <div class="ref-table-wrap">
+      <table class="ref-table ref-table--index">
+        <thead>
+          <tr>
+            <th scope="col">Strain</th>
+            <th scope="col">Lab</th>
+            <th scope="col">Type</th>
+            <th scope="col">Temp °C (min · opt · max)</th>
+            <th scope="col">Attenuation</th>
+            <th scope="col">β-lyase level</th>
+            <th scope="col">Availability</th>
+            <th scope="col">Character tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for y in yeast %}
+          <tr id="{{ y.slug }}">
+            <th scope="row">{% if y.has_page %}<a href="/yeast/{{ y.slug }}/">{{ y.display_name }}</a>{% else %}{{ y.display_name }}{% endif %}</th>
+            <td>{{ y.lab }}</td>
+            <td>{{ y.fermentation_type }}</td>
+            <td>{{ y.temp_c.min | n }} · {{ y.temp_c.opt | n }} · {{ y.temp_c.max | n }}</td>
+            <td>{{ (y.attenuation * 100) | n }} %</td>
+            <td>{{ m.tier_badge(y.biotransformation_level) }}{% if y.biotransformation_level == 'high' and not y.has_page %} <span class="ref-conf ref-conf--estimate" title="Rated from supplier characterisation; literature note not yet on file">provisional</span>{% endif %}</td>
+            <td>{{ m.availability_badge(y.availability) }}</td>
+            <td class="ref-table__aroma">{{ y.style_tags | join(', ') }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="ref-note">
+      Strains with a link have an evidence page. A level marked provisional comes from supplier characterisation that has not yet been written up here; treat it as a working rating.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="pair-h">
+    <h2 id="pair-h">Pairing with hops</h2>
+    <p>
+      High-level strains pay off with hops rated high for bound thiols:
+      {% for h in thiol_hops %}<a href="{{ '/hops/' ~ h.slug ~ '/' if h.individual_page else '/hops/#' ~ h.slug }}">{{ h.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.
+      With low-thiol hops the strain choice matters less for thiols and more for esters and oil handling.
+    </p>
+  </section>
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">In Hoparoma</h2>
+    <p>Hoparoma models the yeast's release step together with hop precursors, malt precursors, and Phantasm dose, and warns when a low-activity strain is paired with a thiol-dependent recipe.</p>
+    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    <p class="ref-note">Machine-readable copy: <a href="/data/yeast.json">yeast.json</a>.{% if cfg.dataset_license %} Published under <a href="{{ cfg.dataset_license }}" rel="license noopener" target="_blank">{{ cfg.dataset_license_name }}</a>: reuse freely with credit to Hoparoma and a link to hoparoma.com.{% endif %}</p>
+  </section>
+</article>
+{% endblock %}

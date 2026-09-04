@@ -1,0 +1,82 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article ref-article--wide">
+  {{ m.breadcrumb([('Home', '/'), ('Hops', None)]) }}
+  <header class="ref-head">
+    <p class="ref-eyebrow">Reference · {{ hops | length }} hop varieties</p>
+    <h1 class="ref-title">Hop varieties: oils, thiol potential, crop-year lots</h1>
+    <p class="ref-lede">
+      Every variety in Hoparoma's library, with supplier brewing values, a qualitative rating for bound thiol precursors, and lot-level crop-year data where it is published. Varieties with enough verified data have their own page.
+    </p>
+  </header>
+
+  <section class="ref-section" aria-labelledby="legend-h">
+    <h2 id="legend-h">How to read the thiol columns</h2>
+    <ul class="ref-legend">
+      <li>{{ m.tier_badge('high') }} Among the strongest known carriers of that thiol's precursors. A thiol-releasing yeast turns this into pronounced passionfruit or grapefruit (3MH family) or blackcurrant (4MMP).</li>
+      <li>{{ m.tier_badge('significant') }} A meaningful contribution when the yeast can release it.</li>
+      <li>{{ m.tier_badge('low') }} Aroma comes mainly from the oils. Thiols are not this hop's story.</li>
+    </ul>
+    <p class="ref-note">
+      Tiers summarise published precursor measurements and supplier statements {{ m.cite('gros-2012') }} {{ m.cite('kishimoto-2009') }} {{ m.cite('roland-2016') }}. Hoparoma's internal weighting is not published.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="shortlist-h">
+    <h2 id="shortlist-h">Thiol-forward shortlist</h2>
+    <p class="ref-chips">
+      {%- for h in hops if h.thiol_3mh_qualitative in ('high', 'very_high_bound') or h.thiol_4mmp_qualitative in ('high', 'very_high_bound') %}
+      <a class="ref-chip" href="{{ '/hops/' ~ h.slug ~ '/' if h.individual_page else '#' ~ h.slug }}">{{ h.name }}</a>
+      {%- endfor %}
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="table-h">
+    <h2 id="table-h">All varieties</h2>
+    <div class="ref-table-wrap">
+      <table class="ref-table ref-table--index">
+        <thead>
+          <tr>
+            <th scope="col">Variety</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Alpha %</th>
+            <th scope="col">Oil mL/100 g</th>
+            <th scope="col">3MH family</th>
+            <th scope="col">4MMP</th>
+            <th scope="col">Crop lots</th>
+            <th scope="col">Aroma</th>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for h in hops %}
+          {%- set agg = h.aggregate %}
+          <tr id="{{ h.slug }}">
+            <th scope="row">{% if h.individual_page %}<a href="/hops/{{ h.slug }}/">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}</th>
+            <td>{% if h.origin %}<span aria-hidden="true">{{ h.origin.flag }}</span> {{ h.origin.country }}{% else %}–{% endif %}</td>
+            <td>{{ (agg.alpha_acid if agg else None) | rng }}</td>
+            <td>{{ (agg.total_oil if agg else None) | rng }}</td>
+            <td>{{ m.tier_badge(h.thiol_3mh_qualitative) }}</td>
+            <td>{{ m.tier_badge(h.thiol_4mmp_qualitative) }}</td>
+            <td>{% if h.crop_years %}{{ h.crop_years | map(attribute='year') | join(' · ') }}{% else %}–{% endif %}</td>
+            <td class="ref-table__aroma">{{ h.sensory_summary }}</td>
+            <td>{{ m.confidence(h.data_quality_note) }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="ref-note">
+      Varieties without a link are listed from pooled medians only; they get their own page once a supplier datasheet or lot certificate is on file. Data quality: Verified = cross-checked against 2026 supplier data; Supplier reference = single supplier or research source; Estimate = pooled community values, treat as approximate.
+    </p>
+  </section>
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">Use this data in a recipe</h2>
+    <p>Hoparoma applies these values to your own hop schedule, then models the thiol side across yeast, hop, malt, and Phantasm. Estimates, disclosed honestly.</p>
+    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    <p class="ref-note">Machine-readable copy of this table: <a href="/data/hops.json">hops.json</a>.{% if cfg.dataset_license %} The tables and JSON on this site are published under <a href="{{ cfg.dataset_license }}" rel="license noopener" target="_blank">{{ cfg.dataset_license_name }}</a>: reuse and adapt them freely, with credit to Hoparoma and a link to hoparoma.com.{% endif %}</p>
+  </section>
+</article>
+{% endblock %}

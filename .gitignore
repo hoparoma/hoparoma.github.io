@@ -1,35 +1,3 @@
+tools/.cache/
+__pycache__/
 .DS_Store
-.claude/
-
-# Unused / staging assets (kept locally for iteration, not shipped)
-assets/app-store-badge-white.svg
-assets/bento-card-detail.png
-assets/hero-homestart-liquidglass.png
-assets/section-2-hazy-ipa.png
-
-# Internal work notes / design exploration (not for live site)
-charts_chatgpt_fix_prompt.md
-charts_chatgpt_prompt.md
-charts_data_source.md
-stitch_hoparoma_press_kit_redesign/
-
-# Raw iPhone screenshots (use framed versions in production)
-assets/screenshot0528/
-
-# Source / intermediate framed screenshots (only _v2.png + hero-mockup-cropped.png used in production)
-assets/screenshot_framed/*.psd
-assets/screenshot_framed/IMG_*_framed.png
-assets/screenshot_framed/IMG_*_framed_half.png
-assets/screenshot_framed/free-iphone-17-pro-mockup-transparent-background-3-colors.png
-!assets/screenshot_framed/IMG_*_framed_v2.png
-!assets/screenshot_framed/hero-mockup-cropped.png
-
-# Older chart iterations (only hoparoma_new_charts_fixed/fig05+fig06 used in production)
-chatgpt-output-2026-05-28/hoparoma_charts/
-chatgpt-output-2026-05-28/hoparoma_new_charts/
-chatgpt-output-2026-05-28/hoparoma_new_charts_fixed/*.bak
-chatgpt-output-2026-05-28/hoparoma_new_charts_fixed/fig07_*
-chatgpt-output-2026-05-28/hoparoma_new_charts_fixed/preview.html
-
-# Old editorial versions archived locally (not deployed)
-_archive/

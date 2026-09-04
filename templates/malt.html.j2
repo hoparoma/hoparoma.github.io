@@ -1,0 +1,72 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article ref-article--wide">
+  {{ m.breadcrumb([('Home', '/'), ('Malt', None)]) }}
+  <header class="ref-head">
+    <p class="ref-eyebrow">Reference · {{ malt | length }} malts and grains</p>
+    <h1 class="ref-title">Malt thiol precursors: which grains carry them</h1>
+    <p class="ref-lede">
+      Hops are not the only source of tropical thiols. Pale barley malt carries bound 3MH precursors of its own, and a thiol-releasing yeast can free them even in a wort that is barely hopped. Kilning and roasting destroy them, and non-barley grains carry little. This table rates every malt in Hoparoma's library.
+    </p>
+  </header>
+
+  <section class="ref-section" aria-labelledby="why-h">
+    <h2 id="why-h">What the literature measured</h2>
+    <ul class="ref-evidence">
+      <li>Pale barley malts contain glutathionylated 3-mercaptohexanol precursor in the low hundreds of µg/kg range, and some special malts carry comparable or higher amounts; wheat is a poor carrier {{ m.cite('chenot-2023') }}.</li>
+      <li>Thiol groups in malt protein fall as colour rises and are undetectable in the darkest roasted malts, which is why roast and heavily caramelised malts rate negligible here {{ m.cite('fleischer-hellwig-2022') }}.</li>
+      <li>A genetically modified yeast fermenting an all-barley wort with only a light Cascade addition produced free 3MH well above its sensory threshold, whereas wheat, rice, and sorghum worts carried far less precursor {{ m.cite('molitor-2022') }}.</li>
+      <li>Malt and hops both supply thiol S-conjugates, and a lager yeast can release thiols from them during fermentation; disulfide-bonded thiols in malt and hops are a further precursor pool {{ m.cite('chenot-2022') }} {{ m.cite('kishimoto-2022') }}.</li>
+    </ul>
+    <p class="ref-note">
+      The levels below are a relative ranking, not a molar yield. Hoparoma uses them as one input to its thiol model; the resulting aroma is a research-based estimate, and the perceived effect of malt precursors in a heavily hopped beer is still an open question in the literature.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="scale-h">
+    <h2 id="scale-h">The scale</h2>
+    <ul class="ref-legend">
+      <li>{{ m.tier_badge('high') }} Reserved for specialty base malts documented as unusually precursor-rich. None of the library's standard malts qualify yet.</li>
+      <li>{{ m.tier_badge('medium') }} Standard pale barley base malts and lightly kilned specialty malts.</li>
+      <li>{{ m.tier_badge('low') }} Light roast or light caramelisation; precursors reduced.</li>
+      <li>{{ m.tier_badge('negligible') }} Fully roasted or heavily caramelised; precursors effectively gone.</li>
+      <li>{{ m.tier_badge('lowNonBarley') }} Wheat, rye, and oat products; barley-type precursors are scarce.</li>
+    </ul>
+  </section>
+
+  {%- for cat, label in [('base', 'Base malts'), ('crystal', 'Crystal and caramel malts'), ('roast', 'Roasted malts'), ('adjunct', 'Adjunct grains'), ('other', 'Other')] %}
+  <section class="ref-section" aria-labelledby="cat-{{ cat }}">
+    <h2 id="cat-{{ cat }}">{{ label }}</h2>
+    <div class="ref-table-wrap">
+      <table class="ref-table ref-table--index">
+        <thead><tr><th scope="col">Malt</th><th scope="col">Colour °L</th><th scope="col">Thiol precursor level</th></tr></thead>
+        <tbody>
+          {%- for x in malt if x.category == cat %}
+          <tr id="{{ x.id }}"><th scope="row">{{ x.name }}</th><td>{{ x.lovibond | n }}</td><td>{{ m.tier_badge(x.thiol_precursor_level) }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {%- endfor %}
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">In Hoparoma</h2>
+    <p>Hoparoma carries malt-derived precursors into its thiol model alongside hop precursors, yeast release, and Phantasm dose, so a grain bill change shows up in the estimate.</p>
+    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    <p class="ref-note">Machine-readable copy: <a href="/data/malt.json">malt.json</a>.{% if cfg.dataset_license %} Published under <a href="{{ cfg.dataset_license }}" rel="license noopener" target="_blank">{{ cfg.dataset_license_name }}</a>: reuse freely with credit to Hoparoma and a link to hoparoma.com.{% endif %}</p>
+  </section>
+
+  <section class="ref-section ref-sources" aria-labelledby="src-h">
+    <h2 id="src-h">Sources</h2>
+    <ul>
+      <li>{{ m.cite('chenot-2023') }}</li>
+      <li>{{ m.cite('fleischer-hellwig-2022') }}</li>
+      <li>{{ m.cite('molitor-2022') }}</li>
+      <li>{{ m.cite('chenot-2022') }}, {{ m.cite('kishimoto-2022') }}</li>
+    </ul>
+    <p class="ref-note">Colour values follow maltster datasheets (Weyermann, Crisp, Simpsons, Briess). Full list on the <a href="/sources/">sources page</a>.</p>
+  </section>
+</article>
+{% endblock %}

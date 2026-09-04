@@ -1,0 +1,10 @@
+{
+  "_comment": "Site-side overrides applied at build time while the app dataset is corrected. Keep this list short and dated; each entry should have a matching BACKLOG item in the app repo.",
+  "suppress_hop_notes": [
+    {
+      "hop": "Nelson Sauvin",
+      "year": "typical_4yr_aggregate",
+      "reason": "2026-09-02: the note claims '3MH below detection' citing Brauwelt 2025; the Hopsteiner newsletter actually classifies Nelson Sauvin as high thiol impact and does not say that. Suppressed until the underlying Schmidt 2024 BrewingScience paper is checked."
+    }
+  ]
+}
