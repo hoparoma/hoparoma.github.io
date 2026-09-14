@@ -95,7 +95,7 @@
             <p>
               Yes. Tap the share button on any saved recipe to export it
               through iOS's native share sheet. You control where the text
-              goes — Hoparoma does not upload anything.
+              goes; the share action itself sends nothing to Hoparoma.
             </p>
           </details>
 
@@ -141,7 +141,7 @@
           <details class="faq__item">
             <summary>Why do you ask for a phone number?</summary>
             <p>
-              A phone number is the lightest way to keep one account per person
+              A phone number is the lightest way to keep one account per number
               without passwords, and it lets the same account work in the app and
               on the web. Google's Firebase Authentication verifies the number by
               SMS; our server stores only a keyed hash of it, never the number.
@@ -159,9 +159,10 @@
               States (Fly.io, San Jose) behind Cloudflare. Delete your account
               anytime from <strong>Account</strong> → <strong>Delete account</strong>
               on the web or from Settings in the app; recipes and sessions go
-              immediately, and a hashed identifier is kept for 90 days only so
-              that deleting and re-registering cannot reset the monthly
-              allowance. Details in the <a href="/privacy.html">Privacy Policy</a>.
+              immediately, a hashed identifier and your usage counters stay for
+              about 90 days so that deleting and re-registering cannot reset the
+              monthly allowance, and billing records are kept as accounting law
+              requires. Details in the <a href="/privacy.html">Privacy Policy</a>.
             </p>
           </details>
 
@@ -230,7 +231,7 @@
           <details class="faq__item">
             <summary>レシピをエクスポートできますか?</summary>
             <p>
-              できます。保存レシピの共有ボタンから iOS 標準の共有シートが開き、書き出し先は利用者が選びます。Hoparoma から外部にデータを送信することはありません。
+              できます。保存レシピの共有ボタンから iOS 標準の共有シートが開き、書き出し先は利用者が選びます。共有操作そのものが Hoparoma へデータを送ることはありません。
             </p>
           </details>
 
@@ -259,14 +260,14 @@
           <details class="faq__item">
             <summary>なぜ電話番号が必要なのですか?</summary>
             <p>
-              パスワードなしで「1 人 1 アカウント」を保ち、同じアカウントをアプリとウェブで使うための最も軽い方法だからです。番号の確認は Google の Firebase Authentication が SMS で行い、当社サーバーには番号の鍵付きハッシュだけを保存します。SMS は日本・アメリカ・カナダ・イギリス・オーストラリアの番号に送れます。コードが届かない場合は、番号がこれらの地域のものか確認し、1 分ほど待ってから再送してください。
+              パスワードなしで「1 番号 1 アカウント」を保ち、同じアカウントをアプリとウェブで使うための最も軽い方法だからです。番号の確認は Google の Firebase Authentication が SMS で行い、当社サーバーには番号の鍵付きハッシュだけを保存します。SMS は日本・アメリカ・カナダ・イギリス・オーストラリアの番号に送れます。コードが届かない場合は、番号がこれらの地域のものか確認し、1 分ほど待ってから再送してください。
             </p>
           </details>
 
           <details class="faq__item">
             <summary>データはどこに保存され、どう削除できますか?</summary>
             <p>
-              アカウントに保存したレシピは、Cloudflare を経由した米国のサーバー（Fly.io、サンノゼ）にあります。削除はウェブの <strong>Account</strong> → <strong>Delete account</strong>、またはアプリの設定からいつでもできます。レシピとセッションは直ちに消え、削除と再登録で月間枠がリセットされないよう、ハッシュ化した識別子だけを 90 日間保持します。詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。
+              アカウントに保存したレシピは、Cloudflare を経由した米国のサーバー（Fly.io、サンノゼ）にあります。削除はウェブの <strong>Account</strong> → <strong>Delete account</strong>、またはアプリの設定からいつでもできます。レシピとセッションは直ちに消え、削除と再登録で月間枠がリセットされないよう、ハッシュ化した識別子と利用回数をおよそ 90 日間保持します。決済の記録は会計上の法令が求める期間保持します。詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。
             </p>
           </details>
 

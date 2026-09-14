@@ -64,7 +64,7 @@
 
             <h3>2. The iOS app without an account</h3>
             <p>
-              Until you sign in, the app makes no network calls on your behalf. The following stays in local storage on your device and never leaves it unless you actively share it through iOS's share sheet:
+              Until you sign in, the app sends nothing about you to Hoparoma. Versions with account support initialise Google Firebase at launch and register with Apple's push notification service (the resulting device token is shared with Firebase, which uses it only to verify phone sign-ins), and load product information from the App Store; none of this involves your recipes. The following stays in local storage on your device and never leaves it unless you actively share it through iOS's share sheet:
             </p>
             <ul>
               <li>Saved recipe definitions (hops, malts, water chemistry, yeast, mash settings) and results</li>
@@ -84,19 +84,19 @@
                 <strong>Phone number.</strong> Google's Firebase Authentication sends you a one-time SMS code and confirms the number to us. Our server keeps a <strong>keyed hash</strong> (HMAC) of the number and a random account identifier; it does not store the number. The hash lets us keep one account per number and apply monthly allowances. Firebase processes the number under Google's privacy policy; SMS delivery is enabled for Japan, the United States, Canada, the United Kingdom and Australia.
               </li>
               <li>
-                <strong>Sign-in session.</strong> A session token stored in a cookie on the web, or in the device Keychain in the app, for up to 90 days or until you sign out. In the app, the Firebase sign-in component also keeps your sign-in state (including the phone number) in the device Keychain until you sign out.
+                <strong>Sign-in session.</strong> A session token, valid for up to 90 days, stored in a cookie on the web or in the device Keychain in the app; it stays there until you sign out or it is replaced. In the app, the Firebase sign-in component also keeps your sign-in state (including the phone number) in the device Keychain until you sign out.
               </li>
               <li>
-                <strong>Recipes and results</strong> you save to the account (hop additions, brewing settings, yeast, the aroma estimate and comparison history), until you delete them.
+                <strong>Recipes and results</strong> you save to the account (hop additions, brewing settings, yeast, the aroma estimate and comparison history), together with the calculation history behind them. Deleting a recipe hides it and frees a saved slot; the underlying data is removed when you delete the account (see section 6).
               </li>
               <li>
                 <strong>Usage counters:</strong> how many recipes, comparisons, saves and calculations you have used in the current month, to apply the Free or Pro allowances.
               </li>
               <li>
-                <strong>Security signals.</strong> Sign-in is protected by Google reCAPTCHA, which evaluates browser and device signals to block automated SMS abuse; Google's <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="noopener" target="_blank">Terms of Service</a> apply. Our proxy (Cloudflare) and server log IP addresses, request metadata and status codes for rate limiting and troubleshooting.
+                <strong>Security signals.</strong> Sign-in is protected by Google reCAPTCHA, which evaluates browser and device signals to block automated SMS abuse; Google's <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="noopener" target="_blank">Terms of Service</a> apply. Cloudflare and our hosting provider record IP addresses and request metadata for rate limiting and troubleshooting; our own application log records status codes, paths, timings and internal identifiers, not phone numbers or recipe contents.
               </li>
               <li>
-                <strong>Abuse detection.</strong> We analyse patterns in submitted recipes (for example many near-identical variations in a short time) to detect automated probing of the model. Nobody reads your recipes unless you ask us to look at them in a support request.
+                <strong>Abuse detection.</strong> We analyse patterns in submitted recipes (for example a run of near-identical variations) to detect automated probing of the model. Nobody reads your recipes unless you ask us to look at them in a support request.
               </li>
             </ul>
             <p>
@@ -115,31 +115,34 @@
                 <strong>Pro status on your device.</strong> The app caches your account's Pro status for up to 30 days so it keeps working offline.
               </li>
               <li>
-                Transaction identifiers and amounts are retained by us, Stripe and Apple for as long as tax and accounting law requires.
+                Stripe and Apple keep the transaction records, including amounts. We keep the identifiers and status described above for as long as tax, accounting and dispute-handling obligations require (in Japan, up to seven years).
               </li>
             </ul>
 
             <h3>5. Where your data is processed</h3>
             <p>
-              Our server and database run on Fly.io in San Jose, California, USA, behind Cloudflare. Firebase Authentication and reCAPTCHA are operated by Google, payments by Stripe and Apple. These providers process data in the United States and other countries and act on our instructions as processors. Art Factory Co., Ltd. is established in Japan; for users in the EU/EEA, the UK and Switzerland, transfers rely on the providers' standard contractual clauses or equivalent safeguards. Backups are stored encrypted at rest (Fly.io snapshots and Cloudflare R2) and overwritten after 30 days.
+              Our server and database run on Fly.io in San Jose, California, USA, behind Cloudflare. Firebase Authentication and reCAPTCHA are operated by Google, payments by Stripe and Apple. These providers process data in the United States and other countries and act on our instructions as processors. Art Factory Co., Ltd. is established in Japan; for users in the EU/EEA, the UK and Switzerland, transfers rely on the providers' standard contractual clauses or equivalent safeguards. Fly.io keeps five daily volume snapshots, and we copy the database daily to Cloudflare R2 (encrypted at rest), keeping the newest 30 copies.
             </p>
 
             <h3>6. How long we keep data</h3>
             <ul>
-              <li>Recipes and results: until you delete them or delete the account.</li>
+              <li>Recipes and results: while the account exists. A deleted recipe is hidden at once; its data is removed together with the account.</li>
               <li>Sessions: until sign-out or expiry (90 days).</li>
-              <li>Usage counters: monthly, for the life of the account.</li>
+              <li>Usage counters and abuse-detection flags: for the life of the account and about 90 days after deletion.</li>
               <li>
-                Account deletion: recipes, sessions, and billing links are deleted immediately and any Stripe subscription is cancelled first. The hashed phone identifier and the current usage counters are kept for <strong>90 days</strong> so that deleting and re-creating an account cannot reset monthly allowances; then they are deleted. Apple subscriptions must be cancelled with Apple.
+                Account deletion: recipes, calculation history, sessions and abuse-detection data are deleted immediately. Any Stripe subscription is first set to end at the close of the paid period (an incomplete one is cancelled at once). The hashed phone identifier, usage counters and abuse flags are kept for <strong>about 90 days</strong> so that deleting and re-creating an account cannot reset monthly allowances; the clean-up runs daily rather than at an exact moment. Apple subscriptions must be cancelled with Apple.
               </li>
-              <li>Server and proxy logs: a short period (days) for troubleshooting.</li>
-              <li>Backups: up to 30 days.</li>
+              <li>
+                Billing records: if the account ever had a subscription, we keep the Stripe customer and subscription identifiers, the Apple transaction identifiers and their status after deletion, together with the hashed phone identifier they are linked to, for as long as tax, accounting and dispute-handling obligations require (in Japan, up to seven years), and then delete them.
+              </li>
+              <li>Server logs: our application log is kept by the hosting provider for a short period (days); Cloudflare keeps its own request logs under its policy.</li>
+              <li>Backups: the newest 30 daily copies plus five Fly.io snapshots. Deleted data leaves the backups as they rotate.</li>
             </ul>
 
             <h3>7. Your choices and rights</h3>
             <ul>
               <li>You can use the iOS app without any account.</li>
-              <li>You can delete your account yourself, in the web app (Account → Delete account) or in the app (Settings → Account). Deletion is immediate and cannot be undone.</li>
+              <li>You can delete your account yourself, in the web app (Account → Delete account) or in the app (Settings → Account). Deletion of your Hoparoma account is immediate and cannot be undone; if removing the sign-in record from Firebase fails, you are asked to sign in again to finish.</li>
               <li>You can see your saved recipes in the web app and the app at any time; the app can export a recipe as text through the share sheet. For a copy of any other data we hold about your account, email us.</li>
               <li>Depending on where you live (for example under the GDPR, the UK GDPR or Japan's APPI) you may have rights to access, correct, delete, restrict or port your data and to object to processing, and to complain to a supervisory authority. Write to <a href="mailto:support@hoparoma.com">support@hoparoma.com</a>; we answer within 30 days.</li>
               <li>California residents: we do not sell or share personal information and do not use it for targeted advertising.</li>
@@ -192,7 +195,7 @@
 
             <h3>2. アカウントなしの iOS アプリ</h3>
             <p>
-              サインインするまで、アプリはあなたに関する通信を行いません。以下は端末内にローカル保存され、あなたが iOS の共有シートで能動的に共有しない限り、端末の外には出ません:
+              サインインするまで、アプリがあなたに関する情報を Hoparoma に送ることはありません。アカウント対応版のアプリは起動時に Google Firebase を初期化し、Apple のプッシュ通知サービスに登録し(得られた端末トークンは Firebase に渡り、電話番号サインインの確認だけに使われます)、App Store から商品情報を読み込みますが、いずれもレシピには関わりません。以下は端末内にローカル保存され、あなたが iOS の共有シートで能動的に共有しない限り、端末の外には出ません:
             </p>
             <ul>
               <li>保存レシピ（ホップ、モルト、水化学、酵母、マッシュ設定）と予測結果</li>
@@ -205,11 +208,11 @@
             <p>アカウントを作ると、ブラウザで Hoparoma を使い、ウェブとアプリでレシピを共有し、1 つの Pro を両方で使えます。サインインすると、次を取り扱います:</p>
             <ul>
               <li><strong>電話番号。</strong>Google の Firebase Authentication がワンタイムコードを SMS で送り、確認済みの番号を当社に伝えます。当社サーバーは番号の<strong>鍵付きハッシュ</strong>（HMAC）と無作為のアカウント識別子だけを保存し、番号そのものは保存しません。ハッシュは「1 番号 1 アカウント」と月間枠の適用に使います。番号の処理は Google のプライバシーポリシーに従います。SMS の送信対象は日本・アメリカ・カナダ・イギリス・オーストラリアです。</li>
-              <li><strong>サインインのセッション。</strong>ウェブでは Cookie、アプリでは端末のキーチェーンにセッショントークンを最長 90 日またはサインアウトまで保持します。アプリでは Firebase のサインイン部品も、サインアウトまで電話番号を含むサインイン状態を端末のキーチェーンに保持します。</li>
-              <li><strong>アカウントに保存したレシピと結果</strong>（ホップ投入、醸造設定、酵母、香りの見積もり、比較履歴）。削除するまで保持します。</li>
+              <li><strong>サインインのセッション。</strong>有効期間最長 90 日のセッショントークンを、ウェブでは Cookie、アプリでは端末のキーチェーンに置きます。トークンはサインアウトするか新しいものに置き換わるまで残ります。アプリでは Firebase のサインイン部品も、サインアウトまで電話番号を含むサインイン状態を端末のキーチェーンに保持します。</li>
+              <li><strong>アカウントに保存したレシピと結果</strong>（ホップ投入、醸造設定、酵母、香りの見積もり、比較履歴）と、その元になった計算履歴。レシピを削除すると一覧から消えて保存枠が空きますが、データ自体はアカウントを削除したときに消去されます（第 6 条参照）。</li>
               <li><strong>利用回数。</strong>当月に使ったレシピ作成・比較・保存・計算の回数。無料枠 / Pro 枠の適用に使います。</li>
-              <li><strong>セキュリティ信号。</strong>サインインは Google reCAPTCHA で保護され、ブラウザや端末の信号から SMS の自動送信悪用を判定します。Google の<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" rel="noopener" target="_blank">利用規約</a>が適用されます。プロキシ（Cloudflare）とサーバーは、レート制限と障害対応のために IP アドレス・リクエスト情報・応答コードを記録します。</li>
-              <li><strong>不正利用の検知。</strong>モデルの自動探索を検知するため、送信されたレシピの傾向（短時間に多数のほぼ同一な変種など）を機械的に分析します。サポートで依頼された場合を除き、人がレシピを閲覧することはありません。</li>
+              <li><strong>セキュリティ信号。</strong>サインインは Google reCAPTCHA で保護され、ブラウザや端末の信号から SMS の自動送信悪用を判定します。Google の<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" rel="noopener" target="_blank">利用規約</a>が適用されます。Cloudflare とホスティング事業者は、レート制限と障害対応のために IP アドレスとリクエスト情報を記録します。当社自身のアプリケーションログには応答コード・経路・処理時間・内部識別子を記録し、電話番号やレシピの内容は含めません。</li>
+              <li><strong>不正利用の検知。</strong>モデルの自動探索を検知するため、送信されたレシピの傾向（ほぼ同一な変種の連続など）を機械的に分析します。サポートで依頼された場合を除き、人がレシピを閲覧することはありません。</li>
             </ul>
             <p>レシピをモデルの学習や広告に使うことはなく、個人情報を販売・共有することもありません。</p>
 
@@ -218,28 +221,29 @@
               <li><strong>ウェブ（Stripe）。</strong>決済画面とカスタマーポータルは Stripe が提供します。Stripe がカード情報・メールアドレス・請求先住所を取り扱い、領収書を送ります。当社は顧客識別子・サブスクリプション識別子・状態・課金期間を受け取ります。カード番号が当社サーバーに届くことはありません。<a href="https://stripe.com/jp/privacy" rel="noopener" target="_blank">Stripe のプライバシーポリシー</a>をご覧ください。</li>
               <li><strong>アプリ（Apple）。</strong>決済は Apple が行います。サブスクリプションをアカウントに反映するため、アプリは Apple の署名付き取引記録（取引識別子、商品、日付、環境）をアカウント識別子とともに当社へ送ります。<a href="https://www.apple.com/jp/legal/privacy/" rel="noopener" target="_blank">Apple のプライバシーポリシー</a>をご覧ください。</li>
               <li><strong>端末上の Pro 状態。</strong>オフラインでも使えるよう、アプリはアカウントの Pro 状態を最長 30 日間キャッシュします。</li>
-              <li>取引識別子と金額は、税務・会計上の法令が求める期間、当社・Stripe・Apple が保持します。</li>
+              <li>金額を含む取引記録は Stripe と Apple が保持します。当社は上記の識別子と状態を、税務・会計・紛争対応の義務が求める期間（日本では最長 7 年）保持します。</li>
             </ul>
 
             <h3>5. データの処理場所</h3>
             <p>
-              サーバーとデータベースは Cloudflare を経由した Fly.io（米国カリフォルニア州サンノゼ）で動いています。Firebase Authentication と reCAPTCHA は Google、決済は Stripe と Apple が運営します。これらの事業者は米国その他の国でデータを処理し、当社の委託先として当社の指示に従います。当社は日本の事業者です。EU/EEA・英国・スイスの利用者については、各事業者の標準契約条項または同等の保護措置により移転します。バックアップは保存時に暗号化され（Fly.io のスナップショットと Cloudflare R2）、30 日で上書きされます。
+              サーバーとデータベースは Cloudflare を経由した Fly.io（米国カリフォルニア州サンノゼ）で動いています。Firebase Authentication と reCAPTCHA は Google、決済は Stripe と Apple が運営します。これらの事業者は米国その他の国でデータを処理し、当社の委託先として当社の指示に従います。当社は日本の事業者です。EU/EEA・英国・スイスの利用者については、各事業者の標準契約条項または同等の保護措置により移転します。Fly.io はボリュームの日次スナップショットを 5 世代保持し、当社はデータベースを毎日 Cloudflare R2（保存時に暗号化）へ複製して新しい 30 世代を保持します。
             </p>
 
             <h3>6. 保持期間</h3>
             <ul>
-              <li>レシピと結果: 削除またはアカウント削除まで。</li>
+              <li>レシピと結果: アカウントが存続する間。削除したレシピは直ちに一覧から消え、データはアカウント削除とともに消去されます。</li>
               <li>セッション: サインアウトまたは失効（90 日）まで。</li>
-              <li>利用回数: 月ごとに集計し、アカウントが存続する間。</li>
-              <li>アカウント削除: レシピ・セッション・決済との紐付けは直ちに削除し、Stripe のサブスクリプションは先に解約します。番号のハッシュと当月の利用回数だけは、削除と再登録による月間枠のリセットを防ぐため <strong>90 日間</strong>保持し、その後削除します。Apple のサブスクリプションは Apple で解約してください。</li>
-              <li>サーバーとプロキシのログ: 障害対応のための短期間（数日）。</li>
-              <li>バックアップ: 最長 30 日。</li>
+              <li>利用回数と不正検知のフラグ: アカウントが存続する間と、削除後およそ 90 日間。</li>
+              <li>アカウント削除: レシピ・計算履歴・セッション・不正検知のデータは直ちに削除します。Stripe のサブスクリプションは先に支払済み期間の末日での終了を予約します（未完了のものは直ちに解約）。番号のハッシュ・利用回数・不正検知のフラグは、削除と再登録による月間枠のリセットを防ぐため<strong>およそ 90 日間</strong>保持し、その後削除します（清掃は日次で、厳密な時刻ではありません）。Apple のサブスクリプションは Apple で解約してください。</li>
+              <li>決済の記録: サブスクリプションを契約したことのあるアカウントについては、削除後も Stripe の顧客・サブスクリプション識別子、Apple の取引識別子とその状態を、紐づく番号のハッシュとともに、税務・会計・紛争対応の義務が求める期間（日本では最長 7 年）保持し、その後削除します。</li>
+              <li>サーバーのログ: 当社のアプリケーションログはホスティング事業者が短期間（数日）保持します。Cloudflare は自社の方針でリクエストログを保持します。</li>
+              <li>バックアップ: 新しい 30 世代の日次コピーと Fly.io のスナップショット 5 世代。削除したデータは世代の入れ替わりとともにバックアップからも消えます。</li>
             </ul>
 
             <h3>7. 選択肢と権利</h3>
             <ul>
               <li>iOS アプリはアカウントなしで使えます。</li>
-              <li>アカウントは、ウェブ版（Account → Delete account）またはアプリ（設定 → アカウント）から自分で削除できます。削除は即時で、元に戻せません。</li>
+              <li>アカウントは、ウェブ版（Account → Delete account）またはアプリ（設定 → アカウント）から自分で削除できます。Hoparoma アカウントの削除は即時で、元に戻せません。Firebase 側のサインイン記録の削除に失敗した場合は、再度サインインして完了するよう案内します。</li>
               <li>保存レシピはウェブ版とアプリでいつでも閲覧でき、アプリでは共有シートからテキストとして書き出せます。それ以外の保有データの写しが必要な場合はメールでご連絡ください。</li>
               <li>お住まいの地域の法令（個人情報保護法、GDPR、UK GDPR など）に基づき、開示・訂正・削除・利用停止・データポータビリティ・異議申立て、および監督機関への申立ての権利があります。<a href="mailto:support@hoparoma.com">support@hoparoma.com</a> までご連絡ください。30 日以内に回答します。</li>
               <li>個人情報を販売・共有せず、ターゲティング広告にも使いません。</li>
