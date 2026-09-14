@@ -18,7 +18,7 @@ TOOLS = SITE_ROOT / "tools"
 DATA = SITE_ROOT / "data"
 TEMPLATES = SITE_ROOT / "templates"
 GENERATED_DIRS = ["hops", "yeast", "malt", "sources"]
-STATIC_PAGES = ["/", "/support.html", "/privacy.html", "/terms.html"]
+STATIC_PAGES = ["/", "/support.html", "/privacy.html", "/terms.html", "/tokushoho.html"]
 
 THIOL_HIGH = {"high", "very_high_bound"}
 

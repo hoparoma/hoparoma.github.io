@@ -49,8 +49,8 @@
             <div class="contact-card__row">
               <dt>Email · メール</dt>
               <dd>
-                <a href="mailto:hoparoma.support@gmail.com"
-                  >hoparoma.support@gmail.com</a
+                <a href="mailto:support@hoparoma.com"
+                  >support@hoparoma.com</a
                 >
               </dd>
             </div>
@@ -102,11 +102,66 @@
           <details class="faq__item">
             <summary>How do I cancel a Pro subscription?</summary>
             <p>
-              Subscriptions are managed by Apple. Open the iOS
-              <strong>Settings</strong> app → tap your name at the top →
-              <strong>Subscriptions</strong> → <strong>Hoparoma Pro</strong>
-              → <strong>Cancel Subscription</strong>. Your Pro features stay
-              active until the end of the current billing period.
+              <strong>Bought in the iOS app:</strong> the subscription is
+              managed by Apple. Open the iOS <strong>Settings</strong> app →
+              tap your name at the top → <strong>Subscriptions</strong> →
+              <strong>Hoparoma Pro</strong> → <strong>Cancel Subscription</strong>.
+              <strong>Bought on the web:</strong> sign in at app.hoparoma.com,
+              open <strong>Account</strong> → <strong>Manage subscription</strong>
+              and cancel in the Stripe customer portal. Either way, Pro stays
+              active until the end of the period you have paid for; there is no
+              partial refund. See the
+              <a href="/tokushoho.html">特定商取引法に基づく表記</a> for the full
+              terms of sale.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>I pay for Pro in the app. Do I need web Pro too?</summary>
+            <p>
+              No. One Pro subscription covers both the app and the web for the
+              same account. Sign in on the web with the phone number you use in
+              the app, and the web shows you as Pro without offering another
+              subscription. The reverse also holds: a web subscription unlocks
+              Pro in the app once you sign in there.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>What are the monthly allowances on the web?</summary>
+            <p>
+              Free: 3 recipes per month, 2 comparisons per recipe and 3 saved
+              recipes. Pro: 30 recipes per month, up to 10 comparisons each, 50
+              saved recipes, within 200 calculations per month. Deleting a recipe
+              does not restore the monthly allowance, and the allowances count per
+              phone number.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Why do you ask for a phone number?</summary>
+            <p>
+              A phone number is the lightest way to keep one account per person
+              without passwords, and it lets the same account work in the app and
+              on the web. Google's Firebase Authentication verifies the number by
+              SMS; our server stores only a keyed hash of it, never the number.
+              SMS delivery is enabled for Japan, the United States, Canada, the
+              United Kingdom and Australia. If the code does not arrive, check
+              that your number is in one of those regions and try again after a
+              minute.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Where is my data stored, and how do I delete it?</summary>
+            <p>
+              Recipes you save to an account live on our server in the United
+              States (Fly.io, San Jose) behind Cloudflare. Delete your account
+              anytime from <strong>Account</strong> → <strong>Delete account</strong>
+              on the web or from Settings in the app; recipes and sessions go
+              immediately, and a hashed identifier is kept for 90 days only so
+              that deleting and re-registering cannot reset the monthly
+              allowance. Details in the <a href="/privacy.html">Privacy Policy</a>.
             </p>
           </details>
 
@@ -136,7 +191,11 @@
           <details class="faq__item">
             <summary>Do you collect any data?</summary>
             <p>
-              No. No accounts, no analytics, no third-party SDKs. See the
+              Not unless you sign in. Used without an account, the app keeps
+              everything on your device and runs no analytics. If you create an
+              account, we keep a keyed hash of your phone number, the recipes you
+              save to the account and your monthly usage counts; payments go
+              through Stripe or Apple. See the
               <a href="/privacy.html">Privacy Policy</a> for details.
             </p>
           </details>
@@ -178,10 +237,36 @@
           <details class="faq__item">
             <summary>Pro サブスクリプションを解約するには?</summary>
             <p>
-              iOS の <strong>設定</strong> アプリを開き、上部の自分の名前をタップ →
-              <strong>サブスクリプション</strong> →
-              <strong>Hoparoma Pro</strong> →
-              <strong>サブスクリプションをキャンセル</strong>。課金期間の末日まで Pro 機能は使えます。
+              <strong>iOS アプリで購入した場合:</strong> Apple が管理しています。iOS の <strong>設定</strong> アプリを開き、上部の自分の名前をタップ → <strong>サブスクリプション</strong> → <strong>Hoparoma Pro</strong> → <strong>サブスクリプションをキャンセル</strong>。
+              <strong>ウェブで購入した場合:</strong> app.hoparoma.com にサインインし、<strong>Account</strong> → <strong>Manage subscription</strong> から Stripe のカスタマーポータルで解約します。どちらも支払済み期間の末日まで Pro を使えます。日割りの返金はありません。販売条件は<a href="/tokushoho.html">特定商取引法に基づく表記</a>をご覧ください。
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>アプリで Pro を契約中です。ウェブでも契約が必要ですか?</summary>
+            <p>
+              不要です。同じアカウントなら 1 つの Pro でアプリとウェブの両方が使えます。アプリで使っている電話番号でウェブにサインインすれば Pro として扱われ、別のサブスクリプションは提示されません。逆にウェブで契約した Pro も、アプリでサインインすれば有効になります。
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>ウェブ版の月間枠は?</summary>
+            <p>
+              無料: レシピ 3 件 / 月、比較 2 回 / レシピ、保存 3 件。Pro: レシピ 30 件 / 月、比較 10 回 / レシピ、保存 50 件、計算 200 回 / 月まで。レシピを削除しても月間枠は戻りません。枠は電話番号ごとに数えます。
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>なぜ電話番号が必要なのですか?</summary>
+            <p>
+              パスワードなしで「1 人 1 アカウント」を保ち、同じアカウントをアプリとウェブで使うための最も軽い方法だからです。番号の確認は Google の Firebase Authentication が SMS で行い、当社サーバーには番号の鍵付きハッシュだけを保存します。SMS は日本・アメリカ・カナダ・イギリス・オーストラリアの番号に送れます。コードが届かない場合は、番号がこれらの地域のものか確認し、1 分ほど待ってから再送してください。
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>データはどこに保存され、どう削除できますか?</summary>
+            <p>
+              アカウントに保存したレシピは、Cloudflare を経由した米国のサーバー（Fly.io、サンノゼ）にあります。削除はウェブの <strong>Account</strong> → <strong>Delete account</strong>、またはアプリの設定からいつでもできます。レシピとセッションは直ちに消え、削除と再登録で月間枠がリセットされないよう、ハッシュ化した識別子だけを 90 日間保持します。詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。
             </p>
           </details>
 
@@ -202,8 +287,8 @@
           <details class="faq__item">
             <summary>データ収集はありますか?</summary>
             <p>
-              ありません。アカウントなし、アナリティクスなし、サードパーティ SDK なし。詳細は
-              <a href="/privacy.html">Privacy Policy</a> を参照ください。
+              サインインしない限りありません。アカウントなしで使うアプリは、すべてを端末内に保存し、アナリティクスも動かしません。アカウントを作ると、電話番号の鍵付きハッシュ、アカウントに保存したレシピ、月間の利用回数を保持し、決済は Stripe または Apple が行います。詳細は
+              <a href="/privacy.html">プライバシーポリシー</a>を参照ください。
             </p>
           </details>
 
@@ -218,8 +303,8 @@
 
           <p class="doc-meta">
             Still stuck? Email
-            <a href="mailto:hoparoma.support@gmail.com"
-              >hoparoma.support@gmail.com</a
+            <a href="mailto:support@hoparoma.com"
+              >support@hoparoma.com</a
             >
             with the iOS version, device model, and (if relevant) a screenshot.
           </p>
@@ -237,6 +322,7 @@
           <a href="/sources/">Sources</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
+          <a href="/tokushoho.html">特定商取引法</a>
           <a href="/support.html">Support</a>
         </span>
       </div>
