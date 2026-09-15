@@ -42,7 +42,7 @@
           <h1 id="privacy-heading" class="section__title">Privacy Policy</h1>
           <p class="doc-meta">
             <strong>Effective:</strong> 2026-04-17 ·
-            <strong>Last updated:</strong> 2026-09-14 (web service and optional account added; takes effect for the web service on 2026-09-14)
+            <strong>Last updated:</strong> 2026-09-15 (brewing journal added to the web service; web service and optional account added on 2026-09-14)
           </p>
 
           <section class="lang-section" lang="en">
@@ -90,6 +90,9 @@
                 <strong>Recipes and results</strong> you save to the account (hop additions, brewing settings, yeast, the aroma estimate and comparison history), together with the calculation history behind them. Deleting a recipe hides it and frees a saved slot; the underlying data is removed when you delete the account (see section 6).
               </li>
               <li>
+                <strong>Brewing journal</strong> (web service). When you mark a saved recipe version as brewed, we store a copy of that version and its aroma estimate together with the brew date and your batch notes. Each tasting you log against a brew stores the tasting date, an optional liking score (1–5), your notes and any aroma observations you choose to record. These records stay in your journal even if you later change or delete the recipe, until you delete the record or the account. The journal is kept on our server and is not synchronised with the app's tasting log.
+              </li>
+              <li>
                 <strong>Usage counters:</strong> how many recipes, comparisons, saves and calculations you have used in the current month, to apply the Free or Pro allowances.
               </li>
               <li>
@@ -127,10 +130,11 @@
             <h3>6. How long we keep data</h3>
             <ul>
               <li>Recipes and results: while the account exists. A deleted recipe is hidden at once; its data is removed together with the account.</li>
+              <li>Brewing journal (brews and tastings): until you delete the record or the account. Deleting a brew erases its recipe copy, notes, brewing date and all its tastings at once, while deleting a tasting erases only that tasting's notes, ratings, aroma observations and date; record and request identifiers, version numbers where applicable, creation times and hashes of the original creation requests remain, without those contents, until account deletion, so that a repeated request cannot recreate the record.</li>
               <li>Sessions: until sign-out or expiry (90 days).</li>
               <li>Usage counters and abuse-detection flags: for the life of the account and about 90 days after deletion.</li>
               <li>
-                Account deletion: recipes, calculation history, sessions and abuse-detection data are deleted immediately. Any Stripe subscription is first set to end at the close of the paid period (an incomplete one is cancelled at once). The hashed phone identifier, usage counters and abuse flags are kept for <strong>about 90 days</strong> so that deleting and re-creating an account cannot reset monthly allowances; the clean-up runs daily rather than at an exact moment. Apple subscriptions must be cancelled with Apple.
+                Account deletion: recipes, calculation history, the brewing journal, sessions and abuse-detection data are deleted immediately. Any Stripe subscription is first set to end at the close of the paid period (an incomplete one is cancelled at once). The hashed phone identifier, usage counters and abuse flags are kept for <strong>about 90 days</strong> so that deleting and re-creating an account cannot reset monthly allowances; the clean-up runs daily rather than at an exact moment. Apple subscriptions must be cancelled with Apple.
               </li>
               <li>
                 Billing records: if the account ever had a subscription, we keep the Stripe customer and subscription identifiers, the Apple transaction identifiers and their status after deletion, together with the hashed phone identifier they are linked to, for as long as tax, accounting and dispute-handling obligations require (in Japan, up to seven years), and then delete them.
@@ -143,7 +147,7 @@
             <ul>
               <li>You can use the iOS app without any account.</li>
               <li>You can delete your account yourself, in the web app (Account → Delete account) or in the app (Settings → Account). Deletion of your Hoparoma account is immediate and cannot be undone; if removing the sign-in record from Firebase fails, you are asked to sign in again to finish.</li>
-              <li>You can see your saved recipes in the web app and the app at any time; the app can export a recipe as text through the share sheet. For a copy of any other data we hold about your account, email us.</li>
+              <li>You can see your saved recipes in the web app and the app at any time, and your brewing journal in the web app; the app can export a recipe as text through the share sheet. For a copy of any other data we hold about your account, email us.</li>
               <li>Depending on where you live (for example under the GDPR, the UK GDPR or Japan's APPI) you may have rights to access, correct, delete, restrict or port your data and to object to processing, and to complain to a supervisory authority. Write to <a href="mailto:support@hoparoma.com">support@hoparoma.com</a>; we answer within 30 days.</li>
               <li>California residents: we do not sell or share personal information and do not use it for targeted advertising.</li>
             </ul>
@@ -210,6 +214,7 @@
               <li><strong>電話番号。</strong>Google の Firebase Authentication がワンタイムコードを SMS で送り、確認済みの番号を当社に伝えます。当社サーバーは番号の<strong>鍵付きハッシュ</strong>（HMAC）と無作為のアカウント識別子だけを保存し、番号そのものは保存しません。ハッシュは「1 番号 1 アカウント」と月間枠の適用に使います。番号の処理は Google のプライバシーポリシーに従います。SMS の送信対象は日本・アメリカ・カナダ・イギリス・オーストラリアです。</li>
               <li><strong>サインインのセッション。</strong>有効期間最長 90 日のセッショントークンを、ウェブでは Cookie、アプリでは端末のキーチェーンに置きます。トークンはサインアウトするか新しいものに置き換わるまで残ります。アプリでは Firebase のサインイン部品も、サインアウトまで電話番号を含むサインイン状態を端末のキーチェーンに保持します。</li>
               <li><strong>アカウントに保存したレシピと結果</strong>（ホップ投入、醸造設定、酵母、香りの見積もり、比較履歴）と、その元になった計算履歴。レシピを削除すると一覧から消えて保存枠が空きますが、データ自体はアカウントを削除したときに消去されます（第 6 条参照）。</li>
+              <li><strong>醸造記録（ウェブ版）。</strong>保存したレシピの版を「醸造した」と記録すると、その版と香りの見積もりの写し、醸造日、仕込みのメモを保存します。その醸造記録に付けた試飲については、試飲日、任意の好みの点数（1〜5）、メモ、任意で記録した香りの観察を保存します。これらの記録は、後でレシピを変更・削除しても、記録またはアカウントを削除するまで日誌に残ります。記録は当社サーバーに保存され、アプリの試飲ログとは同期しません。</li>
               <li><strong>利用回数。</strong>当月に使ったレシピ作成・比較・保存・計算の回数。無料枠 / Pro 枠の適用に使います。</li>
               <li><strong>セキュリティ信号。</strong>サインインは Google reCAPTCHA で保護され、ブラウザや端末の信号から SMS の自動送信悪用を判定します。Google の<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" rel="noopener" target="_blank">利用規約</a>が適用されます。Cloudflare とホスティング事業者は、レート制限と障害対応のために IP アドレスとリクエスト情報を記録します。当社自身のアプリケーションログには応答コード・経路・処理時間・内部識別子を記録し、電話番号やレシピの内容は含めません。</li>
               <li><strong>不正利用の検知。</strong>モデルの自動探索を検知するため、送信されたレシピの傾向（ほぼ同一な変種の連続など）を機械的に分析します。サポートで依頼された場合を除き、人がレシピを閲覧することはありません。</li>
@@ -232,9 +237,10 @@
             <h3>6. 保持期間</h3>
             <ul>
               <li>レシピと結果: アカウントが存続する間。削除したレシピは直ちに一覧から消え、データはアカウント削除とともに消去されます。</li>
+              <li>醸造記録（醸造と試飲）: 記録またはアカウントを削除するまで。醸造記録を削除するとレシピの写し・メモ・醸造日と配下の全試飲を、試飲だけを削除するとその試飲のメモ・評価・香りの観察・試飲日を直ちに消去します。再送による復元を防ぐため、記録と要求の識別子・該当する版番号・作成日時・元の作成要求のハッシュは、それらの内容を含めずにアカウント削除まで保持します。</li>
               <li>セッション: サインアウトまたは失効（90 日）まで。</li>
               <li>利用回数と不正検知のフラグ: アカウントが存続する間と、削除後およそ 90 日間。</li>
-              <li>アカウント削除: レシピ・計算履歴・セッション・不正検知のデータは直ちに削除します。Stripe のサブスクリプションは先に支払済み期間の末日での終了を予約します（未完了のものは直ちに解約）。番号のハッシュ・利用回数・不正検知のフラグは、削除と再登録による月間枠のリセットを防ぐため<strong>およそ 90 日間</strong>保持し、その後削除します（清掃は日次で、厳密な時刻ではありません）。Apple のサブスクリプションは Apple で解約してください。</li>
+              <li>アカウント削除: レシピ・計算履歴・醸造記録・セッション・不正検知のデータは直ちに削除します。Stripe のサブスクリプションは先に支払済み期間の末日での終了を予約します（未完了のものは直ちに解約）。番号のハッシュ・利用回数・不正検知のフラグは、削除と再登録による月間枠のリセットを防ぐため<strong>およそ 90 日間</strong>保持し、その後削除します（清掃は日次で、厳密な時刻ではありません）。Apple のサブスクリプションは Apple で解約してください。</li>
               <li>決済の記録: サブスクリプションを契約したことのあるアカウントについては、削除後も Stripe の顧客・サブスクリプション識別子、Apple の取引識別子とその状態を、紐づく番号のハッシュとともに、税務・会計・紛争対応の義務が求める期間（日本では最長 7 年）保持し、その後削除します。</li>
               <li>サーバーのログ: 当社のアプリケーションログはホスティング事業者が短期間（数日）保持します。Cloudflare は自社の方針でリクエストログを保持します。</li>
               <li>バックアップ: 新しい 30 世代の日次コピーと Fly.io のスナップショット 5 世代。削除したデータは世代の入れ替わりとともにバックアップからも消えます。</li>
@@ -244,7 +250,7 @@
             <ul>
               <li>iOS アプリはアカウントなしで使えます。</li>
               <li>アカウントは、ウェブ版（Account → Delete account）またはアプリ（設定 → アカウント）から自分で削除できます。Hoparoma アカウントの削除は即時で、元に戻せません。Firebase 側のサインイン記録の削除に失敗した場合は、再度サインインして完了するよう案内します。</li>
-              <li>保存レシピはウェブ版とアプリでいつでも閲覧でき、アプリでは共有シートからテキストとして書き出せます。それ以外の保有データの写しが必要な場合はメールでご連絡ください。</li>
+              <li>保存レシピはウェブ版とアプリでいつでも閲覧でき、醸造記録はウェブ版で閲覧できます。アプリでは共有シートからレシピをテキストとして書き出せます。それ以外の保有データの写しが必要な場合はメールでご連絡ください。</li>
               <li>お住まいの地域の法令（個人情報保護法、GDPR、UK GDPR など）に基づき、開示・訂正・削除・利用停止・データポータビリティ・異議申立て、および監督機関への申立ての権利があります。<a href="mailto:support@hoparoma.com">support@hoparoma.com</a> までご連絡ください。30 日以内に回答します。</li>
               <li>個人情報を販売・共有せず、ターゲティング広告にも使いません。</li>
             </ul>
