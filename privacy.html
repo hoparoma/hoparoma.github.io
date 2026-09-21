@@ -9,7 +9,7 @@
       content="How Hoparoma handles your data: the iOS app stays on your device unless you sign in; an optional account uses your phone number for sign-in (stored only as a keyed hash), saves recipes on our server, and bills Pro through Stripe or Apple. This website uses Google Analytics 4."
     />
     <meta name="color-scheme" content="light" />
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,12 +17,14 @@
       gtag('js', new Date());
       gtag('config', 'G-ELB416YDMP');
     </script>
+    <script src="/track.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link">Calculator</a>
           <a href="/hops/" class="site-nav__link">Hops</a>
           <a href="/yeast/" class="site-nav__link">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
@@ -42,7 +44,7 @@
           <h1 id="privacy-heading" class="section__title">Privacy Policy</h1>
           <p class="doc-meta">
             <strong>Effective:</strong> 2026-04-17 ·
-            <strong>Last updated:</strong> 2026-09-15 (brewing journal added to the web service; web service and optional account added on 2026-09-14)
+            <strong>Last updated:</strong> 2026-09-21 (website analytics also counts clicks on links to the web app; brewing journal added to the web service on 2026-09-15; web service and optional account added on 2026-09-14)
           </p>
 
           <section class="lang-section" lang="en">
@@ -164,7 +166,7 @@
 
             <h3 id="website-en">10. Website (hoparoma.com)</h3>
             <p>
-              This website uses <strong>Google Analytics 4</strong> to count page views and clicks on App Store links, so we can see which reference pages are useful. Google Analytics sets cookies for that purpose and processes your IP address and browser details on Google's servers. We have not enabled advertising features, and we do not sell or share the data. If you would rather not be counted, use the
+              This website uses <strong>Google Analytics 4</strong> to count page views and clicks on links to the App Store and to the web app (which link was clicked and where on the page it sits), so we can see which reference pages are useful. Google Analytics sets cookies for that purpose and processes your IP address and browser details on Google's servers. We have not enabled advertising features, and we do not sell or share the data. If you would rather not be counted, use the
               <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out browser add-on</a>
               or block cookies for this site. The email sign-up form is provided by Buttondown and receives only the address you submit. The web app at app.hoparoma.com does not use Google Analytics.
             </p>
@@ -263,7 +265,7 @@
 
             <h3 id="website-ja">10. ウェブサイト（hoparoma.com）</h3>
             <p>
-              このウェブサイトでは <strong>Google Analytics 4</strong> を使ってページ閲覧数と App Store リンクのクリック数を計測しています。どの参照ページが役に立っているかを知るためです。Google Analytics はそのために Cookie を設定し、IP アドレスやブラウザ情報を Google のサーバーで処理します。広告機能は有効にしておらず、データを販売・共有することもありません。計測を望まない場合は <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics オプトアウト アドオン</a> を使うか、このサイトの Cookie をブロックしてください。メール登録フォームは Buttondown が提供し、送信したアドレスのみを受け取ります。ウェブ版アプリ（app.hoparoma.com）では Google Analytics を使っていません。
+              このウェブサイトでは <strong>Google Analytics 4</strong> を使ってページ閲覧数と、App Store およびウェブ版アプリへのリンクのクリック数（どのリンクが、ページ内のどの位置で押されたか）を計測しています。どの参照ページが役に立っているかを知るためです。Google Analytics はそのために Cookie を設定し、IP アドレスやブラウザ情報を Google のサーバーで処理します。広告機能は有効にしておらず、データを販売・共有することもありません。計測を望まない場合は <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics オプトアウト アドオン</a> を使うか、このサイトの Cookie をブロックしてください。メール登録フォームは Buttondown が提供し、送信したアドレスのみを受け取ります。ウェブ版アプリ（app.hoparoma.com）では Google Analytics を使っていません。
             </p>
 
             <h3>11. 変更</h3>
@@ -282,6 +284,7 @@
       <div class="container">
         <span>© 2026 Hoparoma</span>
         <span class="footer-links">
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>

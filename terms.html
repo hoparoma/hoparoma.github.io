@@ -9,7 +9,7 @@
       content="Terms of Use for the Hoparoma iOS app, the web service at app.hoparoma.com and the optional account. Predictions are estimates. Personal use through the app or a browser only. Pro renews monthly until cancelled."
     />
     <meta name="color-scheme" content="light" />
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,12 +17,14 @@
       gtag('js', new Date());
       gtag('config', 'G-ELB416YDMP');
     </script>
+    <script src="/track.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link">Calculator</a>
           <a href="/hops/" class="site-nav__link">Hops</a>
           <a href="/yeast/" class="site-nav__link">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
@@ -42,7 +44,7 @@
           <h1 id="terms-heading" class="section__title">Terms of Use</h1>
           <p class="doc-meta">
             <strong>Effective:</strong> 2026-04-17 ·
-            <strong>Last updated:</strong> 2026-09-15 (brew records and tasting notes added to your content; web service, account and Pro subscription terms added on 2026-09-14)
+            <strong>Last updated:</strong> 2026-09-21 (sample recipes open without an account and search-engine indexing of public pages clarified; brew records and tasting notes added to your content on 2026-09-15; web service, account and Pro subscription terms added on 2026-09-14)
           </p>
           <p class="lede">
             These terms cover the Hoparoma iOS app (the "App"), the Hoparoma web service at app.hoparoma.com (the "Web Service") and the optional account that links them (together, the "Service"). By installing the App, or by signing in to or using the Web Service, you agree to these terms. The Service is provided by Art Factory Co., Ltd., Tokyo, Japan ("we").
@@ -58,7 +60,7 @@
 
             <h3>2. Account</h3>
             <ul>
-              <li>An account is optional for the App and required for the Web Service. You sign in with a mobile phone number that can receive SMS in a supported region (Japan, the United States, Canada, the United Kingdom, Australia).</li>
+              <li>An account is optional for the App. On the Web Service, the sample recipes and their comparison are open without an account; creating, calculating, importing or saving recipes, and the brewing journal, require one. You sign in with a mobile phone number that can receive SMS in a supported region (Japan, the United States, Canada, the United Kingdom, Australia).</li>
               <li>You must be at least 18 years old to create an account or subscribe.</li>
               <li>One account per phone number. Do not share an account or use several numbers to multiply allowances.</li>
               <li>You are responsible for activity under your account and for keeping your device and number secure. Tell us at once if you believe your account is misused.</li>
@@ -84,7 +86,7 @@
             <h3>5. Acceptable use</h3>
             <p>You agree not to:</p>
             <ul>
-              <li>access the Service by any means other than the App or a standard web browser operated by a person — no bots, scripts, headless browsers or scraping;</li>
+              <li>access the Service by any means other than the App or a standard web browser operated by a person — no bots, scripts, headless browsers or scraping. Search engines may index the public pages of the Web Service; that does not permit automated calculation, collection of results or any other automated use;</li>
               <li>circumvent or attempt to circumvent allowances, rate limits or sign-in protections, including by sharing accounts or using multiple numbers;</li>
               <li>reverse engineer, decompile, probe or attempt to reconstruct the prediction model, its coefficients or its calibration data, including by systematic submission of recipes;</li>
               <li>collect outputs of the Service to build datasets, derived models or competing services, or redistribute outputs commercially;</li>
@@ -157,7 +159,7 @@
 
             <h3>2. アカウント</h3>
             <ul>
-              <li>本アプリではアカウントは任意、ウェブ版では必須です。対応地域（日本、アメリカ、カナダ、イギリス、オーストラリア）で SMS を受信できる携帯電話番号でサインインします。</li>
+              <li>本アプリではアカウントは任意です。ウェブ版では、サンプルレシピとその比較はアカウントなしで閲覧でき、レシピの作成・計算・取込・保存と醸造日誌にはアカウントが必要です。対応地域（日本、アメリカ、カナダ、イギリス、オーストラリア）で SMS を受信できる携帯電話番号でサインインします。</li>
               <li>アカウントの作成とサブスクリプションの申込みは 18 歳以上に限ります。</li>
               <li>1 つの電話番号につき 1 アカウントです。アカウントの共有や、複数の番号による枠の水増しはできません。</li>
               <li>アカウント上の行為と、端末・番号の管理は利用者の責任です。不正利用の疑いがある場合は直ちにご連絡ください。</li>
@@ -183,7 +185,7 @@
             <h3>5. 禁止事項</h3>
             <p>次の行為を禁止します:</p>
             <ul>
-              <li>本アプリまたは人が操作する通常のウェブブラウザ以外の手段で本サービスにアクセスすること（ボット、スクリプト、ヘッドレスブラウザ、スクレイピング）。</li>
+              <li>本アプリまたは人が操作する通常のウェブブラウザ以外の手段で本サービスにアクセスすること（ボット、スクリプト、ヘッドレスブラウザ、スクレイピング）。検索エンジンがウェブ版の公開ページを索引することは妨げませんが、自動化された計算、結果の収集、その他の自動化された利用は認めません。</li>
               <li>利用枠、レート制限、サインイン保護を回避し、または回避を試みること（アカウントの共有や複数番号の利用を含む）。</li>
               <li>予測モデル、その係数、キャリブレーションデータをリバースエンジニアリング、逆コンパイル、探索、または再構築しようとすること（レシピの系統的な送信によるものを含む）。</li>
               <li>本サービスの出力を収集してデータセット、派生モデル、競合サービスを作ること、または出力を商業的に再配布すること。</li>
@@ -248,6 +250,7 @@
       <div class="container">
         <span>© 2026 Hoparoma</span>
         <span class="footer-links">
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>
