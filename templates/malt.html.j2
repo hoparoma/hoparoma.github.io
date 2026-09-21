@@ -54,7 +54,7 @@
   <section class="ref-section ref-cta" aria-labelledby="app-h">
     <h2 id="app-h">In Hoparoma</h2>
     <p>Hoparoma carries malt-derived precursors into its thiol model alongside hop precursors, yeast release, and Phantasm dose, so a grain bill change shows up in the estimate.</p>
-    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    {{ m.app_links('malt_page') }}
     <p class="ref-note">Machine-readable copy: <a href="/data/malt.json">malt.json</a>.{% if cfg.dataset_license %} Published under <a href="{{ cfg.dataset_license }}" rel="license noopener" target="_blank">{{ cfg.dataset_license_name }}</a>: reuse freely with credit to Hoparoma and a link to hoparoma.com.{% endif %}</p>
   </section>
 

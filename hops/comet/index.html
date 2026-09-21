@@ -20,19 +20,21 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style.css?v=5" />
-    <link rel="stylesheet" href="/ref.css?v=5" />    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://hoparoma.com/", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/", "name": "Hops", "position": 2}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/comet/", "name": "Comet", "position": 3}]}, {"@type": "Dataset", "creator": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "dateModified": "2026-09-04", "description": "Comet (US): lemongrass grapefruit geranium resin. Alpha acid 8\u201310.5 %, total oil 1.4\u20133.3 mL/100 g. Bound thiol precursors rated significant (3MH family) and low (4MMP), with sources and yeast pairing.", "isAccessibleForFree": true, "keywords": ["Comet", "hops", "hop aroma", "thiols"], "license": "https://creativecommons.org/licenses/by/4.0/", "name": "Comet hop variety data", "url": "https://hoparoma.com/hops/comet/", "version": "2.0.2-cb514c20e9ef"}]}</script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
+    <link rel="stylesheet" href="/style.css?v=6" />
+    <link rel="stylesheet" href="/ref.css?v=6" />    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://hoparoma.com/", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/", "name": "Hops", "position": 2}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/comet/", "name": "Comet", "position": 3}]}, {"@type": "Dataset", "creator": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "dateModified": "2026-09-04", "description": "Comet (US): lemongrass grapefruit geranium resin. Alpha acid 8\u201310.5 %, total oil 1.4\u20133.3 mL/100 g. Bound thiol precursors rated significant (3MH family) and low (4MMP), with sources and yeast pairing.", "isAccessibleForFree": true, "keywords": ["Comet", "hops", "hop aroma", "thiols"], "license": "https://creativecommons.org/licenses/by/4.0/", "name": "Comet hop variety data", "url": "https://hoparoma.com/hops/comet/", "version": "2.0.2-cb514c20e9ef"}]}</script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ELB416YDMP');
-    </script>  </head>
+    </script>
+    <script src="/track.js?v=1" defer></script>  </head>
   <body class="ref-body">
     <header class="site-header" aria-label="Main">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link">Calculator</a>
           <a href="/hops/" class="site-nav__link site-nav__link--active">Hops</a>
           <a href="/yeast/" class="site-nav__link">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
@@ -44,6 +46,7 @@
           target="_blank"
           rel="noopener"
           class="cta-pill"
+          data-placement="header"
           aria-label="Download Hoparoma on the App Store"
           >Get App</a
         >
@@ -132,7 +135,11 @@ Part of its fruit character comes from bound thiol precursors; the rest rides on
     <p>
       Hoparoma computes how much of Comet's aroma compounds survive your boil, whirlpool, and dry hop, and models the thiol side across yeast, hop, malt, and Phantasm together. The result is a research-based estimate of where the beer is likely to land, not a guarantee.
     </p>
-    <a class="cta-pill" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    <div class="ref-cta__actions">
+  <a class="cta-pill" href="https://app.hoparoma.com/" data-placement="hop_page">Open the web calculator</a>
+  <a class="cta-pill cta-pill--ghost" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener" data-placement="hop_page">Get the iOS app</a>
+</div>
+<p class="ref-cta__note">Free in any browser, 3 recipes a month. <a href="/calculator/">What the calculator does</a></p>
   </section>
 
   <section class="ref-section ref-sources" aria-labelledby="src-h">
@@ -159,6 +166,7 @@ Part of its fruit character comes from bound thiol precursors; the rest rides on
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <a href="/">Home</a>
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>
@@ -166,6 +174,7 @@ Part of its fruit character comes from bound thiol precursors; the rest rides on
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
+          <a href="/tokushoho.html">特定商取引法</a>
           <a href="mailto:support@hoparoma.com">Contact</a>
         </nav>
       </div>

@@ -43,6 +43,15 @@
 {%- endif -%}
 {%- endmacro %}
 
+{# Web calculator first (any device), App Store second. placement feeds the GA4 click events in /track.js. #}
+{% macro app_links(placement, explain=True) -%}
+<div class="ref-cta__actions">
+  <a class="cta-pill" href="{{ cfg.web_app_url }}" data-placement="{{ placement }}">Open the web calculator</a>
+  <a class="cta-pill cta-pill--ghost" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener" data-placement="{{ placement }}">Get the iOS app</a>
+</div>
+<p class="ref-cta__note">Free in any browser, 3 recipes a month.{% if explain %} <a href="/calculator/">What the calculator does</a>{% else %} The sample recipes open without signing in.{% endif %}</p>
+{%- endmacro %}
+
 {% macro breadcrumb(items) -%}
 <nav class="ref-crumbs" aria-label="Breadcrumb">
   <ol>

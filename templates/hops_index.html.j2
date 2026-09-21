@@ -75,7 +75,7 @@
   <section class="ref-section ref-cta" aria-labelledby="app-h">
     <h2 id="app-h">Use this data in a recipe</h2>
     <p>Hoparoma applies these values to your own hop schedule, then models the thiol side across yeast, hop, malt, and Phantasm. Estimates, disclosed honestly.</p>
-    <a class="cta-pill" href="{{ cfg.app_store_url }}" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    {{ m.app_links('hops_index') }}
     <p class="ref-note">Machine-readable copy of this table: <a href="/data/hops.json">hops.json</a>.{% if cfg.dataset_license %} The tables and JSON on this site are published under <a href="{{ cfg.dataset_license }}" rel="license noopener" target="_blank">{{ cfg.dataset_license_name }}</a>: reuse and adapt them freely, with credit to Hoparoma and a link to hoparoma.com.{% endif %}</p>
   </section>
 </article>

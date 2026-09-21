@@ -20,19 +20,21 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style.css?v=5" />
-    <link rel="stylesheet" href="/ref.css?v=5" />    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://hoparoma.com/", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/", "name": "Hops", "position": 2}]}, {"@type": "Dataset", "creator": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "dateModified": "2026-09-04", "description": "Supplier brewing values, oil composition, qualitative thiol precursor ratings and crop-year lot data for hop varieties.", "isAccessibleForFree": true, "keywords": ["hops", "hop aroma", "thiols", "3MH", "4MMP", "crop year"], "license": "https://creativecommons.org/licenses/by/4.0/", "name": "Hoparoma hop variety reference", "url": "https://hoparoma.com/hops/", "version": "2.0.2-cb514c20e9ef"}]}</script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
+    <link rel="stylesheet" href="/style.css?v=6" />
+    <link rel="stylesheet" href="/ref.css?v=6" />    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://hoparoma.com/", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "https://hoparoma.com/hops/", "name": "Hops", "position": 2}]}, {"@type": "Dataset", "creator": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "dateModified": "2026-09-04", "description": "Supplier brewing values, oil composition, qualitative thiol precursor ratings and crop-year lot data for hop varieties.", "isAccessibleForFree": true, "keywords": ["hops", "hop aroma", "thiols", "3MH", "4MMP", "crop year"], "license": "https://creativecommons.org/licenses/by/4.0/", "name": "Hoparoma hop variety reference", "url": "https://hoparoma.com/hops/", "version": "2.0.2-cb514c20e9ef"}]}</script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ELB416YDMP');
-    </script>  </head>
+    </script>
+    <script src="/track.js?v=1" defer></script>  </head>
   <body class="ref-body">
     <header class="site-header" aria-label="Main">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link">Calculator</a>
           <a href="/hops/" class="site-nav__link site-nav__link--active">Hops</a>
           <a href="/yeast/" class="site-nav__link">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
@@ -44,6 +46,7 @@
           target="_blank"
           rel="noopener"
           class="cta-pill"
+          data-placement="header"
           aria-label="Download Hoparoma on the App Store"
           >Get App</a
         >
@@ -808,7 +811,11 @@
   <section class="ref-section ref-cta" aria-labelledby="app-h">
     <h2 id="app-h">Use this data in a recipe</h2>
     <p>Hoparoma applies these values to your own hop schedule, then models the thiol side across yeast, hop, malt, and Phantasm. Estimates, disclosed honestly.</p>
-    <a class="cta-pill" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener">Get Hoparoma on the App Store</a>
+    <div class="ref-cta__actions">
+  <a class="cta-pill" href="https://app.hoparoma.com/" data-placement="hops_index">Open the web calculator</a>
+  <a class="cta-pill cta-pill--ghost" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener" data-placement="hops_index">Get the iOS app</a>
+</div>
+<p class="ref-cta__note">Free in any browser, 3 recipes a month. <a href="/calculator/">What the calculator does</a></p>
     <p class="ref-note">Machine-readable copy of this table: <a href="/data/hops.json">hops.json</a>. The tables and JSON on this site are published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener" target="_blank">CC BY 4.0</a>: reuse and adapt them freely, with credit to Hoparoma and a link to hoparoma.com.</p>
   </section>
 </article>
@@ -827,6 +834,7 @@
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <a href="/">Home</a>
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>
@@ -834,6 +842,7 @@
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
+          <a href="/tokushoho.html">特定商取引法</a>
           <a href="mailto:support@hoparoma.com">Contact</a>
         </nav>
       </div>

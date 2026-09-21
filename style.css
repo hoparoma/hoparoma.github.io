@@ -370,6 +370,21 @@ button {
   width: auto;
 }
 
+.hero__cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.hero__web-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 60px;
+  padding-inline: var(--space-8);
+  border-radius: var(--radius-md);
+}
+
 .hero__new-tag {
   font-family: var(--font-mono);
   font-size: var(--text-label-sm);

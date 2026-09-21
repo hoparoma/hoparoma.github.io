@@ -1,0 +1,37 @@
+{
+  "_note": "Rendered twice on /calculator/: as visible Q&A and as FAQPage JSON-LD (tags stripped). Allowances, price, SMS regions and the phone-number wording are copies of support.html and the web app (Web/public/index.html in the app repo). Change them together.",
+  "items": [
+    {
+      "q": "Can a calculator predict how my beer will smell?",
+      "a_html": "Not exactly, and this one does not claim to. It computes the aroma chemistry your recipe is likely to produce from published research and shows where the beer is likely to land. Hop lots vary, and fermentation health, oxygen pickup and storage all move the real result. Use it to compare options before brew day, then log what you taste against the estimate."
+    },
+    {
+      "q": "Is the hop aroma calculator free?",
+      "a_html": "Yes. Free on the web covers 3 recipes per month, 2 comparisons per recipe and 3 saved recipes, with every hop, yeast and malt available. Pro is US$4.99 per month plus applicable tax on the web: 30 recipes per month, up to 10 comparisons each and 50 saved recipes, within 200 calculations per month. One Pro subscription covers the web and the iOS app on the same account."
+    },
+    {
+      "q": "Why does the web version ask for a phone number?",
+      "a_html": "A phone number is the lightest way to keep one account per number without passwords, and it lets the same account work in the app and on the web. Google's Firebase Authentication verifies the number by SMS; our server stores only a keyed hash of it, never the number. The monthly allowance is linked to that account. The sample recipes and the two-recipe comparison open without signing in."
+    },
+    {
+      "q": "Which countries can sign in on the web?",
+      "a_html": "SMS delivery is enabled for Japan, the United States, Canada, the United Kingdom and Australia. The iOS app works without an account, so it is not limited to those regions."
+    },
+    {
+      "q": "Does it work on Android, Windows or a Mac?",
+      "a_html": "Yes. The web version runs in a current browser on Android, Windows, macOS and Linux, as well as on iPhone and iPad. The native app is for iPhone and iPad on iOS 17 or later."
+    },
+    {
+      "q": "Can I import recipes from Brewfather or BeerSmith?",
+      "a_html": "Yes. Export the recipe as BeerXML, which Brewfather, BeerSmith and most recipe software can do, or as BeerJSON. Sign in and import the file. The import lists unmapped ingredients and fields that need review before you calculate."
+    },
+    {
+      "q": "How is this different from a hop oil chart or a hop comparison tool?",
+      "a_html": "A hop chart describes one ingredient. The calculator works on the whole recipe: the same hop lands differently with a thiol-releasing yeast, a cooler whirlpool or a larger dry hop. It models hops, yeast, malt and Phantasm together, with your process conditions."
+    },
+    {
+      "q": "Where does the data come from?",
+      "a_html": "Supplier lot sheets, manufacturer trials and peer-reviewed papers, with clearly labelled estimates where no measurement exists. The ingredient reference tables are public: <a href=\"/hops/\">hops</a>, <a href=\"/yeast/\">yeast</a> and <a href=\"/malt/thiol-precursors/\">malt</a>, with the full list under <a href=\"/sources/\">Sources</a>. The tables are published under CC BY 4.0. The calculation model and its parameters are not published."
+    }
+  ]
+}

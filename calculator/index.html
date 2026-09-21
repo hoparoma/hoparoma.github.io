@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hop aroma calculator for IPA recipes (web and iOS) | Hoparoma</title>
+    <meta name="description" content="Enter hops, yeast, grain and process conditions and get literature-based estimates: seven aroma bands, tropical thiol potential and key compound concentrations. Free in any browser, 3 recipes a month; also on iPhone and iPad." />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href="https://hoparoma.com/calculator/" />
+    <meta property="og:title" content="Hop aroma calculator for IPA recipes (web and iOS) | Hoparoma" />
+    <meta property="og:description" content="Enter hops, yeast, grain and process conditions and get literature-based estimates: seven aroma bands, tropical thiol potential and key compound concentrations. Free in any browser, 3 recipes a month; also on iPhone and iPad." />
+    <meta property="og:image" content="https://hoparoma.com/assets/web-calculator-og.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hoparoma.com/calculator/" />
+    <meta name="twitter:card" content="summary_large_image" />    <link rel="icon" type="image/png" href="/assets/icon-512.png" />
+    <link rel="apple-touch-icon" href="/assets/icon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css?v=6" />
+    <link rel="stylesheet" href="/ref.css?v=6" />    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://hoparoma.com/", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "https://hoparoma.com/calculator/", "name": "Calculator", "position": 2}]}, {"@type": "WebApplication", "applicationCategory": "UtilitiesApplication", "browserRequirements": "Requires JavaScript", "description": "Enter hops, yeast, grain and process conditions and get literature-based estimates: seven aroma bands, tropical thiol potential and key compound concentrations. Free in any browser, 3 recipes a month; also on iPhone and iPad.", "isAccessibleForFree": true, "name": "Hoparoma hop aroma calculator", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro, monthly", "price": "4.99", "priceCurrency": "USD"}], "operatingSystem": "Any current web browser", "publisher": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "url": "https://app.hoparoma.com/"}, {"@type": "MobileApplication", "applicationCategory": "LifestyleApplication", "name": "Hoparoma", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "operatingSystem": "iOS 17 or later", "publisher": {"@type": "Organization", "name": "Hoparoma", "url": "https://hoparoma.com/"}, "url": "https://apps.apple.com/app/hoparoma/id6764503200"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Not exactly, and this one does not claim to. It computes the aroma chemistry your recipe is likely to produce from published research and shows where the beer is likely to land. Hop lots vary, and fermentation health, oxygen pickup and storage all move the real result. Use it to compare options before brew day, then log what you taste against the estimate."}, "name": "Can a calculator predict how my beer will smell?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Free on the web covers 3 recipes per month, 2 comparisons per recipe and 3 saved recipes, with every hop, yeast and malt available. Pro is US$4.99 per month plus applicable tax on the web: 30 recipes per month, up to 10 comparisons each and 50 saved recipes, within 200 calculations per month. One Pro subscription covers the web and the iOS app on the same account."}, "name": "Is the hop aroma calculator free?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "A phone number is the lightest way to keep one account per number without passwords, and it lets the same account work in the app and on the web. Google\u0027s Firebase Authentication verifies the number by SMS; our server stores only a keyed hash of it, never the number. The monthly allowance is linked to that account. The sample recipes and the two-recipe comparison open without signing in."}, "name": "Why does the web version ask for a phone number?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "SMS delivery is enabled for Japan, the United States, Canada, the United Kingdom and Australia. The iOS app works without an account, so it is not limited to those regions."}, "name": "Which countries can sign in on the web?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The web version runs in a current browser on Android, Windows, macOS and Linux, as well as on iPhone and iPad. The native app is for iPhone and iPad on iOS 17 or later."}, "name": "Does it work on Android, Windows or a Mac?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Export the recipe as BeerXML, which Brewfather, BeerSmith and most recipe software can do, or as BeerJSON. Sign in and import the file. The import lists unmapped ingredients and fields that need review before you calculate."}, "name": "Can I import recipes from Brewfather or BeerSmith?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "A hop chart describes one ingredient. The calculator works on the whole recipe: the same hop lands differently with a thiol-releasing yeast, a cooler whirlpool or a larger dry hop. It models hops, yeast, malt and Phantasm together, with your process conditions."}, "name": "How is this different from a hop oil chart or a hop comparison tool?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Supplier lot sheets, manufacturer trials and peer-reviewed papers, with clearly labelled estimates where no measurement exists. The ingredient reference tables are public: hops, yeast and malt, with the full list under Sources. The tables are published under CC BY 4.0. The calculation model and its parameters are not published."}, "name": "Where does the data come from?"}]}]}</script>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ELB416YDMP');
+    </script>
+    <script src="/track.js?v=1" defer></script>  </head>
+  <body class="ref-body">
+    <header class="site-header" aria-label="Main">
+      <div class="container site-header__inner">
+        <a href="/" class="site-brand">Hoparoma</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link site-nav__link--active">Calculator</a>
+          <a href="/hops/" class="site-nav__link">Hops</a>
+          <a href="/yeast/" class="site-nav__link">Yeast</a>
+          <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
+          <a href="/sources/" class="site-nav__link">Sources</a>
+          <a href="/support.html" class="site-nav__link">Support</a>
+        </nav>
+        <a
+          href="https://apps.apple.com/app/hoparoma/id6764503200"
+          target="_blank"
+          rel="noopener"
+          class="cta-pill"
+          data-placement="header"
+          aria-label="Download Hoparoma on the App Store"
+          >Get App</a
+        >
+      </div>
+    </header>
+
+    <main class="ref-main">
+<article class="container ref-article">
+  <nav class="ref-crumbs" aria-label="Breadcrumb">
+  <ol>    <li><a href="/">Home</a></li>    <li><span aria-current="page">Calculator</span></li>  </ol>
+</nav>
+
+  <header class="ref-head">
+    <p class="ref-eyebrow">Web and iOS</p>
+    <h1 class="ref-title">Hop aroma calculator</h1>
+    <p class="ref-lede">
+      Hoparoma turns an IPA recipe into literature-based aroma estimates: seven aroma bands from citrus to dank, a tropical thiol potential, and rounded concentrations for seven aroma compounds read against published sensory thresholds. It models hops, yeast, malt and Phantasm together, with your boil, whirlpool, dry-hop and fermentation conditions.
+    </p>
+    <div class="ref-cta__actions">
+  <a class="cta-pill" href="https://app.hoparoma.com/" data-placement="calculator_top">Open the web calculator</a>
+  <a class="cta-pill cta-pill--ghost" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener" data-placement="calculator_top">Get the iOS app</a>
+</div>
+<p class="ref-cta__note">Free in any browser, 3 recipes a month. The sample recipes open without signing in.</p>
+    <figure class="calc-shot">
+      <img
+        src="/assets/web-calculator.jpg"
+        alt="The Hoparoma web calculator: sample IPA recipes on the left, and a seven-axis aroma radar with myrcene, linalool and 3MH concentration estimates on the right"
+        width="1600"
+        height="1059"
+      />
+      <figcaption>The web version. Sample recipes and a two-recipe comparison open without signing in.</figcaption>
+    </figure>
+  </header>
+
+  <div class="calc-cols">
+    <section class="ref-section" aria-labelledby="in-h">
+      <h2 id="in-h">What you enter</h2>
+      <ul class="calc-list">
+        <li>Batch size and a yeast strain, from <a href="/yeast/">29 strains rated for thiol release</a></li>
+        <li>Hop additions from <a href="/hops/">70 varieties</a>: amount, boil or whirlpool time, dry-hop contact time and cold-dry-hop temperature</li>
+        <li>The grain bill, from <a href="/malt/thiol-precursors/">40 malts and grains rated for thiol precursors</a></li>
+        <li>Process and water: mash temperature and pH, whirlpool and fermentation temperature, sulfate, chloride, and a Phantasm dose if you use it</li>
+        <li>Or a BeerXML or BeerJSON file exported from your recipe software</li>
+      </ul>
+    </section>
+
+    <section class="ref-section" aria-labelledby="out-h">
+      <h2 id="out-h">What you get</h2>
+      <ul class="calc-list">
+        <li>An aroma profile on seven axes (citrus, tropical, floral, herbal, spicy, resin/pine, dank/earthy), each in one of five bands from subtle to very high</li>
+        <li>A tropical thiol potential for the whole recipe</li>
+        <li>Rounded concentration estimates for myrcene, linalool, geraniol, β-citronellol, 3MH, 3MHA and 4MMP, read against a sensory threshold reported for beer in a published study</li>
+        <li>Recipe vitals: OG, FG, ABV, colour, and a boil-only Tinseth IBU</li>
+        <li>Before and after: change one thing, save, and see what moved. Any two saved recipes can be compared</li>
+        <li>A brewing journal: mark the latest saved version as brewed and log each tasting against it</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="ref-section" aria-labelledby="limits-h">
+    <h2 id="limits-h">What the numbers are, and are not</h2>
+    <p>
+      They are model estimates computed from published research. They are not measurements of your beer and not a guarantee of finished aroma. Ingredients vary by lot, and fermentation, oxygen and storage change what ends up in the glass.
+    </p>
+    <p>
+      The sensory thresholds are examples reported under particular study conditions, not universal boundaries. They help you read a concentration; they do not validate a recipe or measure the model's accuracy. The tool is most useful for comparing two versions of a recipe before brew day, and for learning how your own tastings line up with the estimates over time.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="how-h">
+    <h2 id="how-h">How the estimates are made</h2>
+    <p>
+      Hop oil and thiol data come from supplier lot sheets and peer-reviewed measurements, with clearly labelled estimates where neither exists. Yeast strains are rated for β-lyase thiol release from manufacturer trials and papers. Malts are rated for bound thiol precursors. The model applies published behaviour to your recipe: losses in the boil, whirlpool temperature, dry-hop saturation and contact time, and the yeast's release of bound thiols.
+    </p>
+    <p>
+      The ingredient reference tables are public: <a href="/hops/">hops</a>, <a href="/yeast/">yeast</a>, <a href="/malt/thiol-precursors/">malt</a>, and the papers behind them under <a href="/sources/">Sources</a>. The model's parameters are not published.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="where-h">
+    <h2 id="where-h">Web or iOS</h2>
+    <p>
+      The web version runs in any current browser, including Android and desktop. Free covers 3 recipes per month with every ingredient available, and it reports rounded bands and rounded concentrations.
+    </p>
+    <p>
+      The iPhone and iPad app works without an account and adds a per-stage breakdown of where the aroma comes from (boil, whirlpool, dry hop). One Pro subscription covers both on the same account. The differences are listed under <a href="/support.html">Support</a>.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <h3 class="calc-q">Can a calculator predict how my beer will smell?</h3>
+    <p>Not exactly, and this one does not claim to. It computes the aroma chemistry your recipe is likely to produce from published research and shows where the beer is likely to land. Hop lots vary, and fermentation health, oxygen pickup and storage all move the real result. Use it to compare options before brew day, then log what you taste against the estimate.</p>
+    <h3 class="calc-q">Is the hop aroma calculator free?</h3>
+    <p>Yes. Free on the web covers 3 recipes per month, 2 comparisons per recipe and 3 saved recipes, with every hop, yeast and malt available. Pro is US$4.99 per month plus applicable tax on the web: 30 recipes per month, up to 10 comparisons each and 50 saved recipes, within 200 calculations per month. One Pro subscription covers the web and the iOS app on the same account.</p>
+    <h3 class="calc-q">Why does the web version ask for a phone number?</h3>
+    <p>A phone number is the lightest way to keep one account per number without passwords, and it lets the same account work in the app and on the web. Google's Firebase Authentication verifies the number by SMS; our server stores only a keyed hash of it, never the number. The monthly allowance is linked to that account. The sample recipes and the two-recipe comparison open without signing in.</p>
+    <h3 class="calc-q">Which countries can sign in on the web?</h3>
+    <p>SMS delivery is enabled for Japan, the United States, Canada, the United Kingdom and Australia. The iOS app works without an account, so it is not limited to those regions.</p>
+    <h3 class="calc-q">Does it work on Android, Windows or a Mac?</h3>
+    <p>Yes. The web version runs in a current browser on Android, Windows, macOS and Linux, as well as on iPhone and iPad. The native app is for iPhone and iPad on iOS 17 or later.</p>
+    <h3 class="calc-q">Can I import recipes from Brewfather or BeerSmith?</h3>
+    <p>Yes. Export the recipe as BeerXML, which Brewfather, BeerSmith and most recipe software can do, or as BeerJSON. Sign in and import the file. The import lists unmapped ingredients and fields that need review before you calculate.</p>
+    <h3 class="calc-q">How is this different from a hop oil chart or a hop comparison tool?</h3>
+    <p>A hop chart describes one ingredient. The calculator works on the whole recipe: the same hop lands differently with a thiol-releasing yeast, a cooler whirlpool or a larger dry hop. It models hops, yeast, malt and Phantasm together, with your process conditions.</p>
+    <h3 class="calc-q">Where does the data come from?</h3>
+    <p>Supplier lot sheets, manufacturer trials and peer-reviewed papers, with clearly labelled estimates where no measurement exists. The ingredient reference tables are public: <a href="/hops/">hops</a>, <a href="/yeast/">yeast</a> and <a href="/malt/thiol-precursors/">malt</a>, with the full list under <a href="/sources/">Sources</a>. The tables are published under CC BY 4.0. The calculation model and its parameters are not published.</p>
+  </section>
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">Try it on a recipe</h2>
+    <p>
+      Explore the sample recipes and their comparison without signing in. Sign in to edit a recipe and compare your own changes.
+    </p>
+    <div class="ref-cta__actions">
+  <a class="cta-pill" href="https://app.hoparoma.com/" data-placement="calculator_bottom">Open the web calculator</a>
+  <a class="cta-pill cta-pill--ghost" href="https://apps.apple.com/app/hoparoma/id6764503200" target="_blank" rel="noopener" data-placement="calculator_bottom">Get the iOS app</a>
+</div>
+<p class="ref-cta__note">Free in any browser, 3 recipes a month. The sample recipes open without signing in.</p>
+  </section>
+</article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__wordmark">Hoparoma</span>
+          <p class="site-footer__tagline">
+            © 2026 Hoparoma · ArtFactory, K.K. · Designed in Tokyo
+          </p>
+          <p class="site-footer__tagline ref-footer-data">
+            Reference data: Hoparoma 2.0.2 (build 24) · dataset cb514c20e9ef · generated 2026-09-04
+          </p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/calculator/">Calculator</a>
+          <a href="/hops/">Hops</a>
+          <a href="/yeast/">Yeast</a>
+          <a href="/malt/thiol-precursors/">Malt</a>
+          <a href="/sources/">Sources</a>
+          <a href="/support.html">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/tokushoho.html">特定商取引法</a>
+          <a href="mailto:support@hoparoma.com">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -27,8 +27,9 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=5" />
-    <link rel="stylesheet" href="ref.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
+    <link rel="stylesheet" href="ref.css?v=6" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://hoparoma.com/#org", "name": "Hoparoma", "url": "https://hoparoma.com/", "logo": "https://hoparoma.com/assets/icon-1024.png"}, {"@type": "WebSite", "@id": "https://hoparoma.com/#site", "url": "https://hoparoma.com/", "name": "Hoparoma", "publisher": {"@id": "https://hoparoma.com/#org"}}, {"@type": "MobileApplication", "name": "Hoparoma", "operatingSystem": "iOS 17 or later", "applicationCategory": "LifestyleApplication", "url": "https://apps.apple.com/app/hoparoma/id6764503200", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@id": "https://hoparoma.com/#org"}}, {"@type": "WebApplication", "name": "Hoparoma hop aroma calculator", "url": "https://app.hoparoma.com/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any current web browser", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro, monthly", "price": "4.99", "priceCurrency": "USD"}], "publisher": {"@id": "https://hoparoma.com/#org"}}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB416YDMP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -36,12 +37,14 @@
       gtag('js', new Date());
       gtag('config', 'G-ELB416YDMP');
     </script>
+    <script src="/track.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header" aria-label="Main">
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link">Calculator</a>
           <a href="/hops/" class="site-nav__link">Hops</a>
           <a href="/yeast/" class="site-nav__link">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link">Malt</a>
@@ -53,6 +56,7 @@
           target="_blank"
           rel="noopener"
           class="cta-pill"
+          data-placement="header"
           aria-label="Download Hoparoma on the App Store"
           >Get App</a
         >
@@ -79,20 +83,33 @@
               you brew.
             </p>
             <div class="hero__cta-row">
-              <a
-                href="https://apps.apple.com/app/hoparoma/id6764503200"
-                target="_blank"
-                rel="noopener"
-                class="badge-link"
-                aria-label="Download Hoparoma on the App Store"
-              >
-                <img
-                  src="/assets/app-store-badge-black.svg"
-                  alt="Download on the App Store"
-                  width="180"
-                  height="60"
-                />
-              </a>
+              <div class="hero__cta-buttons">
+                <a
+                  href="https://apps.apple.com/app/hoparoma/id6764503200"
+                  target="_blank"
+                  rel="noopener"
+                  class="badge-link"
+                  data-placement="hub_hero"
+                  aria-label="Download Hoparoma on the App Store"
+                >
+                  <img
+                    src="/assets/app-store-badge-black.svg"
+                    alt="Download on the App Store"
+                    width="180"
+                    height="60"
+                  />
+                </a>
+                <a
+                  href="https://app.hoparoma.com/"
+                  class="cta-pill hero__web-cta"
+                  data-placement="hub_hero"
+                  >Open in your browser</a
+                >
+              </div>
+              <span class="hero__new-note">
+                The <a href="/calculator/">web calculator</a> is free for 3
+                recipes a month, on any device.
+              </span>
               <span class="hero__new-tag">
                 NEW IN 2.0 · On-device AI · Flavor Forecast + co-pilot
               </span>
@@ -711,6 +728,13 @@
               Transparent, indie pricing. Use Hoparoma free with up to 2 saved
               recipes — or unlock the full 4-axis engine.
             </p>
+            <p class="pricing__lede">
+              These are the iOS app's prices, billed through the App Store. On
+              the web, Free covers 3 recipes a month and Pro is US$4.99 a
+              month plus applicable tax, billed through Stripe. One Pro subscription covers the
+              app and the web on the same account.
+              <a href="/calculator/">About the web calculator</a>
+            </p>
           </div>
 
           <ol class="pricing__list">
@@ -752,16 +776,6 @@
               </div>
             </li>
 
-            <li class="pricing-tier pricing-tier--featured">
-              <div class="pricing-tier__main">
-                <span class="pricing-tier__badge">Limited launch edition</span>
-                <h3>Lifetime</h3>
-                <p>Own Hoparoma forever. Support indie development.</p>
-              </div>
-              <div class="pricing-tier__price">
-                <span class="pricing-tier__amount">$69.99</span>
-              </div>
-            </li>
           </ol>
         </div>
       </section>
@@ -784,6 +798,17 @@
               establishes that barley malt holds up to 700 µg/kg of bound 3MH
               precursor, hops carry both free and bound thiols, and yeast's
               β-lyase enzyme is the gate that unlocks all of them.
+            </p>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is there a web version?</summary>
+            <p>
+              Yes. The <a href="/calculator/">hop aroma calculator</a> runs in
+              any current browser, including Android and desktop, at
+              <a href="https://app.hoparoma.com/" data-placement="hub_faq">app.hoparoma.com</a>.
+              Free covers 3 recipes a month, and one Pro subscription covers
+              both the web and the app.
             </p>
           </details>
 
@@ -884,6 +909,7 @@
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <a href="/">Home</a>
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the reference pages (hops / yeast / malt / sources / 404 / sitemap) from data/*.json.
+"""Render the reference pages (hops / yeast / malt / sources / calculator / 404 / sitemap) from data/*.json.
 
 Usage:  python3 tools/extract_data.py && python3 tools/build_site.py && python3 tools/site_gate.py
 Output is committed: GitHub Pages serves the static result, no build step on the server.
@@ -7,6 +7,7 @@ Output is committed: GitHub Pages serves the static result, no build step on the
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -17,7 +18,7 @@ SITE_ROOT = Path(__file__).resolve().parent.parent
 TOOLS = SITE_ROOT / "tools"
 DATA = SITE_ROOT / "data"
 TEMPLATES = SITE_ROOT / "templates"
-GENERATED_DIRS = ["hops", "yeast", "malt", "sources"]
+GENERATED_DIRS = ["hops", "yeast", "malt", "sources", "calculator"]
 STATIC_PAGES = ["/", "/support.html", "/privacy.html", "/terms.html", "/tokushoho.html"]
 
 THIOL_HIGH = {"high", "very_high_bound"}
@@ -81,6 +82,50 @@ def dataset_ld(base: str, path: str, name: str, description: str, keywords: list
     if cfg.get("dataset_license"):
         d["license"] = cfg["dataset_license"]
     return d
+
+
+def strip_tags(html: str) -> str:
+    return re.sub(r"<[^>]+>", "", html)
+
+
+def webapp_ld(base: str, cfg: dict, description: str) -> dict:
+    return {
+        "@type": "WebApplication",
+        "name": "Hoparoma hop aroma calculator",
+        "url": cfg["web_app_url"],
+        "description": description,
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any current web browser",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": True,
+        "offers": [
+            {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
+            {"@type": "Offer", "name": "Pro, monthly", "price": "4.99", "priceCurrency": "USD"},
+        ],
+        "publisher": {"@type": "Organization", "name": "Hoparoma", "url": base + "/"},
+    }
+
+
+def mobileapp_ld(base: str, cfg: dict) -> dict:
+    return {
+        "@type": "MobileApplication",
+        "name": "Hoparoma",
+        "url": cfg["app_store_url"],
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS 17 or later",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "publisher": {"@type": "Organization", "name": "Hoparoma", "url": base + "/"},
+    }
+
+
+def faq_ld(items: list[dict]) -> dict:
+    return {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": i["q"], "acceptedAnswer": {"@type": "Answer", "text": strip_tags(i["a_html"])}}
+            for i in items
+        ],
+    }
 
 
 def graph(*nodes: dict) -> dict:
@@ -226,6 +271,26 @@ def main() -> None:
         jsonld=graph(
             breadcrumb_ld(base, [("Home", "/"), ("Malt", "/malt/thiol-precursors/")]),
             dataset_ld(base, "/malt/thiol-precursors/", "Hoparoma malt thiol precursor reference", "Malts and grains rated for thiol precursor content, with colour and category.", ["malt", "thiol precursors", "3MH", "brewing"], cfg, meta),
+        ),
+    )
+
+    # calculator (the page that names the tool category; links to the web app and the App Store) ---
+    faq = load(TOOLS / "calculator_faq.json")["items"]
+    calc_desc = (
+        "Enter hops, yeast, grain and process conditions and get literature-based estimates: seven aroma bands, "
+        "tropical thiol potential and key compound concentrations. Free in any browser, 3 recipes a month; also on iPhone and iPad."
+    )
+    render(
+        "calculator.html.j2", "/calculator/",
+        nav="calculator", faq=faq, og_type="website", og_image="/assets/web-calculator-og.jpg",
+        n_hops=len(hops), n_yeast=len(yeast), n_malt=len(malt),
+        page_title="Hop aroma calculator for IPA recipes (web and iOS) | Hoparoma",
+        page_description=calc_desc,
+        jsonld=graph(
+            breadcrumb_ld(base, [("Home", "/"), ("Calculator", "/calculator/")]),
+            webapp_ld(base, cfg, calc_desc),
+            mobileapp_ld(base, cfg),
+            faq_ld(faq),
         ),
     )
 

@@ -1,0 +1,96 @@
+{% extends "base.html.j2" %}
+{% import "_macros.html.j2" as m with context %}
+{% block content %}
+<article class="container ref-article">
+  {{ m.breadcrumb([('Home', '/'), ('Calculator', None)]) }}
+
+  <header class="ref-head">
+    <p class="ref-eyebrow">Web and iOS</p>
+    <h1 class="ref-title">Hop aroma calculator</h1>
+    <p class="ref-lede">
+      Hoparoma turns an IPA recipe into literature-based aroma estimates: seven aroma bands from citrus to dank, a tropical thiol potential, and rounded concentrations for seven aroma compounds read against published sensory thresholds. It models hops, yeast, malt and Phantasm together, with your boil, whirlpool, dry-hop and fermentation conditions.
+    </p>
+    {{ m.app_links('calculator_top', explain=False) }}
+    <figure class="calc-shot">
+      <img
+        src="/assets/web-calculator.jpg"
+        alt="The Hoparoma web calculator: sample IPA recipes on the left, and a seven-axis aroma radar with myrcene, linalool and 3MH concentration estimates on the right"
+        width="1600"
+        height="1059"
+      />
+      <figcaption>The web version. Sample recipes and a two-recipe comparison open without signing in.</figcaption>
+    </figure>
+  </header>
+
+  <div class="calc-cols">
+    <section class="ref-section" aria-labelledby="in-h">
+      <h2 id="in-h">What you enter</h2>
+      <ul class="calc-list">
+        <li>Batch size and a yeast strain, from <a href="/yeast/">{{ n_yeast }} strains rated for thiol release</a></li>
+        <li>Hop additions from <a href="/hops/">{{ n_hops }} varieties</a>: amount, boil or whirlpool time, dry-hop contact time and cold-dry-hop temperature</li>
+        <li>The grain bill, from <a href="/malt/thiol-precursors/">{{ n_malt }} malts and grains rated for thiol precursors</a></li>
+        <li>Process and water: mash temperature and pH, whirlpool and fermentation temperature, sulfate, chloride, and a Phantasm dose if you use it</li>
+        <li>Or a BeerXML or BeerJSON file exported from your recipe software</li>
+      </ul>
+    </section>
+
+    <section class="ref-section" aria-labelledby="out-h">
+      <h2 id="out-h">What you get</h2>
+      <ul class="calc-list">
+        <li>An aroma profile on seven axes (citrus, tropical, floral, herbal, spicy, resin/pine, dank/earthy), each in one of five bands from subtle to very high</li>
+        <li>A tropical thiol potential for the whole recipe</li>
+        <li>Rounded concentration estimates for myrcene, linalool, geraniol, β-citronellol, 3MH, 3MHA and 4MMP, read against a sensory threshold reported for beer in a published study</li>
+        <li>Recipe vitals: OG, FG, ABV, colour, and a boil-only Tinseth IBU</li>
+        <li>Before and after: change one thing, save, and see what moved. Any two saved recipes can be compared</li>
+        <li>A brewing journal: mark the latest saved version as brewed and log each tasting against it</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="ref-section" aria-labelledby="limits-h">
+    <h2 id="limits-h">What the numbers are, and are not</h2>
+    <p>
+      They are model estimates computed from published research. They are not measurements of your beer and not a guarantee of finished aroma. Ingredients vary by lot, and fermentation, oxygen and storage change what ends up in the glass.
+    </p>
+    <p>
+      The sensory thresholds are examples reported under particular study conditions, not universal boundaries. They help you read a concentration; they do not validate a recipe or measure the model's accuracy. The tool is most useful for comparing two versions of a recipe before brew day, and for learning how your own tastings line up with the estimates over time.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="how-h">
+    <h2 id="how-h">How the estimates are made</h2>
+    <p>
+      Hop oil and thiol data come from supplier lot sheets and peer-reviewed measurements, with clearly labelled estimates where neither exists. Yeast strains are rated for β-lyase thiol release from manufacturer trials and papers. Malts are rated for bound thiol precursors. The model applies published behaviour to your recipe: losses in the boil, whirlpool temperature, dry-hop saturation and contact time, and the yeast's release of bound thiols.
+    </p>
+    <p>
+      The ingredient reference tables are public: <a href="/hops/">hops</a>, <a href="/yeast/">yeast</a>, <a href="/malt/thiol-precursors/">malt</a>, and the papers behind them under <a href="/sources/">Sources</a>. The model's parameters are not published.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="where-h">
+    <h2 id="where-h">Web or iOS</h2>
+    <p>
+      The web version runs in any current browser, including Android and desktop. Free covers 3 recipes per month with every ingredient available, and it reports rounded bands and rounded concentrations.
+    </p>
+    <p>
+      The iPhone and iPad app works without an account and adds a per-stage breakdown of where the aroma comes from (boil, whirlpool, dry hop). One Pro subscription covers both on the same account. The differences are listed under <a href="/support.html">Support</a>.
+    </p>
+  </section>
+
+  <section class="ref-section" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    {% for item in faq %}
+    <h3 class="calc-q">{{ item.q }}</h3>
+    <p>{{ item.a_html | safe }}</p>
+    {% endfor %}
+  </section>
+
+  <section class="ref-section ref-cta" aria-labelledby="app-h">
+    <h2 id="app-h">Try it on a recipe</h2>
+    <p>
+      Explore the sample recipes and their comparison without signing in. Sign in to edit a recipe and compare your own changes.
+    </p>
+    {{ m.app_links('calculator_bottom', explain=False) }}
+  </section>
+</article>
+{% endblock %}

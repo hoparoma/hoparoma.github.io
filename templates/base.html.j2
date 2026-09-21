@@ -9,10 +9,10 @@
     <link rel="canonical" href="{{ cfg.base_url }}{{ page_path }}" />
     <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="{{ page_description }}" />
-    <meta property="og:image" content="{{ cfg.base_url }}/assets/icon-1024.png" />
+    <meta property="og:image" content="{{ cfg.base_url }}{{ og_image | default('/assets/icon-1024.png') }}" />
     <meta property="og:type" content="{{ og_type | default('article') }}" />
     <meta property="og:url" content="{{ cfg.base_url }}{{ page_path }}" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="{{ 'summary_large_image' if og_image else 'summary' }}" />
     {%- if noindex %}
     <meta name="robots" content="noindex" />
     {%- endif %}
@@ -37,6 +37,7 @@
       gtag('js', new Date());
       gtag('config', '{{ cfg.analytics_id }}');
     </script>
+    <script src="/track.js?v=1" defer></script>
     {%- endif %}
   </head>
   <body class="ref-body">
@@ -44,6 +45,7 @@
       <div class="container site-header__inner">
         <a href="/" class="site-brand">Hoparoma</a>
         <nav class="site-nav" aria-label="Primary">
+          <a href="/calculator/" class="site-nav__link{% if nav == 'calculator' %} site-nav__link--active{% endif %}">Calculator</a>
           <a href="/hops/" class="site-nav__link{% if nav == 'hops' %} site-nav__link--active{% endif %}">Hops</a>
           <a href="/yeast/" class="site-nav__link{% if nav == 'yeast' %} site-nav__link--active{% endif %}">Yeast</a>
           <a href="/malt/thiol-precursors/" class="site-nav__link{% if nav == 'malt' %} site-nav__link--active{% endif %}">Malt</a>
@@ -55,6 +57,7 @@
           target="_blank"
           rel="noopener"
           class="cta-pill"
+          data-placement="header"
           aria-label="Download Hoparoma on the App Store"
           >Get App</a
         >
@@ -78,6 +81,7 @@
         </div>
         <nav class="site-footer__nav" aria-label="Footer">
           <a href="/">Home</a>
+          <a href="/calculator/">Calculator</a>
           <a href="/hops/">Hops</a>
           <a href="/yeast/">Yeast</a>
           <a href="/malt/thiol-precursors/">Malt</a>
@@ -85,6 +89,7 @@
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
+          <a href="/tokushoho.html">特定商取引法</a>
           <a href="mailto:{{ cfg.contact_email }}">Contact</a>
         </nav>
       </div>
