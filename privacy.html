@@ -44,7 +44,7 @@
           <h1 id="privacy-heading" class="section__title">Privacy Policy</h1>
           <p class="doc-meta">
             <strong>Effective:</strong> 2026-04-17 ·
-            <strong>Last updated:</strong> 2026-09-21 (website analytics also counts clicks on links to the web app; brewing journal added to the web service on 2026-09-15; web service and optional account added on 2026-09-14)
+            <strong>Last updated:</strong> 2026-09-23 (iOS phone sign-in security SDK disclosures; website link click counts added on 2026-09-21; brewing journal added on 2026-09-15; web service and optional account added on 2026-09-14)
           </p>
 
           <section class="lang-section" lang="en">
@@ -52,7 +52,7 @@
 
             <h3>Summary</h3>
             <ul>
-              <li><strong>Using the iOS app without signing in collects nothing.</strong> Recipes, settings and notes stay on your device.</li>
+              <li><strong>The iOS app works without an account.</strong> Locally saved recipes, settings and notes stay on your device. Apple and Google services used by the app are described below.</li>
               <li><strong>An account is optional.</strong> If you sign in on the web (app.hoparoma.com) or in the app, your phone number is verified by Google's Firebase Authentication. Our server stores only a keyed hash of the number, never the number itself.</li>
               <li><strong>Recipes you save to your account</strong> are stored on our server so you can reach them from the web and the app.</li>
               <li><strong>Pro billing</strong> goes through Stripe (web) or Apple (app). We never see card details.</li>
@@ -74,7 +74,7 @@
               <li>Recipe history, tastings and personal corrections you create</li>
             </ul>
             <p>
-              We do not collect names, email addresses, device identifiers (IDFA, IDFV), location, analytics or crash reports from the app, and the app shows no advertising.
+              The app shows no advertising and does not collect names, email addresses or location. Firebase Authentication and the reCAPTCHA Enterprise SDK process identifiers and diagnostic data for phone sign-in and abuse prevention, as described in section 3.
             </p>
 
             <h3>3. Your account (web service and signed-in app)</h3>
@@ -98,7 +98,7 @@
                 <strong>Usage counters:</strong> how many recipes, comparisons, saves and calculations you have used in the current month, to apply the Free or Pro allowances.
               </li>
               <li>
-                <strong>Security signals.</strong> Sign-in is protected by Google reCAPTCHA, which evaluates browser and device signals to block automated SMS abuse; Google's <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="noopener" target="_blank">Terms of Service</a> apply. Cloudflare and our hosting provider record IP addresses and request metadata for rate limiting and troubleshooting; our own application log records status codes, paths, timings and internal identifiers, not phone numbers or recipe contents.
+                <strong>Security signals.</strong> Sign-in is protected by Google reCAPTCHA, which evaluates browser and device signals to block automated SMS abuse. In iOS versions with reCAPTCHA Enterprise phone sign-in, the SDK may collect device identifiers, crash data, performance data and app interaction information (such as taps, clicks and scrolling) for app functionality and abuse prevention. Its privacy manifest declares these data as linked to the user and not used for tracking. Firebase Authentication also collects diagnostic information about its SDK, device and platform to diagnose issues and improve the service. See Google’s <a href="https://docs.cloud.google.com/recaptcha/docs/apple-privacy-details" rel="noopener" target="_blank">reCAPTCHA Apple privacy details</a> and <a href="https://firebase.google.com/docs/ios/app-store-data-collection" rel="noopener" target="_blank">Firebase data disclosures</a>; Google's <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="noopener" target="_blank">Terms of Service</a> apply. Cloudflare and our hosting provider record IP addresses and request metadata for rate limiting and troubleshooting; our own application log records status codes, paths, timings and internal identifiers, not phone numbers or recipe contents.
               </li>
               <li>
                 <strong>Abuse detection.</strong> We analyse patterns in submitted recipes (for example a run of near-identical variations) to detect automated probing of the model. Nobody reads your recipes unless you ask us to look at them in a support request.
@@ -187,7 +187,7 @@
 
             <h3>要旨</h3>
             <ul>
-              <li><strong>iOS アプリをサインインせずに使う限り、何も収集しません。</strong>レシピ・設定・メモは端末内にとどまります。</li>
+              <li><strong>iOS アプリはアカウントなしで使えます。</strong>端末に保存したレシピ・設定・メモは端末内にとどまります。アプリが利用する Apple と Google のサービスについては以下に説明します。</li>
               <li><strong>アカウントは任意です。</strong>ウェブ版（app.hoparoma.com）またはアプリでサインインすると、電話番号は Google の Firebase Authentication が確認します。当社サーバーが保存するのは番号の鍵付きハッシュだけで、番号そのものは保存しません。</li>
               <li><strong>アカウントに保存したレシピ</strong>は、ウェブとアプリの両方から使えるように当社サーバーに保存されます。</li>
               <li><strong>Pro の決済</strong>は Stripe（ウェブ）または Apple（アプリ）が行い、当社はカード情報を見ません。</li>
@@ -208,7 +208,7 @@
               <li>アプリ設定（言語、デフォルトバッチ量、警告トグル）</li>
               <li>作成したレシピ履歴、試飲ログ、個人補正</li>
             </ul>
-            <p>氏名・メールアドレス・端末識別子（IDFA、IDFV）・位置情報・利用分析・クラッシュレポートは収集せず、広告表示もありません。</p>
+            <p>アプリは広告を表示せず、氏名・メールアドレス・位置情報を収集しません。電話番号サインインと不正利用防止のため、Firebase Authentication と reCAPTCHA Enterprise SDK が識別子や診断データを処理します（第3節）。</p>
 
             <h3>3. アカウント（ウェブ版とサインイン済みアプリ）</h3>
             <p>アカウントを作ると、ブラウザで Hoparoma を使い、ウェブとアプリでレシピを共有し、1 つの Pro を両方で使えます。サインインすると、次を取り扱います:</p>
@@ -218,7 +218,7 @@
               <li><strong>アカウントに保存したレシピと結果</strong>（ホップ投入、醸造設定、酵母、香りの見積もり、比較履歴）と、その元になった計算履歴。レシピを削除すると一覧から消えて保存枠が空きますが、データ自体はアカウントを削除したときに消去されます（第 6 条参照）。</li>
               <li><strong>醸造記録（ウェブ版）。</strong>保存したレシピの版を「醸造した」と記録すると、その版と香りの見積もりの写し、醸造日、仕込みのメモを保存します。その醸造記録に付けた試飲については、試飲日、任意の好みの点数（1〜5）、メモ、任意で記録した香りの観察を保存します。これらの記録は、後でレシピを変更・削除しても、記録またはアカウントを削除するまで日誌に残ります。記録は当社サーバーに保存され、アプリの試飲ログとは同期しません。</li>
               <li><strong>利用回数。</strong>当月に使ったレシピ作成・比較・保存・計算の回数。無料枠 / Pro 枠の適用に使います。</li>
-              <li><strong>セキュリティ信号。</strong>サインインは Google reCAPTCHA で保護され、ブラウザや端末の信号から SMS の自動送信悪用を判定します。Google の<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" rel="noopener" target="_blank">利用規約</a>が適用されます。Cloudflare とホスティング事業者は、レート制限と障害対応のために IP アドレスとリクエスト情報を記録します。当社自身のアプリケーションログには応答コード・経路・処理時間・内部識別子を記録し、電話番号やレシピの内容は含めません。</li>
+              <li><strong>セキュリティ信号。</strong>サインインは Google reCAPTCHA で保護され、ブラウザや端末の信号から SMS の自動送信悪用を判定します。reCAPTCHA Enterprise による電話番号サインインに対応する iOS 版では、アプリの機能提供と不正利用防止のため、SDK が端末識別子、クラッシュデータ、パフォーマンスデータ、タップ・クリック・スクロールなどのアプリ操作情報を収集する場合があります。SDK のプライバシーマニフェストでは、これらを利用者に関連付けるデータ、トラッキング目的ではないデータとして申告しています。Firebase Authentication も、障害の診断とサービス改善のために SDK・端末・プラットフォームに関する診断情報を収集します。Google の<a href="https://docs.cloud.google.com/recaptcha/docs/apple-privacy-details" rel="noopener" target="_blank">reCAPTCHA の Apple 向けプライバシー情報</a>と<a href="https://firebase.google.com/docs/ios/app-store-data-collection" rel="noopener" target="_blank">Firebase のデータ開示情報</a>をご覧ください。Google の<a href="https://policies.google.com/privacy" rel="noopener" target="_blank">プライバシーポリシー</a>と<a href="https://policies.google.com/terms" rel="noopener" target="_blank">利用規約</a>が適用されます。Cloudflare とホスティング事業者は、レート制限と障害対応のために IP アドレスとリクエスト情報を記録します。当社自身のアプリケーションログには応答コード・経路・処理時間・内部識別子を記録し、電話番号やレシピの内容は含めません。</li>
               <li><strong>不正利用の検知。</strong>モデルの自動探索を検知するため、送信されたレシピの傾向（ほぼ同一な変種の連続など）を機械的に分析します。サポートで依頼された場合を除き、人がレシピを閲覧することはありません。</li>
             </ul>
             <p>レシピをモデルの学習や広告に使うことはなく、個人情報を販売・共有することもありません。</p>
